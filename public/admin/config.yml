@@ -1,11 +1,11 @@
-# Local backend for development
-local_backend: true
+# Local backend for development (set to true for local development with npx decap-server)
+# local_backend: true
 
-# Backend for GitHub (to be configured later)
+# Backend for GitHub
 backend:
   name: github
-  repo: adamgroenhout/wildwood-site # Updated with your actual repo
-  branch: main # or the branch you use
+  repo: adamgroenhout/wildwood
+  branch: main
 
 media_folder: "public/images"
 public_folder: "/images"
