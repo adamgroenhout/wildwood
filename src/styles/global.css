@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --radius-xl: 0.375rem; /* 6px */
+  --radius-lg: 0.25rem; /* 4px */
+  --radius-md: 0.125rem; /* 2px */
+  --radius-sm: 0.0625rem; /* 1px */
+  --radius: 0.125rem; /* 2px */
+}
+
+@layer base {
+  /* Ever so slightly rounded for buttons, inputs, images, and boxed containers */
+  button, 
+  input, 
+  textarea, 
+  select, 
+  img:not(.w-full.h-full.object-cover), 
+  video, 
+  iframe {
+    border-radius: 4px;
+  }
+
+  /* Target links that are styled as buttons or have borders/backgrounds */
+  a:is([class*="bg-"], [class*="border"]) {
+    border-radius: 4px;
+  }
+
+  /* Target common content boxes that have backgrounds or borders */
+  /* We exclude top-level layout elements like section, header, etc. */
+  div:is([class*="bg-"], [class*="border"]) {
+    border-radius: 4px;
+  }
+
+  /* Ensure top-level layout elements and full-width containers remain square */
+  html, body, header, footer, section, main, nav, .w-full, .max-w-full, .h-screen {
+    border-radius: 0 !important;
+  }
+  
+  /* Re-apply rounding to boxes inside these layouts that should be rounded */
+  header div:is([class*="bg-"], [class*="border"]),
+  nav div:is([class*="bg-"], [class*="border"]),
+  section div:is([class*="bg-"], [class*="border"]),
+  main div:is([class*="bg-"], [class*="border"]),
+  footer div:is([class*="bg-"], [class*="border"]),
+  .absolute:is([class*="bg-"], [class*="border"]),
+  .fixed:is([class*="bg-"], [class*="border"]) {
+    border-radius: 4px !important;
+  }
+}
+
+@layer components {
+  /* Alternating Section Colors - Progressive Palette */
+  .bg-alternate {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Section 1: Sage */
+  .bg-alternate:nth-of-type(4n+1) {
+    background-color: #B2B29F;
+  }
+
+  /* Section 2: Cream */
+  .bg-alternate:nth-of-type(4n+2) {
+    background-color: #EEEBDF;
+  }
+
+  /* Section 3: Sand */
+  .bg-alternate:nth-of-type(4n+3) {
+    background-color: #E3D5C9;
+  }
+
+  /* Section 4: Paper */
+  .bg-alternate:nth-of-type(4n+4) {
+    background-color: #F9F7F0;
+  }
+
+  /* Typography Logic */
+  .bg-alternate:not(.h-screen) :is(h1, h2, h3, h4, h5, h6) {
+    color: #414224 !important; /* Dark Olive Headings */
+  }
+
+  .bg-alternate:not(.h-screen) :is(p, li, span, div, strong, em, a:not(.bg-terracotta)) {
+    color: #414244 !important; /* Charcoal Body Text */
+  }
+
+  /* Muted text for the new palette */
+  .bg-alternate:not(.h-screen) :is(.text-white\/70, .text-white\/80, .text-white\/90) {
+    color: rgba(65, 66, 68, 0.8) !important; /* Based on Charcoal */
+  }
+
+  .bg-alternate:not(.h-screen) :is(.text-white\/50, .text-white\/60) {
+    color: rgba(65, 66, 68, 0.6) !important;
+  }
+
+  /* Border color overrides - using Taupe for subtle separation */
+  .bg-alternate:not(.h-screen) :is(.border-white\/5, .border-white\/10, .border-white\/20) {
+    border-color: rgba(196, 191, 184, 0.4) !important;
+  }
+
+  /* Highlight boxes - using Sand for depth */
+  .bg-alternate:not(.h-screen) :is(.bg-white\/5, .bg-white\/10) {
+    background-color: rgba(227, 213, 201, 0.5) !important;
+    border: 1px solid rgba(196, 191, 184, 0.3) !important;
+  }
+
+  /* Prose overrides */
+  .bg-alternate:not(.h-screen) .prose-invert {
+    --tw-prose-body: #414244;
+    --tw-prose-headings: #414224;
+    --tw-prose-lead: #414244;
+    --tw-prose-links: #B17048; /* Terracotta links for subtle pop */
+    --tw-prose-bold: #414244;
+    --tw-prose-counters: #414244;
+    --tw-prose-bullets: #B17048;
+    --tw-prose-hr: rgba(196, 191, 184, 0.4);
+    --tw-prose-quotes: #414244;
+    --tw-prose-quote-borders: #B17048;
+    --tw-prose-captions: #414244;
+    --tw-prose-code: #414244;
+    --tw-prose-pre-code: #F9F7F0;
+    --tw-prose-pre-bg: #414224;
+    --tw-prose-th-borders: rgba(196, 191, 184, 0.4);
+    --tw-prose-td-borders: rgba(196, 191, 184, 0.2);
+  }
+
+  /* Primary Button: Terracotta */
+  .bg-terracotta,
+  .bg-alternate:not(.h-screen) a.bg-white {
+    background-color: #B17048 !important;
+    color: #F9F7F0 !important;
+    transition: all 0.3s ease;
+  }
+
+  .bg-terracotta:hover,
+  .bg-alternate:not(.h-screen) a.bg-white:hover {
+    background-color: #414224 !important; /* Switch to Dark Olive on hover */
+    color: #F9F7F0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Secondary Button: Dark Olive outline */
+  .border-olive {
+    border: 1px solid #414224 !important;
+    color: #414224 !important;
+  }
+  
+  .border-olive:hover {
+    background-color: #414224 !important;
+    color: #F9F7F0 !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "site_name": "Wildwood Psychotherapy",
+  "site_title": "Wildwood Psychotherapy | Trauma-Informed Therapy in Leesburg, VA",
+  "site_description": "Wildwood Psychotherapy - Trauma-Informed Therapy in Leesburg, VA",
+  "tagline": "Trauma-Informed Therapy in Leesburg, VA.",
+  "logo": "/images/1-300x300.png",
+  "contact": {
+    "phone": "(703) 493-0459",
+    "email": "info@wildwoodpsychotherapy.co",
+    "address": "19 Wirt St SW, Suite 205, Leesburg, VA 20175",
+    "consultation_url": "https://wildwoodpsychotherapy.clientsecure.me/"
+  },
+  "navigation": [
+    { "name": "About", "href": "/about" },
+    { 
+      "name": "Specialties", 
+      "href": "#", 
+      "subItems": [
+        { "name": "Anxiety & Perfectionism", "href": "/anxiety-and-perfectionism" },
+        { "name": "Relationships", "href": "/relationships" },
+        { "name": "Trauma + EMDR", "href": "/trauma-and-emdr" }
+      ]
+    },
+    { 
+      "name": "Therapy Options", 
+      "href": "#", 
+      "subItems": [
+        { "name": "Intensives", "href": "/intensives" },
+        { "name": "Group Therapy", "href": "/group-therapy" },
+        { "name": "Telehealth", "href": "/telehealth" }
+      ]
+    },
+    { "name": "Events", "href": "/events" },
+    { "name": "FAQs", "href": "/faqs" }
+  ]
+}

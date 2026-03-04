@@ -1,0 +1,27 @@
+{
+  "title": "Schedule Your Consultation",
+  "intro_title": "Your Path to Healing Begins with a Conversation.",
+  "intro_text": "Because the therapeutic relationship is the most important factor in your success, a 15-minute consultation call is a required first step for all new clients.",
+  "cta_text": "Book Your Consultation",
+  "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+  "location": {
+    "title": "Location",
+    "name": "Wildwood Psychotherapy",
+    "address_line1": "19 Wirt St SW, Suite 205",
+    "address_line2": "Leesburg, VA 20175",
+    "phone": "(703) 493-0459",
+    "email": "info@wildwoodpsychotherapy.co"
+  },
+  "parking": {
+    "title": "Parking",
+    "options": [
+      { "label": "Free Parking", "text": "The Liberty Street parking lot at 204 Liberty St, SW typically has the best availability." },
+      { "label": "Alternative", "text": "The Town Hall garage at 10 Loudoun St, SW is a reliable paid option." },
+      { "label": "Street Parking", "text": "Metered spots are available on Wirt St SW." }
+    ]
+  },
+  "arrival": {
+    "title": "Arriving for Your Session",
+    "text": "Please use the side entrance located on the left side of the building (marked for upper-level suites). Head up the stairs to our quiet waiting area. I will greet you exactly at our scheduled appointment time."
+  }
+}

@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import groupTherapyData from '../content/group-therapy.json';
+
+const { title, subtitle, intro, benefits_section, featured_group, is_right_section, cta_text, cta_url } = groupTherapyData;
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Group Therapy | Wildwood Psychotherapy">
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+				<p class="text-2xl text-center italic mb-12 ">{subtitle}</p>
+				
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+					<div class="mb-12">
+						<h2 class="text-3xl font-serif mb-6 ">{intro.title}</h2>
+						<p>{intro.text1}</p>
+						<p class="font-bold text-xl text-center italic ">{intro.quote}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+					<div class="bg-terracotta/5 p-8 rounded-lg mb-12">
+						<h2 class="text-3xl font-serif mb-6 ">{benefits_section.title}</h2>
+						<div class="space-y-6">
+							{benefits_section.benefits.map(benefit => (
+								<div>
+									<h3 class="text-xl font-bold ">{benefit.title}</h3>
+									<p>{benefit.text}</p>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<div class="bg-terracotta/10 p-12 rounded-lg text-center border border-white/5 mb-12">
+						<h2 class="text-3xl font-serif mb-6  uppercase tracking-widest">{featured_group.title}</h2>
+						<p class="text-xl italic mb-8 ">{featured_group.subtitle}</p>
+						<p class="mb-10">{featured_group.text}</p>
+						<a href={`${base}${featured_group.cta_url.startsWith('/') ? featured_group.cta_url.slice(1) : featured_group.cta_url}`} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest">{featured_group.cta_text}</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+					<div>
+						<h2 class="text-3xl font-serif mb-6 ">{is_right_section.title}</h2>
+						<p>{is_right_section.text}</p>
+						<ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 list-disc pl-6">
+							{is_right_section.points.map(point => (
+								<li>{point}</li>
+							))}
+						</ul>
+					</div>
+
+					<div class="mt-16 text-center">
+						<a href={cta_url} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest">
+							{cta_text}
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import privacyData from '../content/privacy.json';
+import { marked } from 'marked';
+
+const { title, content } = privacyData;
+---
+
+<Layout title={`${title} | Wildwood Psychotherapy`}>
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none " set:html={marked(content)} />
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

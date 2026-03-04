@@ -1,0 +1,51 @@
+---
+import settings from '../content/settings.json';
+
+const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
+
+const { site_name, tagline, contact } = settings;
+---
+
+<footer class="bg-[#414244] border-t border-white/5 py-20 px-4">
+	<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+		<div>
+			<a href={base} class="text-3xl tracking-tight uppercase font-serif text-white">{site_name.split(' ')[0]}</a>
+			<p class="mt-4 text-sm text-white/50">{tagline}</p>
+		</div>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+			<div>
+				<h3 class="text-xs uppercase tracking-widest font-bold mb-4 text-white/40">Practice</h3>
+				<ul class="space-y-2 text-sm text-white/60">
+					<li><a href={`${base}about`} class="hover:text-white transition-colors">About</a></li>
+					<li><a href={`${base}faqs`} class="hover:text-white transition-colors">FAQs</a></li>
+					<li><a href={`${base}events`} class="hover:text-white transition-colors">Events</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="text-xs uppercase tracking-widest font-bold mb-4 text-white/40">Specialties</h3>
+				<ul class="space-y-2 text-sm text-white/60">
+					<li><a href={`${base}anxiety-and-perfectionism`} class="hover:text-white transition-colors">Anxiety</a></li>
+					<li><a href={`${base}relationships`} class="hover:text-white transition-colors">Relationships</a></li>
+					<li><a href={`${base}trauma-and-emdr`} class="hover:text-white transition-colors">Trauma + EMDR</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="text-xs uppercase tracking-widest font-bold mb-4 text-white/40">Legal</h3>
+				<ul class="space-y-2 text-sm text-white/60">
+					<li><a href={`${base}good-faith-estimate`} class="hover:text-white transition-colors">Good Faith Estimate</a></li>
+					<li><a href={`${base}privacy`} class="hover:text-white transition-colors">Privacy Policy</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="text-xs uppercase tracking-widest font-bold mb-4 text-white/40">Contact</h3>
+				<ul class="space-y-2 text-sm text-white/60">
+					<li><a href={contact.consultation_url} class="hover:text-white transition-colors">Schedule Consultation</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex justify-between items-center text-xs text-white/30">
+		<p>&copy; {year} {site_name}. All rights reserved.</p>
+	</div>
+</footer>

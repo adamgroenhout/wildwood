@@ -1,0 +1,48 @@
+{
+  "title": "Group Therapy",
+  "subtitle": "Connection & healing in community.",
+  "intro": {
+    "title": "What group therapy offers that individual therapy doesn't",
+    "text1": "People seek out group therapy because it offers unique benefits that individual therapy alone can't provide: healing through connection. Where individual therapy focuses on one-on-one, personalized support, group therapy provides an interpersonal-based experience that can foster healing in different ways.",
+    "quote": "A space to feel seen, heard, and understood by people who get it."
+  },
+  "benefits_section": {
+    "title": "Why choose group therapy?",
+    "benefits": [
+      {
+        "title": "Connection & Belonging",
+        "text": "One of the biggest benefits of group therapy is realizing you’re not alone. Group therapy provides a space to connect with others who have similar experiences, which can be deeply validating and reduce feelings of shame or loneliness."
+      },
+      {
+        "title": "Peer Support & Feedback",
+        "text": "Group members offer honest, compassionate feedback that can help you gain new perspectives. You’ll learn how others see you and how your behaviors impact those around you."
+      },
+      {
+        "title": "Opportunities for Practice - and for Healing",
+        "text": "Many of our deepest wounds are relational. Group therapy allows you to heal in a relational setting. By building trust and connection with group members, you can start to shift unhealthy patterns and learn new ways of relating."
+      }
+    ]
+  },
+  "featured_group": {
+    "title": "Holding It Together",
+    "subtitle": "Group Therapy for Adults Who Are Quietly Struggling With Overwhelm or Disconnection",
+    "text": "You show up for work, for family, for friends. To the outside world, you look high functioning and capable. But inside, the emotional load can get overwhelming.",
+    "cta_text": "Learn More About This Group",
+    "cta_url": "/holding-it-together"
+  },
+  "is_right_section": {
+    "title": "Is group right for you?",
+    "text": "Group therapy may be especially beneficial if you're experiencing:",
+    "points": [
+      "Anxiety (including social anxiety)",
+      "Depression",
+      "Trauma or PTSD",
+      "Relationship challenges",
+      "Shame and self-criticism",
+      "Emotional regulation issues",
+      "Isolation and loneliness"
+    ]
+  },
+  "cta_text": "Schedule a Call",
+  "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/"
+}

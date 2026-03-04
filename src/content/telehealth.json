@@ -1,0 +1,27 @@
+{
+  "title": "Telehealth",
+  "subtitle": "Online therapy via video for adults in Virginia.",
+  "why_telehealth": {
+    "title": "Why use telehealth?",
+    "items": [
+      { "label": "Flexibility", "text": "No commute, schedule around other commitments like kids or work." },
+      { "label": "Sense of Safety", "text": "For some, virtual sessions are less intense or intimidating." },
+      { "label": "Privacy", "text": "Avoid being seen parking or sitting in a waiting room." },
+      { "label": "Continuity of Care", "text": "No need to miss sessions due to weather or mild illness." },
+      { "label": "Access", "text": "Especially helpful for those in rural areas." }
+    ]
+  },
+  "what_to_expect": {
+    "title": "What to expect:",
+    "steps": [
+      { "label": "Consultation", "text": "Discuss what you need and how I can help." },
+      { "label": "Schedule", "text": "Book your first appointment." },
+      { "label": "Client Portal", "text": "Review and sign documents online." },
+      { "label": "Reminders", "text": "Receive email reminders before your session." },
+      { "label": "Log on", "text": "Click the secure link in your email to join the session." }
+    ]
+  },
+  "bottom_text": "Telehealth is proven effective and offers a convenient way to prioritize your mental health from the comfort of your own space.",
+  "cta_text": "Schedule a Call",
+  "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/"
+}

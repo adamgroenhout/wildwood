@@ -1,0 +1,363 @@
+# Local backend for development
+local_backend: true
+
+# Backend for GitHub (to be configured later)
+backend:
+  name: github
+  repo: adamgroenhout/wildwood-site # Updated with your actual repo
+  branch: main # or the branch you use
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    extension: "json"
+    format: "json"
+    files:
+      - name: "settings"
+        label: "Global Settings"
+        file: "src/content/settings.json"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Default SEO Title", name: "site_title", widget: "string" }
+          - { label: "Default Meta Description", name: "site_description", widget: "text" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - label: "Contact Information"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Consultation URL", name: "consultation_url", widget: "string" }
+          - label: "Navigation"
+            name: "navigation"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Link Name", name: "name", widget: "string" }
+              - { label: "Link URL", name: "href", widget: "string" }
+              - label: "Sub-menu Items"
+                name: "subItems"
+                widget: "list"
+                required: false
+                summary: "{{name}}"
+                fields:
+                  - { label: "Link Name", name: "name", widget: "string" }
+                  - { label: "Link URL", name: "href", widget: "string" }
+      - name: "home"
+        label: "Home Page"
+        file: "src/content/homepage.json"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "CTA Text", name: "cta_text", widget: "string" }
+          - { label: "CTA URL", name: "cta_url", widget: "string" }
+          - label: "Specialties"
+            name: "specialties"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - { label: "Intro Title", name: "intro_title", widget: "string" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - { label: "Feature Image", name: "feature_image", widget: "image" }
+          - { label: "Feature Title", name: "feature_title", widget: "string" }
+          - { label: "Feature Text", name: "feature_text", widget: "text" }
+          - { label: "Feature Link Text", name: "feature_link_text", widget: "string" }
+          - { label: "Feature Link URL", name: "feature_link_url", widget: "string" }
+      - name: "about"
+        label: "About Page"
+        file: "src/content/about.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Bio Content", name: "bio", widget: "markdown" }
+          - label: "Lists"
+            name: "sections"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Items", name: "items", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+          - { label: "CTA Text", name: "cta_text", widget: "string" }
+          - { label: "CTA URL", name: "cta_url", widget: "string" }
+      - name: "contact"
+        label: "Contact Page"
+        file: "src/content/contact.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro Title", name: "intro_title", widget: "string" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - { label: "CTA Text", name: "cta_text", widget: "string" }
+          - { label: "CTA URL", name: "cta_url", widget: "string" }
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Address Line 1", name: "address_line1", widget: "string" }
+              - { label: "Address Line 2", name: "address_line2", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Parking"
+            name: "parking"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Options"
+                name: "options"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+          - label: "Arrival"
+            name: "arrival"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+      - name: "faqs"
+        label: "FAQs Page"
+        file: "src/content/faqs.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            summary: "{{question}}"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text", required: false }
+              - label: "Rates"
+                name: "rates"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Service", name: "service", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
+                  - { label: "Is Italic", name: "is_italic", widget: "boolean", default: false }
+          - { label: "Footer CTA Text", name: "footer_cta_text", widget: "string" }
+      - name: "telehealth"
+        label: "Telehealth Page"
+        file: "src/content/telehealth.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Why Telehealth"
+            name: "why_telehealth"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+          - label: "What to Expect"
+            name: "what_to_expect"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+          - { label: "Bottom Text", name: "bottom_text", widget: "text" }
+          - { label: "CTA Text", name: "cta_text", widget: "string" }
+          - { label: "CTA URL", name: "cta_url", widget: "string" }
+      - name: "group-therapy"
+        label: "Group Therapy Page"
+        file: "src/content/group-therapy.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text 1", name: "text1", widget: "text" }
+              - { label: "Quote", name: "quote", widget: "string" }
+          - label: "Benefits Section"
+            name: "benefits_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Featured Group"
+            name: "featured_group"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "CTA Text", name: "cta_text", widget: "string" }
+              - { label: "CTA URL", name: "cta_url", widget: "string" }
+          - label: "Is Right Section"
+            name: "is_right_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+          - { label: "CTA Text", name: "cta_text", widget: "string" }
+          - { label: "CTA URL", name: "cta_url", widget: "string" }
+      - name: "holding-it-together"
+        label: "Holding It Together Page"
+        file: "src/content/holding-it-together.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Hero Section"
+            name: "hero_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text 1", name: "text1", widget: "text" }
+              - { label: "Text 2", name: "text2", widget: "text" }
+              - { label: "Text 3", name: "text3", widget: "text" }
+          - label: "Who For Section"
+            name: "who_for_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+              - { label: "Footer Italic", name: "footer_italic", widget: "string" }
+          - label: "Program Details"
+            name: "program_details"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Format", name: "format", widget: "string" }
+              - { label: "Cohort Size", name: "cohort_size", widget: "string" }
+              - { label: "Cost", name: "cost", widget: "string" }
+              - label: "Weekly Focus"
+                name: "weekly_focus"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Weeks", name: "weeks", widget: "list", field: { label: "Week", name: "week", widget: "string" } }
+          - label: "Footer CTA"
+            name: "footer_cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - label: "Primary Button"
+                name: "primary_button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Secondary Button"
+                name: "secondary_button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+      - name: "good-faith-estimate"
+        label: "Good Faith Estimate Page"
+        file: "src/content/good-faith-estimate.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Content", name: "content", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+          - { label: "Highlight Box", name: "highlight_box", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+          - { label: "Footer Text", name: "footer_text", widget: "string" }
+          - { label: "Footer URL", name: "footer_url", widget: "string" }
+      - name: "events"
+        label: "Events Page"
+        file: "src/content/events.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text", required: false }
+              - label: "Highlight"
+                name: "highlight"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Details"
+                    name: "details"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                  - { label: "CTA Text", name: "cta_text", widget: "string" }
+                  - { label: "CTA URL", name: "cta_url", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Location", name: "location", widget: "string", required: false }
+                  - { label: "Cost", name: "cost", widget: "string", required: false }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Footer", name: "footer", widget: "text", required: false }
+                  - { label: "CTA Text", name: "cta_text", widget: "string", required: false }
+                  - { label: "CTA URL", name: "cta_url", widget: "string", required: false }
+      - name: "privacy"
+        label: "Privacy Policy Page"
+        file: "src/content/privacy.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Policy Content", name: "content", widget: "markdown" }
+
+  - name: "services"
+    label: "Service Pages"
+    folder: "src/content/services"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Seo Title", name: "seo_title", widget: "string" }
+      - label: "Page Sections"
+        name: "sections"
+        widget: "list"
+        types:
+          - name: "text"
+            label: "Text Section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "markdown" }
+              - { label: "Style", name: "style", widget: "select", options: ["standard", "highlighted"], default: "standard" }
+          - name: "list"
+            label: "List Section (Grid)"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+      - { label: "CTA Text", name: "cta_text", widget: "string", default: "Schedule a Call" }
+      - { label: "CTA URL", name: "cta_url", widget: "string", default: "https://wildwoodpsychotherapy.clientsecure.me/" }

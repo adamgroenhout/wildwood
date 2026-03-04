@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { marked } from 'marked';
+
+export async function getStaticPaths() {
+  const files = import.meta.glob('../content/services/*.json', { eager: true });
+  return Object.entries(files).map(([path, data]) => {
+    const slug = path.split('/').pop().replace('.json', '');
+    return {
+      params: { slug },
+      props: { content: (data as any).default || data },
+    };
+  });
+}
+
+const { content } = Astro.props;
+const { title, subtitle, seo_title, sections, cta_text, cta_url } = content;
+---
+
+<Layout title={seo_title}>
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-10 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center">{title}</h1>
+				{subtitle && <p class="text-2xl text-center italic mb-12">{subtitle}</p>}
+			</div>
+		</section>
+		
+		{/* Split sections into two groups to force a background color change halfway through */}
+		{(() => {
+			const midPoint = Math.ceil(sections.length / 2);
+			const firstHalf = sections.slice(0, midPoint);
+			const secondHalf = sections.slice(midPoint);
+			
+			const renderSection = (section: any) => {
+				if (section.type === 'text') {
+					return (
+						<div class={`mb-12 ${section.style === 'highlighted' ? "bg-terracotta/5 p-8 rounded-lg" : ""}`}>
+							{section.title && <h2 class="text-3xl font-serif mb-6 ">{section.title}</h2>}
+							<div class="space-y-4" set:html={marked(section.body)} />
+						</div>
+					);
+				} else if (section.type === 'list') {
+					return (
+						<div class="mb-12">
+							{section.title && <h2 class="text-3xl font-serif mb-6 text-center italic ">{section.title}</h2>}
+							<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0">
+								{section.items.map((item: string) => (
+									<li class="border-l-4 border-white/20 pl-4 py-2">{item}</li>
+								))}
+							</ul>
+						</div>
+					);
+				}
+				return null;
+			};
+
+			return (
+				<>
+					<section class="bg-alternate py-20 px-4">
+						<div class="max-w-4xl mx-auto">
+							<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+								{firstHalf.map(renderSection)}
+							</div>
+						</div>
+					</section>
+
+					<section class="bg-alternate py-20 px-4">
+						<div class="max-w-4xl mx-auto">
+							<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+								{secondHalf.map(renderSection)}
+								
+								<div class="mt-16 text-center">
+									<a href={cta_url} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest">
+										{cta_text}
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</>
+			);
+		})()}
+	</main>
+	<Footer />
+</Layout>

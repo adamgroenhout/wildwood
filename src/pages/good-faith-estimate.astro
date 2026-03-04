@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import gfeData from '../content/good-faith-estimate.json';
+
+const { title, subtitle, content, highlight_box, footer_text, footer_url } = gfeData;
+---
+
+<Layout title="Good Faith Estimate | Wildwood Psychotherapy">
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<h1 class="text-5xl font-serif mb-10 ">{title}</h1>
+				<p class="text-2xl italic mb-12 ">{subtitle}</p>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8 text-left">
+					{content.map(p => <p>{p}</p>)}
+					
+					<div class="bg-terracotta/5 p-8 border border-white/5 rounded-lg">
+						{highlight_box.map(p => <p>{p}</p>)}
+					</div>
+					
+					<p>{footer_text.split(footer_url).map((part, i, arr) => (
+						i === arr.length - 1 ? part : <span>{part}<a href={footer_url} class="underline  hover: transition-colors">{footer_url}</a></span>
+					))}</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

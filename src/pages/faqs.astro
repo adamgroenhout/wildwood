@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import faqsData from '../content/faqs.json';
+
+const { title, faqs, footer_cta_text } = faqsData;
+---
+
+<Layout title="FAQs | Wildwood Psychotherapy">
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+			</div>
+		</section>
+
+		{(() => {
+			const midPoint = Math.ceil(faqs.length / 2);
+			const firstHalf = faqs.slice(0, midPoint);
+			const secondHalf = faqs.slice(midPoint);
+
+			const renderFaqs = (faqList: typeof faqs) => (
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+					<div class="space-y-8">
+						{faqList.map(faq => (
+							<div class="bg-terracotta/5 p-8 border border-white/5 rounded-lg">
+								<h3 class="text-2xl font-serif mb-4 ">{faq.question}</h3>
+								{faq.answer && <p>{faq.answer}</p>}
+								{faq.rates && (
+									<ul class="list-none pl-0 space-y-2">
+										{faq.rates.map(rate => (
+											<li class="flex justify-between border-b border-white/10 pb-2">
+												<span>{rate.service}</span> 
+												<span class={`${rate.is_italic ? ' italic' : ' font-bold'}`}>{rate.price}</span>
+											</li>
+										))}
+									</ul>
+								)}
+							</div>
+						))}
+					</div>
+				</div>
+			);
+
+			return (
+				<>
+					<section class="bg-alternate py-20 px-4">
+						<div class="max-w-4xl mx-auto">
+							{renderFaqs(firstHalf)}
+						</div>
+					</section>
+
+					<section class="bg-alternate py-20 px-4">
+						<div class="max-w-4xl mx-auto">
+							{renderFaqs(secondHalf)}
+							
+							<div class="mt-16 text-center">
+								<a href={`${import.meta.env.BASE_URL}contact`} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest">
+									{footer_cta_text}
+								</a>
+							</div>
+						</div>
+					</section>
+				</>
+			);
+		})()}
+	</main>
+	<Footer />
+</Layout>

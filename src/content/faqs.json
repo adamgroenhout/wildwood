@@ -1,0 +1,39 @@
+{
+  "title": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "question": "What are some of the things people come to you for?",
+      "answer": "Common concerns I help with include: trauma (complex as well as single-incident), anxiety, perfectionism, relationship struggles, depression, attachment issues, low self-esteem, life transitions, and grief."
+    },
+    {
+      "question": "What does EMDRIA Certified Therapist™ mean?",
+      "answer": "Therapists can practice EMDR after basic training. Being an EMDRIA Certified Therapist™ is a designation granted to clinicians who have completed advanced training and extensive supervised practice, demonstrating a high level of expertise and commitment to EMDRIA’s rigorous standards."
+    },
+    {
+      "question": "Do you take insurance?",
+      "answer": "I am an out-of-network provider and do not bill insurance directly. Choosing to work outside of insurance protects your privacy and gives us flexibility to move at a pace that supports meaningful, trauma-informed work. I can provide a superbill for potential reimbursement."
+    },
+    {
+      "question": "What are your rates?",
+      "rates": [
+        { "service": "Individual session (50 mins)", "price": "$175" },
+        { "service": "Couples/Relationship session (50 mins)", "price": "$185" },
+        { "service": "Initial Intake (60 mins)", "price": "Same as above", "is_italic": true },
+        { "service": "Intensives", "price": "Starting at $1600", "is_italic": true }
+      ]
+    },
+    {
+      "question": "Where are you located?",
+      "answer": "My office is located in downtown Leesburg (19 Wirt Street SW) near Town Hall. We are in the same building as Shake and Bops Botanical Cafe, on the 2nd floor."
+    },
+    {
+      "question": "Do you offer virtual therapy?",
+      "answer": "Yes. I offer secure virtual therapy for clients located anywhere in Virginia. Many clients find virtual sessions to be just as effective as in-person ones."
+    },
+    {
+      "question": "What is your cancellation policy?",
+      "answer": "At least 24 hours' notice is required for cancellations. Appointments cancelled with less than 24 hours' notice will be charged the full session fee."
+    }
+  ],
+  "footer_cta_text": "Have more questions? Contact me."
+}

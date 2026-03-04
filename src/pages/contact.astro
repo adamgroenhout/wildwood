@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import contactData from '../content/contact.json';
+
+const { title, intro_title, intro_text, cta_text, cta_url, location, parking, arrival } = contactData;
+---
+
+<Layout title="Contact | Wildwood Psychotherapy">
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+				
+				<div class="prose prose-invert prose-lg max-w-none ">
+					<div class="text-center">
+						<h2 class="text-3xl font-serif mb-6 italic ">{intro_title}</h2>
+						<p>{intro_text}</p>
+						
+						<div class="mt-8">
+							<a href={cta_url} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest">{cta_text}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none  space-y-12">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 border-t border-white/10 pt-12">
+						<div class="bg-terracotta/5 p-8 border border-white/5 rounded-lg">
+							<h3 class="text-2xl font-serif mb-4 ">{location.title}</h3>
+							<p>{location.name}</p>
+							<p>{location.address_line1}</p>
+							<p>{location.address_line2}</p>
+							<p class="mt-4"><strong class="">Phone:</strong> {location.phone}</p>
+							<p><strong class="">Email:</strong> {location.email}</p>
+						</div>
+
+						<div class="bg-terracotta/5 p-8 border border-white/5 rounded-lg">
+							<h3 class="text-2xl font-serif mb-4 ">{parking.title}</h3>
+							{parking.options.map(option => (
+								<p><strong class="">{option.label}:</strong> {option.text}</p>
+							))}
+						</div>
+					</div>
+
+					<div class="bg-terracotta/10 p-8 rounded-lg border border-white/5">
+						<h3 class="text-2xl font-serif mb-4 ">{arrival.title}</h3>
+						<p>{arrival.text}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

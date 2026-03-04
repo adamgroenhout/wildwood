@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import holdingData from '../content/holding-it-together.json';
+
+const { title, subtitle, hero_section, who_for_section, program_details, footer_cta } = holdingData;
+---
+
+<Layout title="Holding It Together Group | Wildwood Psychotherapy">
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+				<p class="text-2xl text-center italic mb-12 ">{subtitle}</p>
+				
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+					<div class="bg-terracotta/5 p-8 rounded-lg text-center border border-white/5">
+						<h2 class="text-3xl font-serif mb-6 uppercase tracking-widest ">{hero_section.title}</h2>
+						<p>{hero_section.text1}</p>
+						<p>{hero_section.text2}</p>
+						<p>{hero_section.text3}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none  space-y-8">
+					<div>
+						<h2 class="text-3xl font-serif mb-6 ">{who_for_section.title}</h2>
+						<ul class="list-disc pl-6 space-y-2">
+							{who_for_section.points.map(point => (
+								<li>{point}</li>
+							))}
+						</ul>
+						<p class="mt-6 italic ">{who_for_section.footer_italic}</p>
+					</div>
+
+					<div class="mt-12">
+						<h2 class="text-3xl font-serif mb-6 ">{program_details.title}</h2>
+						<div class="bg-terracotta/5 border border-white/10 p-8 shadow-sm space-y-4">
+							<p><strong class="">Duration:</strong> {program_details.duration}</p>
+							<p><strong class="">Location:</strong> {program_details.location}</p>
+							<p><strong class="">Format:</strong> {program_details.format}</p>
+							<p><strong class="">Cohort Size:</strong> {program_details.cohort_size}</p>
+							<p><strong class="">Cost:</strong> {program_details.cost}</p>
+							
+							<div class="mt-8">
+								<h3 class="text-xl font-bold mb-4 ">{program_details.weekly_focus.title}</h3>
+								<ul class="list-none pl-0 space-y-4">
+									{program_details.weekly_focus.weeks.map((week, index) => (
+										<li class="border-l border-white/20 pl-4"><strong class="">Week {index + 1}:</strong> {week}</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-alternate py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<div class="prose prose-invert prose-lg max-w-none  text-center">
+					<h2 class="text-3xl font-serif mb-6 ">{footer_cta.title}</h2>
+					<p class="mb-10 ">{footer_cta.text}</p>
+					<div class="flex flex-col md:flex-row justify-center gap-6">
+						<a href={footer_cta.primary_button.url} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest text-center">{footer_cta.primary_button.text}</a>
+						<a href={footer_cta.secondary_button.url} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest text-center">{footer_cta.secondary_button.text}</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

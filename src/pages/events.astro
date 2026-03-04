@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import eventsData from '../content/events.json';
+
+const { title, subtitle, sections } = eventsData;
+---
+
+<Layout title="Events | Wildwood Psychotherapy">
+	<Header />
+	<main>
+		<section class="bg-alternate pt-32 pb-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+				<p class="text-2xl text-center italic mb-12 ">{subtitle}</p>
+			</div>
+		</section>
+
+		{(() => {
+			const midPoint = Math.ceil(sections.length / 2);
+			const firstHalf = sections.slice(0, midPoint);
+			const secondHalf = sections.slice(midPoint);
+
+			const renderSection = (section: any) => (
+				<div class="mb-16">
+					<h2 class="text-3xl font-serif mb-6 uppercase tracking-widest text-center ">{section.title}</h2>
+					{section.text && <p>{section.text}</p>}
+					
+					{section.highlight && (
+						<div class="bg-terracotta/5 border border-white/5 p-8 rounded-lg mt-8">
+							<h3 class="text-2xl font-serif mb-4 ">{section.highlight.title}</h3>
+							<ul class="list-none pl-0 space-y-4">
+								{section.highlight.details.map(detail => (
+									<li><strong class="">{detail.label}:</strong> {detail.text}</li>
+								))}
+							</ul>
+							<div class="mt-8 text-center">
+								<a href={section.highlight.cta_url} class="bg-terracotta  px-10 py-4 text-sm font-medium hover:bg-black hover: transition-all uppercase tracking-widest">{section.highlight.cta_text}</a>
+							</div>
+						</div>
+					)}
+
+					{section.items && section.items.map(item => (
+						<div class="border border-white/5 bg-terracotta/5 p-8 shadow-sm mt-8">
+							<h3 class="text-2xl font-serif mb-4 ">{item.name}</h3>
+							{item.location && <p><strong class="">Location:</strong> {item.location}</p>}
+							{item.cost && <p><strong class="">Cost:</strong> {item.cost}</p>}
+							<div class="mt-4 whitespace-pre-wrap">{item.text}</div>
+							{item.footer && <p class="mt-4">{item.footer}</p>}
+							{item.cta_text && (
+								<div class="mt-6 text-center">
+									<a href={item.cta_url} class="inline-block text-sm uppercase tracking-widest border-b border-white/20 pb-1 hover: transition-colors">{item.cta_text}</a>
+								</div>
+							)}
+						</div>
+					))}
+				</div>
+			);
+
+			return (
+				<>
+					<section class="bg-alternate py-20 px-4">
+						<div class="max-w-4xl mx-auto">
+							<div class="prose prose-invert prose-lg max-w-none  space-y-12">
+								{firstHalf.map(renderSection)}
+							</div>
+						</div>
+					</section>
+
+					<section class="bg-alternate py-20 px-4">
+						<div class="max-w-4xl mx-auto">
+							<div class="prose prose-invert prose-lg max-w-none  space-y-12">
+								{secondHalf.map(renderSection)}
+							</div>
+						</div>
+					</section>
+				</>
+			);
+		})()}
+	</main>
+	<Footer />
+</Layout>

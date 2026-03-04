@@ -1,0 +1,59 @@
+---
+import settings from '../content/settings.json';
+
+const base = import.meta.env.BASE_URL;
+
+const { site_name, logo, navigation } = settings;
+
+// Helper to format URLs correctly with base path
+const formatUrl = (url: string) => {
+  if (url === '#' || url.startsWith('http')) return url;
+  return `${base}${url.startsWith('/') ? url.slice(1) : url}`;
+};
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#414224]/95 backdrop-blur-sm border-b border-white/5">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between items-center h-20">
+			<div class="flex-shrink-0">
+				<a href={base} class="flex items-center gap-3 text-2xl tracking-tight uppercase font-serif text-white">
+					<img src={formatUrl(logo)} alt={`${site_name} Logo`} class="h-12 w-12 object-contain" />
+					<span>{site_name}</span>
+				</a>
+			</div>
+			<nav class="hidden lg:flex space-x-10 items-center">
+				{navigation.map(item => (
+					<div class="relative group">
+						<a href={formatUrl(item.href)} class="text-sm font-medium text-white/70 hover:text-white transition-colors">
+							{item.name}
+							{item.subItems && (
+								<svg class="ml-1 w-3 h-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							)}
+						</a>
+						{item.subItems && (
+							<div class="absolute left-0 mt-2 w-56 bg-[#414224] border border-white/5 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+								{item.subItems.map(subItem => (
+									<a href={formatUrl(subItem.href)} class="block px-4 py-3 text-sm text-white/70 hover:bg-white/5 hover:text-white">
+										{subItem.name}
+									</a>
+								))}
+							</div>
+						)}
+					</div>
+				))}
+				<a href={`${base}contact`} class="inline-flex items-center px-6 py-2 border border-white/20 text-sm font-medium text-white hover:bg-white hover:text-[#414224] transition-all">
+					Contact
+				</a>
+			</nav>
+			<div class="lg:hidden flex items-center">
+				<button type="button" class="text-white/70 hover:text-white" aria-label="Toggle menu">
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
