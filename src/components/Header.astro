@@ -21,6 +21,8 @@ const formatUrl = (url: string) => {
 					<span>{site_name}</span>
 				</a>
 			</div>
+			
+			<!-- Desktop Navigation -->
 			<nav class="hidden lg:flex space-x-10 items-center">
 				{navigation.map(item => (
 					<div class="relative group">
@@ -47,13 +49,88 @@ const formatUrl = (url: string) => {
 					Contact
 				</a>
 			</nav>
+
+			<!-- Mobile Menu Button -->
 			<div class="lg:hidden flex items-center">
-				<button type="button" class="text-white/70 hover:text-white" aria-label="Toggle menu">
-					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<button id="mobile-menu-button" type="button" class="text-white/70 hover:text-white p-2" aria-label="Toggle menu">
+					<svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
+					</svg>
+					<svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</button>
 			</div>
 		</div>
 	</div>
+
+	<!-- Mobile Navigation Drawer -->
+	<div id="mobile-menu" class="hidden lg:hidden bg-[#414224] border-t border-white/5 px-4 pt-2 pb-6 space-y-1 shadow-2xl">
+		{navigation.map(item => (
+			<div>
+				<div class="flex items-center justify-between">
+					<a href={formatUrl(item.href)} class="block px-3 py-4 text-base font-medium text-white/70 hover:text-white">
+						{item.name}
+					</a>
+					{item.subItems && (
+						<button class="mobile-submenu-toggle p-3 text-white/40">
+							<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+							</svg>
+						</button>
+					)}
+				</div>
+				{item.subItems && (
+					<div class="hidden pl-6 space-y-1 bg-black/10 rounded-lg mb-2">
+						{item.subItems.map(subItem => (
+							<a href={formatUrl(subItem.href)} class="block px-3 py-3 text-sm text-white/60 hover:text-white">
+								{subItem.name}
+							</a>
+						))}
+					</div>
+				)}
+			</div>
+		))}
+		<div class="pt-4">
+			<a href={`${base}contact`} class="block text-center px-6 py-3 border border-white/20 text-base font-medium text-white hover:bg-white hover:text-[#414224] transition-all">
+				Contact
+			</a>
+		</div>
+	</div>
 </header>
+
+<script>
+	const button = document.getElementById('mobile-menu-button');
+	const menu = document.getElementById('mobile-menu');
+	const menuIcon = document.getElementById('menu-icon');
+	const closeIcon = document.getElementById('close-icon');
+
+	if (button && menu && menuIcon && closeIcon) {
+		button.addEventListener('click', () => {
+			const isExpanded = !menu.classList.contains('hidden');
+			
+			if (isExpanded) {
+				menu.classList.add('hidden');
+				menuIcon.classList.remove('hidden');
+				closeIcon.classList.add('hidden');
+			} else {
+				menu.classList.remove('hidden');
+				menuIcon.classList.add('hidden');
+				closeIcon.classList.remove('hidden');
+			}
+		});
+	}
+
+	// Submenu toggles for mobile
+	const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+	submenuToggles.forEach(toggle => {
+		toggle.addEventListener('click', () => {
+			const submenu = toggle.parentElement?.nextElementSibling;
+			const icon = toggle.querySelector('svg');
+			if (submenu && icon) {
+				submenu.classList.toggle('hidden');
+				icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+			}
+		});
+	});
+</script>
