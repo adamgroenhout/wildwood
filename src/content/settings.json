@@ -11,26 +11,53 @@
     "consultation_url": "https://wildwoodpsychotherapy.clientsecure.me/"
   },
   "navigation": [
-    { "name": "About", "href": "/about" },
-    { 
-      "name": "Specialties", 
-      "href": "#", 
+    {
+      "name": "ABOUT",
+      "href": "/about"
+    },
+    {
+      "name": "SPECIALTIES",
+      "href": "#",
       "subItems": [
-        { "name": "Anxiety & Perfectionism", "href": "/anxiety-and-perfectionism" },
-        { "name": "Relationships", "href": "/relationships" },
-        { "name": "Trauma + EMDR", "href": "/trauma-and-emdr" }
+        {
+          "name": "Anxiety & Perfectionism",
+          "href": "/anxiety-and-perfectionism"
+        },
+        {
+          "name": "Relationships",
+          "href": "/relationships"
+        },
+        {
+          "name": "Trauma + EMDR",
+          "href": "/trauma-and-emdr"
+        }
       ]
     },
-    { 
-      "name": "Therapy Options", 
-      "href": "#", 
+    {
+      "name": "THERAPY OPTIONS",
+      "href": "#",
       "subItems": [
-        { "name": "Intensives", "href": "/intensives" },
-        { "name": "Group Therapy", "href": "/group-therapy" },
-        { "name": "Telehealth", "href": "/telehealth" }
+        {
+          "name": "INTENSIVES",
+          "href": "/intensives"
+        },
+        {
+          "name": "GROUP THERAPY",
+          "href": "/group-therapy"
+        },
+        {
+          "name": "TELEHEALTH",
+          "href": "/telehealth"
+        }
       ]
     },
-    { "name": "Events", "href": "/events" },
-    { "name": "FAQs", "href": "/faqs" }
+    {
+      "name": "EVENTS",
+      "href": "/events"
+    },
+    {
+      "name": "FAQS",
+      "href": "/faqs"
+    }
   ]
 }
