@@ -37,7 +37,7 @@ const { site_name, logo, navigation, header_cta_text, header_cta_href } = settin
 							)}
 						</a>
 						{item.subItems && (
-							<div class="absolute left-0 mt-2 w-56 bg-olive border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-1 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto">
+							<div class="absolute left-0 mt-2 w-56 bg-olive border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-1 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2">
 								{item.subItems.map(subItem => (
 									<a href={formatUrl(subItem.href)} class="block px-4 py-3 eyebrow text-white/70 hover:bg-white/5 hover:text-white transition-colors">
 										{subItem.name}

@@ -161,30 +161,30 @@
   }
 
   /* Typography Logic */
-  .bg-alternate:not(.h-screen) :is(h1, h2, h3, h4, h5, h6) {
+  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(h1, h2, h3, h4, h5, h6) {
     color: var(--color-olive) !important; /* Dark Olive Headings */
   }
 
-  .bg-alternate:not(.h-screen) :is(p, li, span, div, strong, em, a:not(.bg-terracotta)) {
+  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(p, li, span, div, strong, em, a:not(.bg-terracotta)) {
     color: var(--color-charcoal) !important; /* Charcoal Body Text */
   }
 
   /* Muted text for the new palette */
-  .bg-alternate:not(.h-screen) :is(.text-white\/70, .text-white\/80, .text-white\/90) {
+  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.text-white\/70, .text-white\/80, .text-white\/90) {
     color: color-mix(in srgb, var(--color-charcoal) 80%, transparent) !important;
   }
 
-  .bg-alternate:not(.h-screen) :is(.text-white\/50, .text-white\/60) {
+  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.text-white\/50, .text-white\/60) {
     color: color-mix(in srgb, var(--color-charcoal) 60%, transparent) !important;
   }
 
   /* Border color overrides - using Taupe for subtle separation */
-  .bg-alternate:not(.h-screen) :is(.border-white\/5, .border-white\/10, .border-white\/20, .border-white\/40) {
+  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.border-white\/5, .border-white\/10, .border-white\/20, .border-white\/40) {
     border-color: color-mix(in srgb, var(--color-taupe) 60%, transparent) !important;
   }
 
   /* Highlight boxes - using Sand for depth */
-  .bg-alternate:not(.h-screen) :is(.bg-white\/5, .bg-white\/10) {
+  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.bg-white\/5, .bg-white\/10) {
     background-color: color-mix(in srgb, var(--color-sand) 50%, transparent) !important;
     border: 1px solid color-mix(in srgb, var(--color-taupe) 30%, transparent) !important;
   }

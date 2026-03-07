@@ -59,7 +59,7 @@ const {
 <Layout title={seo_title}>
 	<main>
 		{/* Hero Section */}
-		<Section theme="alternate" padding="hero" class="relative h-screen flex flex-col justify-center items-center overflow-hidden">
+		<Section theme="alternate" padding="hero" class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pb-24 md:pb-32">
 			<div class="absolute inset-0 z-0">
 				{hero_image && (
 					<Image 
@@ -77,16 +77,16 @@ const {
 				<p class="eyebrow text-center mb-8 animate-[fadeInUp_0.8s_ease-out_forwards] text-white/90">
 					{hero_subtitle}
 				</p>
-				<h1 class="display-serif mb-10 text-balance animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
+				<h1 class="display-serif mb-6 text-balance animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
 					{hero_title?.split('*').map((part: string, i: number) => i % 2 === 1 ? <em class="italic">{part}</em> : part)}
 				</h1>
 				
-				<div class="flex flex-col items-center gap-10 mt-10 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+				<div class="flex flex-col items-center gap-8 mt-6 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
 					<Button href={cta_url || '#'} theme="terracotta">
 						{cta_text}
 					</Button>
 					
-					<div class="flex flex-wrap justify-center gap-4 mt-4">
+					<div class="flex flex-wrap justify-center gap-4">
 						{specialties?.map((spec: any) => (
 							<a href={formatUrl(spec.url)} class="border border-white/40 px-6 py-2 text-sm hover:border-white transition-all duration-300 hover:bg-white/5 active:scale-95">
 								{spec.name}
@@ -274,7 +274,7 @@ const {
 		</Section>
 
 		{/* Section 9: Final CTA Section */}
-		<section class="flex flex-col md:flex-row min-h-[600px]">
+		<Section theme="none" padding="none" class="flex flex-col md:flex-row min-h-[600px]">
 			<div class="w-full md:w-1/2 bg-alternate flex items-center justify-center p-0">
 				{hero_image && (
 					<Image 
@@ -298,7 +298,7 @@ const {
 					</Button>
 				</div>
 			</div>
-		</section>
+		</Section>
 
 		<BackToTop />
 	</main>

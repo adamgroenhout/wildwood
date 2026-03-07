@@ -1,6 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
 import { marked } from 'marked';
 
 const privacyEntry = await getEntry('pages', 'privacy');
@@ -9,11 +10,11 @@ const { title, content } = privacyEntry?.data || {};
 
 <Layout title="Privacy Policy | Wildwood Psychotherapy">
 	<main>
-		<section class="bg-alternate pt-32 pb-20 px-4">
+		<Section theme="alternate" padding="hero" class="pb-20 px-4">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="text-5xl font-serif mb-10 text-center ">{title}</h1>
+				<h1 class="display-serif mb-16 text-center">{title}</h1>
 				<div class="prose prose-invert prose-lg max-w-none " set:html={marked.parse(content || '')} />
 			</div>
-		</section>
+		</Section>
 	</main>
 </Layout>

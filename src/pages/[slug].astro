@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const serviceEntries = await getCollection('services');
@@ -18,12 +20,12 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 
 <Layout title={seo_title}>
 	<main>
-		<section class="bg-alternate pt-32 pb-10 px-4">
+		<Section theme="alternate" padding="hero" class="pb-10 px-4">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-10 text-center text-balance">{title}</h1>
+				<h1 class="display-serif mb-16 text-center text-balance">{title}</h1>
 				{subtitle && <p class="subtitle-serif text-center mb-12 text-balance">{subtitle}</p>}
 			</div>
-		</section>
+		</Section>
 		
 		{/* Split sections into two groups to force a background color change halfway through */}
 		{(() => {
@@ -34,7 +36,7 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 			const renderSection = (section: any) => {
 				if (section.type === 'text') {
 					return (
-						<div class={`mb-12 ${section.style === 'highlighted' ? "bg-white/5 p-8 border border-white/10" : ""}`}>
+						<div class={`mb-12 ${section.style === 'highlighted' ? "bg-white/5 p-8 border border-white/10 rounded-lg" : ""}`}>
 							{section.title && <h2 class="h1-serif mb-6 text-balance">{section.title}</h2>}
 							<div class="space-y-4" set:html={marked(section.body)} />
 						</div>
@@ -56,27 +58,27 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 
 			return (
 				<>
-					<section class="bg-alternate py-20 px-4">
+					<Section theme="alternate">
 						<div class="max-w-4xl mx-auto">
 							<div class="prose prose-invert body-lg max-w-none  space-y-8">
 								{firstHalf.map(renderSection)}
 							</div>
 						</div>
-					</section>
+					</Section>
 
-					<section class="bg-alternate py-20 px-4">
+					<Section theme="alternate">
 						<div class="max-w-4xl mx-auto">
 							<div class="prose prose-invert body-lg max-w-none  space-y-8">
 								{secondHalf.map(renderSection)}
 								
-								<div class="mt-16 text-center">
-									<a href={cta_url} class="bg-terracotta inline-block px-6 md:px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all text-center">
+								<div class="mt-16 text-center border-t border-black/5 pt-16">
+									<Button href={cta_url} theme="terracotta">
 										{cta_text}
-									</a>
+									</Button>
 								</div>
 							</div>
 						</div>
-					</section>
+					</Section>
 				</>
 			);
 		})()}

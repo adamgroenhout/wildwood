@@ -1,6 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 import BackToTop from '../components/BackToTop.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
@@ -15,12 +17,14 @@ const cleanDescription = meta_description?.replace(/[#*`]/g, '') || "Frequently 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqs?.filter((f: any) => f.question && f.answer).map((faq: any) => ({
+  "mainEntity": faqs?.filter((f: any) => f.question && (f.answer || f.rates)).map((faq: any) => ({
     "@type": "Question",
     "name": faq.question,
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": faq.answer?.replace(/[#*`]/g, '') // Schema should be plain text
+      "text": faq.answer 
+        ? faq.answer.replace(/[#*`]/g, '') 
+        : faq.rates.map((r: any) => `${r.service}: ${r.price}`).join(', ')
     }
   }))
 };
@@ -31,11 +35,11 @@ const faqSchema = {
 	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 	<main>
-		<section class="bg-alternate pt-48 pb-20 px-4">
+		<Section theme="alternate" padding="hero" class="pb-20 px-4">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-10 text-center ">{title}</h1>
+				<h1 class="display-serif mb-16 text-center ">{title}</h1>
 			</div>
-		</section>
+		</Section>
 
 		{(() => {
 			const midPoint = Math.ceil((faqs?.length || 0) / 2);
@@ -43,26 +47,23 @@ const faqSchema = {
 			const secondHalf = faqs?.slice(midPoint) || [];
 
 			const renderFaqs = (faqList: any[]) => (
-				<div class="prose prose-invert body-lg max-w-none  space-y-8">
+				<div class="prose prose-invert body-lg max-w-none space-y-8">
 					<div class="space-y-8">
 						{faqList.map(faq => (
-							<div class="bg-terracotta/5 p-8 border border-white/5 rounded-lg">
+							<div class="bg-white/5 p-8 border border-white/10 rounded-lg">
 								<h3 class="h2-serif mb-4 ">{faq.question}</h3>
-								
-								{faq.answer && (
-									<div class="prose prose-invert text-white/80 max-w-none" set:html={marked.parse(faq.answer || '')} />
-								)}
-
-								{faq.rates && (
-									<ul class="list-none pl-0 space-y-2 mt-4">
+								{faq.answer ? (
+									<div class="opacity-80" set:html={marked.parse(faq.answer)} />
+								) : faq.rates ? (
+									<div class="space-y-4 pt-2">
 										{faq.rates.map((rate: any) => (
-											<li class="flex justify-between border-b border-white/10 pb-2">
-												<span set:html={rate.service} /> 
-												<span class={`${rate.is_italic ? ' italic' : ' font-bold'}`}>{rate.price}</span>
-											</li>
+											<div class="flex justify-between items-baseline gap-4 border-b border-white/5 pb-2 last:border-0">
+												<span class={`text-sm md:text-base ${rate.is_italic ? 'italic opacity-90' : 'font-medium'}`} set:html={rate.service} />
+												<span class="text-terracotta font-serif whitespace-nowrap">{rate.price}</span>
+											</div>
 										))}
-									</ul>
-								)}
+									</div>
+								) : null}
 							</div>
 						))}
 					</div>
@@ -71,30 +72,30 @@ const faqSchema = {
 
 			return (
 				<>
-					<section class="bg-alternate py-20 px-4">
+					<Section theme="alternate">
 						<div class="max-w-4xl mx-auto">
 							{renderFaqs(firstHalf)}
 						</div>
-					</section>
+					</Section>
 
-					<section class="bg-alternate py-20 px-4">
-						<div class="max-w-4xl mx-auto text-center">
+					<Section theme="alternate">
+						<div class="max-w-4xl mx-auto">
 							{renderFaqs(secondHalf)}
 							
-							<div class="mt-20 pt-20 border-t border-white/10 text-center space-y-8">
-								<h2 class="h1-serif italic text-balance">{footer_cta_text}</h2>
-								<div class="pt-4">
-									<a href={formatUrl(footer_cta_url)} class="bg-terracotta inline-block px-6 md:px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all text-center">
+							<div class="mt-20 text-center border-t border-black/5 pt-20">
+								<div class="max-w-2xl mx-auto space-y-10">
+									<h2 class="h1-serif italic">{footer_cta_text}</h2>
+									<Button href={footer_cta_url} theme="terracotta">
 										{footer_cta_button_text}
-									</a>
+									</Button>
 								</div>
 							</div>
-
 						</div>
-					</section>
+					</Section>
 				</>
 			);
 		})()}
+
 		<BackToTop />
 	</main>
 </Layout>
