@@ -8,14 +8,14 @@ interface Props {
 const { images } = Astro.props;
 ---
 
-<div class="carousel-container relative overflow-hidden rounded-lg border border-white/5 bg-terracotta/5 shadow-lg group">
+<div class="carousel-container relative overflow-hidden rounded-brand border border-current/10 bg-current/5 shadow-lg group">
   <div class="carousel-track flex transition-transform duration-500 ease-in-out">
     {images.map((img, index) => (
       <div class="carousel-slide min-w-full aspect-video flex items-center justify-center">
         {img ? (
           <Image src={img} alt={`Studio image ${index + 1}`} width={800} height={450} class="w-full h-full object-cover" />
         ) : (
-          <div class="w-full h-full bg-stone-800 flex items-center justify-center text-stone-500 italic">
+          <div class="w-full h-full bg-current/10 flex items-center justify-center opacity-50 italic">
             Placeholder for Image {index + 1}
           </div>
         )}
@@ -27,13 +27,13 @@ const { images } = Astro.props;
   {images.length > 1 && (
     <>
       <button 
-        class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
+        class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-paper p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
         aria-label="Previous slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
       </button>
       <button 
-        class="next-btn absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
+        class="next-btn absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-paper p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
         aria-label="Next slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
@@ -43,7 +43,7 @@ const { images } = Astro.props;
       <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {images.map((_, index) => (
           <button 
-            class={`carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/60 transition-colors ${index === 0 ? 'bg-white' : ''}`}
+            class={`carousel-dot w-2 h-2 rounded-full bg-current/30 hover:bg-current/60 transition-colors ${index === 0 ? 'bg-current' : ''}`}
             data-index={index}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -68,14 +68,15 @@ const { images } = Astro.props;
       const totalSlides = slides.length;
 
       function updateCarousel() {
+        if (!track) return;
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
         dots.forEach((dot, idx) => {
           if (idx === currentIndex) {
-            dot.classList.add('bg-white');
-            dot.classList.remove('bg-white/30');
+            dot.classList.add('bg-current');
+            dot.classList.remove('opacity-30');
           } else {
-            dot.classList.remove('bg-white');
-            dot.classList.add('bg-white/30');
+            dot.classList.remove('bg-current');
+            dot.classList.add('opacity-30');
           }
         });
       }
@@ -99,11 +100,6 @@ const { images } = Astro.props;
           updateCarousel();
         });
       });
-
-      // Optional: Auto-play
-      // let interval = setInterval(nextSlide, 5000);
-      // container.addEventListener('mouseenter', () => clearInterval(interval));
-      // container.addEventListener('mouseleave', () => interval = setInterval(nextSlide, 5000));
     });
   }
 

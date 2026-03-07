@@ -2,98 +2,101 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import Button from '../components/Button.astro';
+import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
-const holdingEntry = await getEntry('pages', 'holding-it-together');
-const { title, subtitle, hero_section, who_for_section, program_details, footer_cta } = holdingEntry?.data || {};
+const hitEntry = await getEntry('pages', 'holding-it-together');
+const { 
+  title, 
+  subtitle, 
+  hero_section,
+  who_for_section,
+  program_details,
+  footer_cta
+} = hitEntry?.data || {};
 ---
 
-<Layout title="Holding It Together Group | Wildwood Psychotherapy">
+<Layout title="Holding It Together | Wildwood Psychotherapy">
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="display-serif mb-16">{title}</h1>
-				<p class="subtitle-serif text-center mb-12">{subtitle}</p>
-				
-				<div class="prose prose-invert body-lg max-w-none space-y-8">
-					<div class="bg-white/5 p-8 border border-white/10 rounded-lg text-center">
-						<h2 class="eyebrow mb-6 text-terracotta">{hero_section?.title}</h2>
-						<p>{hero_section?.text1}</p>
-						<p>{hero_section?.text2}</p>
-						<p>{hero_section?.text3}</p>
-					</div>
-				</div>
+		<Section theme="alternate" padding="hero" class="text-center">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="display-serif mb-10">{title}</h1>
+				{subtitle && <p class="subtitle-serif mt-8 opacity-80 text-center">{subtitle}</p>}
 			</div>
 		</Section>
 
 		<Section theme="alternate">
-			<div class="max-w-4xl mx-auto">
-				<div class="grid md:grid-cols-2 gap-12 items-start mb-20">
-					<div class="space-y-6">
-						<h2 class="h1-serif">{who_for_section?.title}</h2>
-						<p class="body-lg opacity-80 italic">{who_for_section?.footer_italic}</p>
-					</div>
-					<div class="bg-white/5 border border-white/10 p-8 shadow-sm rounded-lg">
-						<ul class="space-y-3 list-none pl-0">
-							{who_for_section?.points?.map((item: string) => (
-								<li class="flex gap-3">
-									<span class="text-terracotta">•</span>
-									<span class="opacity-80">{item}</span>
-								</li>
-							))}
-						</ul>
+			<div class="max-w-4xl mx-auto space-y-24">
+        {/* Intro Section */}
+				<div class="prose body-lg max-w-none space-y-12">
+					<div class="bg-current/5 p-8 border border-current/10 rounded-brand text-center">
+						<h2 class="h2-serif italic mb-6">{hero_section?.title}</h2>
+						<div class="max-w-2xl mx-auto space-y-6 opacity-90">
+              <div set:html={marked.parse(hero_section?.text1 || '')} />
+              <div set:html={marked.parse(hero_section?.text2 || '')} />
+              <div set:html={marked.parse(hero_section?.text3 || '')} />
+            </div>
 					</div>
 				</div>
 
-				<div class="space-y-12 mb-20">
-					<h2 class="h1-serif text-center">{program_details?.title}</h2>
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						{[
-							{ label: 'Duration', value: program_details?.duration },
-							{ label: 'Location', value: program_details?.location },
-							{ label: 'Format', value: program_details?.format },
-							{ label: 'Cohort Size', value: program_details?.cohort_size },
-							{ label: 'Cost', value: program_details?.cost }
-						].filter(item => item.value).map(item => (
-							<div class="bg-white/5 p-6 border border-white/5 rounded-lg text-center">
-								<p class="eyebrow text-[10px] opacity-60 mb-2">{item.label}</p>
-								<p class="text-base font-medium">{item.value}</p>
-							</div>
-						))}
-					</div>
+        {/* Who For Section */}
+        <div class="space-y-12">
+          <h2 class="h1-serif text-center">{who_for_section?.title}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {who_for_section?.points?.map((point: string) => (
+              <div class="bg-current/5 border border-current/10 p-8 rounded-brand shadow-sm">
+                <p class="opacity-90">{point}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-center italic opacity-70">{who_for_section?.footer_italic}</p>
+        </div>
 
-					{program_details?.weekly_focus && (
-						<div class="bg-white/5 p-10 border border-white/10 rounded-lg max-w-3xl mx-auto">
-							<h3 class="h2-serif mb-8 text-center">{program_details.weekly_focus.title}</h3>
-							<div class="grid gap-4">
-								{program_details.weekly_focus.weeks.map((week: string, i: number) => (
-									<div class="flex gap-6 items-baseline border-b border-white/5 pb-3 last:border-0">
-										<span class="font-serif italic text-terracotta opacity-60">Week {i + 1}</span>
-										<span class="opacity-90">{week}</span>
-									</div>
-								))}
-							</div>
-						</div>
-					)}
-				</div>
+        {/* Program Details */}
+        <div class="space-y-12 pt-12 border-t border-current/10">
+          <h2 class="h1-serif text-center">{program_details?.title}</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-current/5 p-6 border border-current/5 rounded-brand text-center">
+              <p class="eyebrow mb-2">Duration</p>
+              <p class="h3-serif">{program_details?.duration}</p>
+            </div>
+            <div class="bg-current/5 p-6 border border-current/5 rounded-brand text-center">
+              <p class="eyebrow mb-2">Format</p>
+              <p class="h3-serif">{program_details?.format}</p>
+            </div>
+            <div class="bg-current/5 p-6 border border-current/5 rounded-brand text-center">
+              <p class="eyebrow mb-2">Location</p>
+              <p class="h3-serif">{program_details?.location}</p>
+            </div>
+          </div>
 
-				<div class="text-center space-y-10 border-t border-black/5 pt-20">
-					<div class="space-y-4">
-						<h2 class="h1-serif italic">{footer_cta?.title}</h2>
-						<p class="opacity-80">{footer_cta?.text}</p>
-					</div>
-					<div class="flex flex-col sm:flex-row justify-center gap-6">
-						<Button href={footer_cta?.primary_button?.url} theme="terracotta">
-							{footer_cta?.primary_button?.text}
-						</Button>
-						{footer_cta?.secondary_button && (
-							<Button href={footer_cta?.secondary_button?.url} theme="terracotta">
-								{footer_cta?.secondary_button?.text}
-							</Button>
-						)}
-					</div>
-				</div>
+          <div class="bg-current/5 p-10 border border-current/10 rounded-brand max-w-3xl mx-auto">
+            <h3 class="eyebrow mb-8 text-center">{program_details?.weekly_focus?.title}</h3>
+            <div class="space-y-4 text-left max-w-md mx-auto">
+              {program_details?.weekly_focus?.weeks?.map((week: string, index: number) => (
+                <div class="flex gap-6 items-baseline border-b border-current/5 pb-3 last:border-0">
+                  <span class="h3-serif italic opacity-40">Week {index + 1}</span>
+                  <span class="opacity-90">{week}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer CTA */}
+        <div class="text-center space-y-12 pt-12">
+          <h2 class="display-serif italic text-center">{footer_cta?.title}</h2>
+          <p class="max-w-2xl mx-auto opacity-90">{footer_cta?.text}</p>
+          <div class="flex flex-wrap justify-center gap-6 pt-4">
+            <a href={formatUrl(footer_cta?.primary_button?.url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+              {footer_cta?.primary_button?.text}
+            </a>
+            <a href={formatUrl(footer_cta?.secondary_button?.url || '#')} class="border border-olive text-olive px-10 py-4 eyebrow hover:bg-olive hover:text-paper transition-all rounded-brand inline-block">
+              {footer_cta?.secondary_button?.text}
+            </a>
+          </div>
+        </div>
 			</div>
 		</Section>
 	</main>

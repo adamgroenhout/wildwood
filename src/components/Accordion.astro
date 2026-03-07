@@ -26,12 +26,12 @@ const titleClasses = theme === 'large'
 
 <div class:list={['space-y-4', className]}>
   {items.map((item) => (
-    <details class="group border-b border-white/10 last:border-0 pb-4">
+    <details class="group border-b border-current/10 last:border-0 pb-4">
       <summary class:list={['flex justify-between items-center cursor-pointer list-none', titleClasses]}>
         <span>{item.title}</span>
         <span class="text-3xl transition-transform group-open:rotate-45 block leading-none">+</span>
       </summary>
-      <div class="pt-4 pb-6 prose prose-invert prose-lg max-w-none">
+      <div class="pt-4 pb-6 prose prose-lg max-w-none group-open:animate-fade-in">
         {item.content && <div set:html={marked.parse(item.content)} />}
         {item.items && (
           <ul class="list-disc pl-6 space-y-2">
@@ -44,3 +44,13 @@ const titleClasses = theme === 'large'
     </details>
   ))}
 </div>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+</style>

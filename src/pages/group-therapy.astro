@@ -2,79 +2,82 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import Button from '../components/Button.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
 const groupEntry = await getEntry('pages', 'group-therapy');
-const { title, subtitle, intro, benefits_section, featured_group, is_right_section, cta_text, cta_url } = groupEntry?.data || {};
+const { 
+  title, 
+  seo_title, 
+  subtitle, 
+  intro,
+  benefits_section,
+  featured_group,
+  is_right_section,
+  cta_text, 
+  cta_url 
+} = groupEntry?.data || {};
 ---
 
-<Layout title="Group Therapy | Wildwood Psychotherapy">
+<Layout title={seo_title}>
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4">
+		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-16 text-center">{title}</h1>
-				<p class="subtitle-serif text-center mb-12">{subtitle}</p>
-				
-				<div class="prose prose-invert body-lg max-w-none space-y-8">
-					<div class="mb-12">
-						<h2 class="h1-serif mb-6 ">{intro?.title}</h2>
-						<p>{intro?.text1}</p>
-						<p class="subtitle-serif text-xl text-center italic">{intro?.quote}</p>
-					</div>
-				</div>
+				<h1 class="display-serif text-balance">{title}</h1>
+				{subtitle && <p class="subtitle-serif opacity-80 text-balance mx-auto max-w-2xl text-center mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)]">{subtitle}</p>}
 			</div>
 		</Section>
 
 		<Section theme="alternate">
 			<div class="max-w-4xl mx-auto">
-				<div class="space-y-12 mb-20">
-					<h2 class="h1-serif text-center">{benefits_section?.title}</h2>
-					<div class="grid md:grid-cols-3 gap-8">
-						{benefits_section?.benefits?.map((benefit: any) => (
-							<div class="bg-white/5 p-8 border border-white/10 rounded-lg space-y-4">
-								<h3 class="h3-serif text-terracotta">{benefit.title}</h3>
-								<p class="text-sm opacity-80 leading-relaxed">{benefit.text}</p>
-							</div>
-						))}
-					</div>
+        {/* Intro */}
+				<div class="text-center space-y-10 mb-24">
+					<h2 class="h1-serif text-balance">{intro?.title}</h2>
+					<div class="prose body-lg max-w-2xl mx-auto text-center">
+            <p>{intro?.text1}</p>
+            <p class="subtitle-serif italic opacity-90 mt-8">"{intro?.quote}"</p>
+          </div>
 				</div>
 
-				<div class="bg-white/10 p-12 rounded-lg text-center border border-white/5 mb-20 shadow-2xl">
-					<h2 class="h1-serif mb-4">{featured_group?.title}</h2>
-					<p class="subtitle-serif mb-8 italic">{featured_group?.subtitle}</p>
-					<p class="max-w-2xl mx-auto mb-10 opacity-90 body-lg">{featured_group?.text}</p>
-					<Button href={featured_group?.cta_url} theme="terracotta">
-						{featured_group?.cta_text}
-					</Button>
+        {/* Benefits Grid */}
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-16">
+					{benefits_section?.benefits?.map((item: any) => (
+						<div class="bg-current/5 p-8 border border-current/10 rounded-brand space-y-4 shadow-sm">
+							<h3 class="h3-serif italic">{item.title}</h3>
+							<p class="text-sm opacity-90">{item.text}</p>
+						</div>
+					))}
 				</div>
 
-				<div class="grid md:grid-cols-2 gap-12 items-start mb-20">
-					<div class="bg-white/5 p-8 border border-white/10 rounded-lg">
-						<h2 class="h1-serif mb-6">{is_right_section?.title}</h2>
-						<p class="opacity-90 leading-relaxed">{is_right_section?.text}</p>
+        {/* Featured Group Callout */}
+				<div class="mt-24 pt-24 text-center space-y-12">
+					<div class="bg-current/5 p-12 rounded-brand text-center border border-current/10 mb-20 shadow-xl">
+						<h2 class="display-serif italic mb-2 text-balance">{featured_group?.title}</h2>
+            <p class="eyebrow mb-6 opacity-70">{featured_group?.subtitle}</p>
+            <div class="prose body-lg max-w-2xl mx-auto mb-8 text-center" set:html={marked.parse(featured_group?.text || '')} />
+						<div class="pt-4">
+							<a href={formatUrl(featured_group?.cta_url || '#')} class="border border-olive text-olive px-8 py-3 eyebrow hover:bg-olive hover:text-paper transition-all rounded-brand inline-block">
+								{featured_group?.cta_text}
+							</a>
+						</div>
 					</div>
-					<div class="space-y-4">
-						<h3 class="eyebrow text-terracotta">Common concerns include:</h3>
-						<ul class="space-y-3 list-none pl-0">
-							{is_right_section?.points?.map((item: string) => (
-								<li class="flex gap-3">
-									<span class="text-terracotta opacity-40 italic">?</span>
-									<span class="opacity-80">{item}</span>
-								</li>
-							))}
-						</ul>
-					</div>
-				</div>
 
-				<div class="text-center space-y-10 border-t border-black/5 pt-20">
-					<div class="max-w-2xl mx-auto space-y-8">
-						<h2 class="h1-serif italic">Ready to join a group?</h2>
-						<Button href={cta_url} theme="terracotta">
-							{cta_text}
-						</Button>
+          {/* Is it right? */}
+					<div class="max-w-3xl mx-auto space-y-8">
+						<h3 class="h2-serif italic">{is_right_section?.title}</h3>
+						<p class="opacity-90">{is_right_section?.text}</p>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left list-none pl-0">
+              {is_right_section?.points?.map((point: string) => (
+                <li class="border-l-4 border-terracotta/40 pl-4 py-2">{point}</li>
+              ))}
+            </ul>
 					</div>
+
+          <div class="pt-16">
+            <a href={formatUrl(cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+              {cta_text}
+            </a>
+          </div>
 				</div>
 			</div>
 		</Section>

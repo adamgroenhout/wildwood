@@ -5,16 +5,21 @@ import Section from '../components/Section.astro';
 import { marked } from 'marked';
 
 const privacyEntry = await getEntry('pages', 'privacy');
-const { title, content } = privacyEntry?.data || {};
+const { content } = privacyEntry?.data || {};
 ---
 
 <Layout title="Privacy Policy | Wildwood Psychotherapy">
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4">
+		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-16 text-center">{title}</h1>
-				<div class="prose prose-invert prose-lg max-w-none " set:html={marked.parse(content || '')} />
+				<h1 class="display-serif">Privacy Policy</h1>
 			</div>
 		</Section>
+
+    <Section theme="alternate">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none " set:html={marked.parse(content || '')} />
+      </div>
+    </Section>
 	</main>
 </Layout>

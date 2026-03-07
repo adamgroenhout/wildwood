@@ -15,16 +15,20 @@ const carouselImages = studio_images?.map((item: any) => formatUrl(item.image)) 
 
 <Layout title="Contact | Wildwood Psychotherapy">
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4">
+		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-10 text-center">{title}</h1>
-				
-				<div class="prose prose-invert body-lg max-w-none">
+				<h1 class="display-serif text-balance">{title}</h1>
+			</div>
+		</Section>
+
+		<Section theme="alternate">
+			<div class="max-w-4xl mx-auto">
+				<div class="body-lg max-w-none">
 					<div class="text-center">
-						<h2 class="h1-serif mb-6 italic">{intro_title}</h2>
-						<div class="prose prose-invert mx-auto" set:html={marked.parse(intro_text || '')} />
+						<h2 class="h1-serif mb-6 italic text-center">{intro_title}</h2>
+						<div class="prose mx-auto text-left" set:html={marked.parse(intro_text || '')} />
 						
-						<div class="mt-8">
+						<div class="mt-8 text-center">
 							<Button href={cta_url} theme="terracotta">
 								{cta_text}
 							</Button>
@@ -36,9 +40,9 @@ const carouselImages = studio_images?.map((item: any) => formatUrl(item.image)) 
 
 		<Section theme="alternate">
 			<div class="max-w-4xl mx-auto">
-				<div class="prose prose-invert body-lg max-w-none space-y-12">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 border-t border-white/10 pt-12">
-						<div class="bg-white/5 p-8 border border-white/10 rounded-lg">
+				<div class="body-lg max-w-none space-y-12">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 border-t border-current/10 pt-12">
+						<div class="bg-current/5 p-8 border border-current/10 rounded-brand">
 							<h3 class="h2-serif mb-4 ">{location?.title || 'Location'}</h3>
 							<p>{location?.name}</p>
 							<p>{location?.address_line1}</p>
@@ -47,7 +51,7 @@ const carouselImages = studio_images?.map((item: any) => formatUrl(item.image)) 
 							<p><strong class="">Email:</strong> <a href={`mailto:${location?.email}`} class="hover:text-terracotta transition-colors">{location?.email}</a></p>
 						</div>
 
-						<div class="bg-white/5 p-8 border border-white/10 rounded-lg">
+						<div class="bg-current/5 p-8 border border-current/10 rounded-brand">
 							<h3 class="h2-serif mb-4 ">{parking?.title || 'Parking'}</h3>
 							{parking?.options?.map((option: any) => (
 								<p><strong class="">{option.label}:</strong> {option.text}</p>
@@ -55,9 +59,9 @@ const carouselImages = studio_images?.map((item: any) => formatUrl(item.image)) 
 						</div>
 					</div>
 
-					<div class="bg-white/10 p-8 rounded-lg border border-white/10">
+					<div class="bg-current/5 p-8 rounded-brand border border-current/10">
 						<h3 class="h2-serif mb-4 ">{arrival?.title || 'Upon Arrival'}</h3>
-						<div class="prose prose-invert text-white/80 max-w-none" set:html={marked.parse(arrival?.text || '')} />
+						<div class="prose max-w-none" set:html={marked.parse(arrival?.text || '')} />
 					</div>
 
 					{carouselImages.length > 0 && (

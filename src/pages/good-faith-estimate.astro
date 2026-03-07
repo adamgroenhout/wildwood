@@ -14,19 +14,19 @@ const footerParts = footer_text.split(linkPlaceholder);
 
 <Layout title="Good Faith Estimate | Wildwood Psychotherapy" description="Information about the Good Faith Estimate for Wildwood Psychotherapy services.">
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="display-serif mb-16">{title}</h1>
-				<h2 class="subtitle-serif mb-12 opacity-80">{subtitle}</h2>
+		<Section theme="alternate" padding="hero" class="text-center">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="display-serif">{title}</h1>
+				{subtitle && <p class="subtitle-serif mt-8 opacity-80">{subtitle}</p>}
 			</div>
 		</Section>
 
 		<Section theme="alternate">
 			<div class="max-w-4xl mx-auto">
-				<div class="prose prose-invert prose-lg max-w-none space-y-8 text-left">
+				<div class="prose max-w-none space-y-8 text-left">
 					{content.map((p: string) => <div set:html={marked.parse(p)} />)}
 
-					<div class="bg-white/5 p-8 border border-white/10 rounded-lg space-y-6">
+					<div class="bg-current/5 p-8 border border-current/10 rounded-brand space-y-6">
 						{highlight_box.map((p: string) => <div class="opacity-80" set:html={marked.parse(p)} />)}
 					</div>
 
@@ -40,7 +40,7 @@ const footerParts = footer_text.split(linkPlaceholder);
 						</p>
 					</div>
 
-					<div class="mt-12 pt-12 border-t border-white/10">
+					<div class="mt-12 pt-12 border-t border-current/10">
 						<h3 class="h2-serif mb-6 italic">{keep_in_mind.title}</h3>
 						<div class="opacity-80 space-y-4" set:html={marked.parse(keep_in_mind.text)} />
 					</div>

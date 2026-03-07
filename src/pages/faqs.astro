@@ -2,100 +2,64 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import Button from '../components/Button.astro';
-import BackToTop from '../components/BackToTop.astro';
-import { marked } from 'marked';
+import Accordion from '../components/Accordion.astro';
 import { formatUrl } from '../utils/paths';
 
 const faqsEntry = await getEntry('pages', 'faqs');
-const { title, faqs, footer_cta_text, footer_cta_button_text, footer_cta_url, meta_description } = faqsEntry?.data || {};
-
-// Strip markdown for meta tag
-const cleanDescription = meta_description?.replace(/[#*`]/g, '') || "Frequently Asked Questions about Wildwood Psychotherapy.";
-
-// Generate FAQ Schema
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs?.filter((f: any) => f.question && (f.answer || f.rates)).map((faq: any) => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer 
-        ? faq.answer.replace(/[#*`]/g, '') 
-        : faq.rates.map((r: any) => `${r.service}: ${r.price}`).join(', ')
-    }
-  }))
-};
+const { 
+  title, 
+  faqs, 
+  footer_cta_text,
+  footer_cta_button_text,
+  footer_cta_url 
+} = faqsEntry?.data || {};
 ---
 
-<Layout title="FAQs | Wildwood Psychotherapy" description={cleanDescription}>
-	<!-- Inject FAQ Schema -->
-	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-
+<Layout title="FAQs | Wildwood Psychotherapy">
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4">
+		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-16 text-center ">{title}</h1>
+				<h1 class="display-serif text-balance">{title}</h1>
 			</div>
 		</Section>
 
-		{(() => {
-			const midPoint = Math.ceil((faqs?.length || 0) / 2);
-			const firstHalf = faqs?.slice(0, midPoint) || [];
-			const secondHalf = faqs?.slice(midPoint) || [];
-
-			const renderFaqs = (faqList: any[]) => (
-				<div class="prose prose-invert body-lg max-w-none space-y-8">
-					<div class="space-y-8">
-						{faqList.map(faq => (
-							<div class="bg-white/5 p-8 border border-white/10 rounded-lg">
-								<h3 class="h2-serif mb-4 ">{faq.question}</h3>
-								{faq.answer ? (
-									<div class="opacity-80" set:html={marked.parse(faq.answer)} />
-								) : faq.rates ? (
-									<div class="space-y-4 pt-2">
-										{faq.rates.map((rate: any) => (
-											<div class="flex justify-between items-baseline gap-4 border-b border-white/5 pb-2 last:border-0">
-												<span class={`text-sm md:text-base ${rate.is_italic ? 'italic opacity-90' : 'font-medium'}`} set:html={rate.service} />
-												<span class="text-terracotta font-serif whitespace-nowrap">{rate.price}</span>
-											</div>
-										))}
-									</div>
-								) : null}
-							</div>
-						))}
-					</div>
+		<Section theme="alternate">
+			<div class="max-w-4xl mx-auto">
+				<div class="space-y-16">
+					{faqs?.map((faq: any) => (
+            <div class="space-y-8">
+              {faq.rates ? (
+                <div class="space-y-8">
+                  <h2 class="h1-serif text-center mb-12 text-balance">{faq.question}</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {faq.rates?.map((item: any) => (
+                      <div class="bg-current/5 p-8 border border-current/10 rounded-brand flex flex-col justify-between">
+                        <h3 class={`eyebrow mb-4 opacity-70 ${item.is_italic ? 'italic' : ''}`} set:html={item.service}></h3>
+                        <div class="flex justify-between items-baseline gap-4 border-b border-current/5 pb-2">
+                          <span class="font-bold text-xl">{item.price}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Accordion items={[{ title: faq.question, content: faq.answer }]} />
+              )}
+            </div>
+          ))}
 				</div>
-			);
+			</div>
+		</Section>
 
-			return (
-				<>
-					<Section theme="alternate">
-						<div class="max-w-4xl mx-auto">
-							{renderFaqs(firstHalf)}
-						</div>
-					</Section>
-
-					<Section theme="alternate">
-						<div class="max-w-4xl mx-auto">
-							{renderFaqs(secondHalf)}
-							
-							<div class="mt-20 text-center border-t border-black/5 pt-20">
-								<div class="max-w-2xl mx-auto space-y-10">
-									<h2 class="h1-serif italic">{footer_cta_text}</h2>
-									<Button href={footer_cta_url} theme="terracotta">
-										{footer_cta_button_text}
-									</Button>
-								</div>
-							</div>
-						</div>
-					</Section>
-				</>
-			);
-		})()}
-
-		<BackToTop />
+		<Section theme="charcoal">
+			<div class="max-w-4xl mx-auto text-center space-y-10">
+				<h2 class="display-serif italic text-balance">{footer_cta_text}</h2>
+				<div class="pt-8">
+					<a href={formatUrl(footer_cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+						{footer_cta_button_text}
+					</a>
+				</div>
+			</div>
+		</Section>
 	</main>
 </Layout>

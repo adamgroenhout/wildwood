@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --radius-xl: 0.375rem; /* 6px */
-  --radius-lg: 0.25rem; /* 4px */
-  --radius-md: 0.125rem; /* 2px */
-  --radius-sm: 0.0625rem; /* 1px */
-  --radius: 0.125rem; /* 2px */
+  /* Brand Radius - 4px standard */
+  --radius-brand: 0.25rem;
+  --radius-xl: 0.375rem;
+  --radius-lg: 0.25rem;
+  --radius-md: 0.125rem;
+  --radius-sm: 0.0625rem;
+  --radius: 0.125rem;
 
   /* Wildwood Brand Palette */
   --color-olive: #294b27;
@@ -17,50 +19,59 @@
   --color-terracotta-dark: #965d3a;
   --color-charcoal: #414244;
   --color-taupe: #C4BFB8;
+
+  /* Brand Typography */
+  --font-sans: "Arimo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Section Spacing Standards */
+  --spacing-section-standard-y: 5rem; /* 80px */
+  --spacing-section-standard-y-md: 8rem; /* 128px */
+  
+  --spacing-section-small-y: 3rem; /* 48px */
+  --spacing-section-small-y-md: 5rem; /* 80px */
+  
+  --spacing-section-large-y: 8rem; /* 128px */
+  --spacing-section-large-y-md: 12rem; /* 192px */
+
+  --spacing-hero-pt: 6rem; /* 96px */
+  --spacing-hero-pt-md: 8rem; /* 128px */
+  --spacing-hero-pb: 3rem; /* 48px */
+  --spacing-hero-pb-md: 4rem; /* 64px */
+
+  --spacing-hero-content-gap: 4rem; /* 64px */
+  --spacing-hero-content-gap-md: 6rem; /* 96px */
+
+  --spacing-hero-title-gap: 1.5rem; /* 24px */
+  --spacing-hero-title-gap-md: 2rem; /* 32px */
 }
 
 @layer base {
+  :root {
+    --theme-text: var(--color-charcoal);
+    --theme-heading: var(--color-olive);
+    --theme-border: color-mix(in srgb, var(--color-olive) 10%, transparent);
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+    color: var(--theme-text);
+    background-color: var(--color-paper);
   }
 
-  /* Ever so slightly rounded for buttons, inputs, images, and boxed containers */
+  /* Consistent Brand Rounding */
   button, 
   input, 
   textarea, 
   select, 
   img:not(.w-full.h-full.object-cover), 
   video, 
-  iframe {
-    border-radius: 4px;
-  }
-
-  /* Target links that are styled as buttons or have borders/backgrounds */
-  a:is([class*="bg-"], [class*="border"]) {
-    border-radius: 4px;
-  }
-
-  /* Target common content boxes that have backgrounds or borders */
-  div:is([class*="bg-"], [class*="border"]) {
-    border-radius: 4px;
-  }
-
-  /* Ensure top-level layout elements and full-width containers remain square */
-  html, body, header, footer, section, main, nav, .max-w-full, .h-screen {
-    border-radius: 0 !important;
-  }
-  
-  /* Re-apply rounding to boxes inside these layouts that should be rounded */
-  header div:is([class*="bg-"], [class*="border"]),
-  nav div:is([class*="bg-"], [class*="border"]),
-  section div:is([class*="bg-"], [class*="border"]),
-  main div:is([class*="bg-"], [class*="border"]),
-  footer div:is([class*="bg-"], [class*="border"]),
-  .absolute:is([class*="bg-"], [class*="border"]),
-  .fixed:is([class*="bg-"], [class*="border"]) {
-    border-radius: 4px !important;
+  iframe,
+  .rounded-brand {
+    border-radius: var(--radius-brand);
   }
 
   /* Typography Refinements */
@@ -68,10 +79,10 @@
     text-wrap: balance;
     letter-spacing: -0.01em;
     font-family: var(--font-serif);
+    color: var(--theme-heading);
   }
 
   p {
-    text-align: left;
     line-height: 1.6;
   }
 
@@ -123,10 +134,6 @@
     text-align: left;
   }
 
-  .tracking-widest {
-    letter-spacing: 0.15em !important;
-  }
-
   /* Custom Focus Ring */
   :focus-visible {
     outline: 2px solid var(--color-terracotta);
@@ -135,108 +142,86 @@
 }
 
 @layer components {
-  /* Alternating Section Colors - Progressive Palette */
+  /* Theme Variable Definitions */
+  .theme-light {
+    --theme-text: var(--color-charcoal);
+    --theme-heading: var(--color-olive);
+    --theme-border: color-mix(in srgb, var(--color-olive) 15%, transparent);
+  }
+
+  .theme-dark {
+    --theme-text: var(--color-paper);
+    --theme-heading: var(--color-paper);
+    --theme-border: color-mix(in srgb, var(--color-paper) 15%, transparent);
+  }
+
+  /* Section Backgrounds - Now mapping to themes manually to avoid @apply issues */
+  .bg-sage { background-color: var(--color-sage); color: var(--color-charcoal); --theme-text: var(--color-charcoal); --theme-heading: var(--color-olive); }
+  .bg-cream { background-color: var(--color-cream); color: var(--color-charcoal); --theme-text: var(--color-charcoal); --theme-heading: var(--color-olive); }
+  .bg-sand { background-color: var(--color-sand); color: var(--color-charcoal); --theme-text: var(--color-charcoal); --theme-heading: var(--color-olive); }
+  .bg-paper { background-color: var(--color-paper); color: var(--color-charcoal); --theme-text: var(--color-charcoal); --theme-heading: var(--color-olive); }
+  
+  .bg-olive { background-color: var(--color-olive); color: var(--color-paper); --theme-text: var(--color-paper); --theme-heading: var(--color-paper); }
+  .bg-charcoal { background-color: var(--color-charcoal); color: var(--color-paper); --theme-text: var(--color-paper); --theme-heading: var(--color-paper); }
+  .bg-terracotta { background-color: var(--color-terracotta); color: var(--color-paper); --theme-text: var(--color-paper); --theme-heading: var(--color-paper); }
+
+  /* Alternating Section Colors */
   .bg-alternate {
     transition: background-color 0.5s ease;
+    --theme-text: var(--color-charcoal);
+    --theme-heading: var(--color-olive);
+    color: var(--theme-text);
   }
 
-  /* Section 1: Sage */
-  .bg-alternate:nth-of-type(4n+1) {
-    background-color: var(--color-sage);
+  .bg-alternate:nth-of-type(4n+1) { background-color: var(--color-sage); }
+  .bg-alternate:nth-of-type(4n+2) { background-color: var(--color-cream); }
+  .bg-alternate:nth-of-type(4n+3) { background-color: var(--color-sand); }
+  .bg-alternate:nth-of-type(4n+4) { background-color: var(--color-paper); }
+
+  /* Custom Minimal Prose Implementation */
+  .prose {
+    max-width: 65ch;
+    color: var(--theme-text);
   }
 
-  /* Section 2: Cream */
-  .bg-alternate:nth-of-type(4n+2) {
-    background-color: var(--color-cream);
+  .prose.max-w-none {
+    max-width: none;
   }
 
-  /* Section 3: Sand */
-  .bg-alternate:nth-of-type(4n+3) {
-    background-color: var(--color-sand);
+  .prose-container {
+    padding-top: var(--spacing-section-standard-y);
+    padding-bottom: var(--spacing-section-standard-y);
   }
 
-  /* Section 4: Paper */
-  .bg-alternate:nth-of-type(4n+4) {
-    background-color: var(--color-paper);
+  @media (min-width: 768px) {
+    .prose-container {
+      padding-top: var(--spacing-section-standard-y-md);
+      padding-bottom: var(--spacing-section-standard-y-md);
+    }
   }
+  
+  .prose p { margin-top: 1.25em; margin-bottom: 1.25em; }
+  .prose h1, .prose h2, .prose h3, .prose h4 { color: var(--theme-heading); margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { list-style-type: disc; padding-left: 1.625em; margin-top: 1.25em; margin-bottom: 1.25em; }
+  .prose li { margin-top: 0.5em; margin-bottom: 0.5em; }
+  .prose strong { color: inherit; font-weight: 700; }
+  .prose a { color: var(--color-terracotta); text-decoration: underline; font-weight: 500; }
+  .prose blockquote { border-left: 4px solid var(--color-terracotta); padding-left: 1em; font-style: italic; opacity: 0.9; }
 
-  /* Typography Logic */
-  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(h1, h2, h3, h4, h5, h6) {
-    color: var(--color-olive) !important; /* Dark Olive Headings */
-  }
-
-  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(p, li, span, div, strong, em, a:not(.bg-terracotta)) {
-    color: var(--color-charcoal) !important; /* Charcoal Body Text */
-  }
-
-  /* Muted text for the new palette */
-  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.text-white\/70, .text-white\/80, .text-white\/90) {
-    color: color-mix(in srgb, var(--color-charcoal) 80%, transparent) !important;
-  }
-
-  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.text-white\/50, .text-white\/60) {
-    color: color-mix(in srgb, var(--color-charcoal) 60%, transparent) !important;
-  }
-
-  /* Border color overrides - using Taupe for subtle separation */
-  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.border-white\/5, .border-white\/10, .border-white\/20, .border-white\/40) {
-    border-color: color-mix(in srgb, var(--color-taupe) 60%, transparent) !important;
-  }
-
-  /* Highlight boxes - using Sand for depth */
-  .bg-alternate:not(.h-screen):not(.min-h-screen) :is(.bg-white\/5, .bg-white\/10) {
-    background-color: color-mix(in srgb, var(--color-sand) 50%, transparent) !important;
-    border: 1px solid color-mix(in srgb, var(--color-taupe) 30%, transparent) !important;
-  }
-
-  /* Prose overrides */
-  .bg-alternate:not(.h-screen) .prose-invert {
-    --tw-prose-body: var(--color-charcoal);
-    --tw-prose-headings: var(--color-olive);
-    --tw-prose-lead: var(--color-charcoal);
-    --tw-prose-links: var(--color-terracotta); /* Terracotta links for subtle pop */
-    --tw-prose-bold: var(--color-charcoal);
-    --tw-prose-counters: var(--color-charcoal);
-    --tw-prose-bullets: var(--color-terracotta);
-    --tw-prose-hr: color-mix(in srgb, var(--color-taupe) 40%, transparent);
-    --tw-prose-quotes: var(--color-charcoal);
-    --tw-prose-quote-borders: var(--color-terracotta);
-    --tw-prose-captions: var(--color-charcoal);
-    --tw-prose-code: var(--color-charcoal);
-    --tw-prose-pre-code: var(--color-paper);
-    --tw-prose-pre-bg: var(--color-olive);
-    --tw-prose-th-borders: color-mix(in srgb, var(--color-taupe) 40%, transparent);
-    --tw-prose-td-borders: color-mix(in srgb, var(--color-taupe) 20%, transparent);
-  }
-
-  /* Primary Button: Terracotta */
-  .bg-terracotta,
-  .bg-alternate:not(.h-screen) a.bg-white {
-    background-color: var(--color-terracotta) !important;
-    color: var(--color-paper) !important;
+  /* Primary Button Styling */
+  .bg-terracotta {
+    background-color: var(--color-terracotta);
+    color: var(--color-paper);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .bg-terracotta:hover,
-  .bg-alternate:not(.h-screen) a.bg-white:hover {
-    background-color: var(--color-terracotta-dark) !important;
-    color: var(--color-paper) !important;
+  .bg-terracotta:hover {
+    background-color: var(--color-terracotta-dark);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
   }
 
-  /* Secondary Button: Dark Olive outline */
-  .border-olive {
-    border: 1px solid var(--color-olive) !important;
-    color: var(--color-olive) !important;
-  }
-  
-  .border-olive:hover {
-    background-color: var(--color-olive) !important;
-    color: var(--color-paper) !important;
-  }
-
-  /* Subtle Underline Animation for Links */
+  /* Link Underline Animation */
   .link-underline {
     position: relative;
     text-decoration: none;

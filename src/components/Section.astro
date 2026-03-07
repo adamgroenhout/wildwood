@@ -1,7 +1,7 @@
 ---
 interface Props {
-  theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate' | 'none';
-  padding?: 'standard' | 'large' | 'small' | 'none' | 'hero';
+  theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate' | 'terracotta' | 'none';
+  padding?: 'standard' | 'large' | 'small' | 'hero' | 'none';
   class?: string;
   id?: string;
 }
@@ -14,21 +14,23 @@ const {
 } = Astro.props;
 
 const themeClasses = {
-  sage: 'bg-sage text-charcoal',
-  cream: 'bg-cream text-charcoal',
-  sand: 'bg-sand text-charcoal',
-  paper: 'bg-paper text-charcoal',
-  charcoal: 'bg-charcoal text-paper',
-  olive: 'bg-olive text-paper',
+  sage: 'bg-sage',
+  cream: 'bg-cream',
+  sand: 'bg-sand',
+  paper: 'bg-paper',
+  charcoal: 'bg-charcoal',
+  olive: 'bg-olive',
+  terracotta: 'bg-terracotta',
   alternate: 'bg-alternate',
   none: '',
 };
 
 const paddingClasses = {
-  standard: 'py-20 md:py-32 px-4',
-  large: 'py-32 md:py-48 px-4',
-  small: 'py-12 md:py-20 px-4',
-  hero: 'pt-32 md:pt-40',
+  standard: 'py-[var(--spacing-section-standard-y)] md:py-[var(--spacing-section-standard-y-md)] px-4',
+  large: 'py-[var(--spacing-section-large-y)] md:py-[var(--spacing-section-large-y-md)] px-4',
+  small: 'py-[var(--spacing-section-small-y)] md:py-[var(--spacing-section-small-y-md)] px-4',
+  hero: 'pt-[var(--spacing-hero-pt)] md:pt-[var(--spacing-hero-pt-md)] pb-[var(--spacing-hero-pb)] md:pb-[var(--spacing-hero-pb-md)] px-4',
+  'top-only': 'pt-[var(--spacing-section-standard-y)] md:pt-[var(--spacing-section-standard-y-md)] pb-0 px-4',
   none: '',
 };
 ---

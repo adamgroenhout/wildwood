@@ -2,105 +2,92 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import Button from '../components/Button.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
 const eventsEntry = await getEntry('pages', 'events');
-const { title, subtitle, sections } = eventsEntry?.data || {};
+const { title, seo_title, subtitle, content, sections } = eventsEntry?.data || {};
 ---
 
-<Layout title="Events | Wildwood Psychotherapy">
+<Layout title={seo_title}>
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-20 px-4 relative z-10">
+		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="display-serif mb-16">{title}</h1>
-				<p class="subtitle-serif text-center mb-12">{subtitle}</p>
+				<h1 class="display-serif mb-10 text-balance">{title}</h1>
+				{subtitle && <p class="subtitle-serif opacity-80 text-balance mx-auto max-w-2xl text-center">{subtitle}</p>}
 			</div>
 		</Section>
 
-		{(() => {
-			const midPoint = Math.ceil((sections?.length || 0) / 2);
-			const firstHalf = sections?.slice(0, midPoint) || [];
-			const secondHalf = sections?.slice(midPoint) || [];
+		<Section theme="alternate">
+			<div class="max-w-4xl mx-auto">
+				<div class="space-y-24">
+					{content?.map((p: string) => <div class="prose body-lg max-w-none text-center" set:html={marked.parse(p)} />)}
 
-			const renderSection = (section: any) => (
-				<div class="mb-20">
-					<div class="space-y-8">
-						<div class="space-y-4">
-							<h2 class="h1-serif">{section.title}</h2>
-							{section.text && <div class="body-lg opacity-90 prose prose-invert" set:html={marked.parse(section.text)} />}
-						</div>
-						
-						{section.highlight && (
-							<div class="bg-white/5 border border-white/10 p-8 rounded-lg mt-8 shadow-sm space-y-8">
-								<h3 class="h2-serif italic text-terracotta">{section.highlight.title}</h3>
-								
-								{section.highlight.details && (
-									<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-										{section.highlight.details.map((detail: any) => (
-											<div class="space-y-1">
-												<p class="eyebrow text-xs opacity-60">{detail.label}</p>
-												<p class="text-base opacity-90">{detail.text}</p>
+					{sections?.map((section: any) => (
+						<div class="space-y-12 pt-16 border-t border-current/10">
+							<div class="max-w-3xl mx-auto text-center space-y-6">
+								<h2 class="h1-serif italic">{section.title}</h2>
+								{section.text && <div class="body-lg opacity-90 prose max-w-none" set:html={marked.parse(section.text)} />}
+							</div>
+							
+							{/* Highlight Box Logic (e.g. Book Club) */}
+							{section.highlight && (
+								<div class="bg-current/5 border border-current/10 p-8 md:p-12 rounded-brand shadow-sm max-w-3xl mx-auto space-y-8">
+									<h3 class="h2-serif text-center">{section.highlight.title}</h3>
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+										{section.highlight.details?.map((detail: any) => (
+											<div class="border-b border-current/5 pb-2">
+												<p class="eyebrow opacity-60 mb-1">{detail.label}</p>
+												<p class="text-sm font-medium">{detail.text}</p>
 											</div>
 										))}
 									</div>
-								)}
-
-								<div class="pt-4">
-									<Button href={section.highlight.cta_url} theme="terracotta">
-										{section.highlight.cta_text}
-									</Button>
-								</div>
-							</div>
-						)}
-
-						{section.items && (
-							<div class="space-y-10">
-								{section.items.map((item: any) => (
-									<div class="bg-white/5 border border-white/5 p-8 rounded-lg space-y-6">
-										<div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-4 border-b border-white/10 pb-4">
-											<h3 class="h2-serif italic">{item.name}</h3>
-											<div class="flex gap-4 text-xs eyebrow opacity-70">
-												{item.location && <span>{item.location}</span>}
-												{item.cost && <span>{item.cost}</span>}
-											</div>
+									{section.highlight.cta_text && (
+										<div class="pt-4 text-center">
+											<a href={formatUrl(section.highlight.cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+												{section.highlight.cta_text}
+											</a>
 										</div>
-										
-										{item.text && <div class="opacity-90 prose prose-invert" set:html={marked.parse(item.text)} />}
-										
-										{item.footer && <p class="text-sm italic opacity-70 border-t border-white/5 pt-4">{item.footer}</p>}
+									)}
+								</div>
+							)}
 
-										{item.cta_text && (
-											<div class="pt-4">
-												<Button href={item.cta_url} theme="terracotta">
-													{item.cta_text}
-												</Button>
+							{/* Items List Logic (e.g. Community Events, Clinicians) */}
+							{section.items && (
+								<div class="grid grid-cols-1 gap-12">
+									{section.items.map((item: any) => (
+										<div class="bg-current/5 border border-current/10 p-8 md:p-12 rounded-brand shadow-sm space-y-8 max-w-3xl mx-auto w-full">
+											<div class="text-center space-y-2">
+												<h3 class="h2-serif">{item.name}</h3>
+												<div class="flex flex-wrap justify-center gap-4 eyebrow opacity-60 text-xs">
+													{item.location && <span>{item.location}</span>}
+													{item.cost && <span>• {item.cost}</span>}
+												</div>
 											</div>
-										)}
-									</div>
-								))}
-							</div>
-						)}
-					</div>
+
+											{item.text && <div class="prose max-w-none opacity-90" set:html={marked.parse(item.text)} />}
+											
+											{item.footer && (
+												<div class="pt-6 border-t border-current/10">
+													<p class="text-sm italic opacity-70 text-center">{item.footer}</p>
+												</div>
+											)}
+
+											{item.cta_text && (
+												<div class="pt-4 text-center">
+													<a href={formatUrl(item.cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+														{item.cta_text}
+													</a>
+												</div>
+											)}
+										</div>
+									))}
+								</div>
+							)}
+						</div>
+					))}
 				</div>
-			);
-
-			return (
-				<>
-					<Section theme="alternate">
-						<div class="max-w-4xl mx-auto">
-							{firstHalf.map(renderSection)}
-						</div>
-					</Section>
-
-					<Section theme="alternate">
-						<div class="max-w-4xl mx-auto">
-							{secondHalf.map(renderSection)}
-						</div>
-					</Section>
-				</>
-			);
-		})()}
+			</div>
+		</Section>
 	</main>
 </Layout>

@@ -20,10 +20,10 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 
 <Layout title={seo_title}>
 	<main>
-		<Section theme="alternate" padding="hero" class="pb-10 px-4">
+		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-16 text-center text-balance">{title}</h1>
-				{subtitle && <p class="subtitle-serif text-center mb-12 text-balance">{subtitle}</p>}
+				<h1 class="display-serif text-balance">{title}</h1>
+				{subtitle && <p class="subtitle-serif text-center mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)] text-balance opacity-80">{subtitle}</p>}
 			</div>
 		</Section>
 		
@@ -36,14 +36,14 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 			const renderSection = (section: any) => {
 				if (section.type === 'text') {
 					return (
-						<div class={`mb-12 ${section.style === 'highlighted' ? "bg-white/5 p-8 border border-white/10 rounded-lg" : ""}`}>
+						<div class={`${section.style === 'highlighted' ? "bg-current/5 p-8 border border-current/10 rounded-brand mb-12" : "mb-8 last:mb-0"}`}>
 							{section.title && <h2 class="h1-serif mb-6 text-balance">{section.title}</h2>}
 							<div class="space-y-4" set:html={marked(section.body)} />
 						</div>
 					);
 				} else if (section.type === 'list') {
 					return (
-						<div class="mb-12">
+						<div class="mb-12 last:mb-0">
 							{section.title && <h2 class="h1-serif mb-6 text-center italic text-balance">{section.title}</h2>}
 							<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0">
 								{section.items.map((item: string) => (
@@ -58,17 +58,17 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 
 			return (
 				<>
-					<Section theme="alternate">
-						<div class="max-w-4xl mx-auto">
-							<div class="prose prose-invert body-lg max-w-none  space-y-8">
+					<Section theme="alternate" padding="none">
+						<div class="max-w-4xl mx-auto prose-container">
+							<div class="prose body-lg max-w-none">
 								{firstHalf.map(renderSection)}
 							</div>
 						</div>
 					</Section>
 
-					<Section theme="alternate">
-						<div class="max-w-4xl mx-auto">
-							<div class="prose prose-invert body-lg max-w-none  space-y-8">
+					<Section theme="alternate" padding="none">
+						<div class="max-w-4xl mx-auto prose-container">
+							<div class="prose body-lg max-w-none">
 								{secondHalf.map(renderSection)}
 								
 								<div class="mt-16 text-center border-t border-black/5 pt-16">
