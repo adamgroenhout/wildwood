@@ -3,7 +3,7 @@ import settings from '../content/settings.json';
 
 const base = import.meta.env.BASE_URL;
 
-const { site_name, logo, navigation } = settings;
+const { site_name, logo, navigation, header_cta_text, header_cta_href } = settings;
 
 // Helper to format URLs correctly with base path
 const formatUrl = (url: string) => {
@@ -46,8 +46,8 @@ const formatUrl = (url: string) => {
 						)}
 					</div>
 				))}
-				<a href={`${base}contact`} class="inline-flex items-center px-6 py-2 border border-white/20 text-sm font-medium text-white hover:bg-white hover:text-[#294b27] transition-all duration-300 hover:shadow-lg uppercase tracking-wider">
-					Contact
+				<a href={formatUrl(header_cta_href)} class="inline-flex items-center px-6 py-2 border border-white/20 text-sm font-medium text-white hover:bg-white hover:text-[#294b27] transition-all duration-300 hover:shadow-lg uppercase tracking-wider">
+					{header_cta_text}
 				</a>
 			</nav>
 
@@ -93,8 +93,8 @@ const formatUrl = (url: string) => {
 			</div>
 		))}
 		<div class="pt-6">
-			<a href={`${base}contact`} class="block text-center px-6 py-4 bg-[#B17048] text-white text-base font-medium hover:bg-[#965d3a] transition-all uppercase tracking-widest shadow-lg active:scale-[0.98]">
-				Contact
+			<a href={formatUrl(header_cta_href)} class="block text-center px-6 py-4 bg-[#B17048] text-white text-base font-medium hover:bg-[#965d3a] transition-all uppercase tracking-widest shadow-lg active:scale-[0.98]">
+				{header_cta_text}
 			</a>
 		</div>
 	</div>

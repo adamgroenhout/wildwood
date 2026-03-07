@@ -57,5 +57,7 @@
       "answer": "At least 24 hours' notice is required for cancellations. Appointments cancelled with less than 24 hours' notice will be charged the full session fee."
     }
   ],
-  "footer_cta_text": "Have more questions? Contact me."
+  "footer_cta_text": "Have more questions? Contact me.",
+  "footer_cta_button_text": "Get Started",
+  "footer_cta_url": "/contact"
 }

@@ -2,6 +2,7 @@
   "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
   "intro_text": "Maybe you've noticed you're drinking more than you used to. Or working longer hours to avoid feeling what's underneath. Or your relationship is struggling because old patterns keep showing up in new ways. You know something has to change. You're here because you're finally ready to figure out what that something is.\n\nI'm Kaylie, and I specialize in helping adults and couples in Leesburg, Virginia unpack the trauma that's been running the show. Together, we'll work through the anxiety, depression, and attachment wounds that keep you stuck in cycles you desperately want to break.",
   "intro_title": "You're exhausted from managing everyone else's expectations while your own needs sit on the back burner.",
+  "wounds_header": "When Old Wounds Keep Showing Up in Your Present",
   "resources_items": [
     {
       "title": "Constantly feeling like you're waiting for the other shoe to drop.",
@@ -29,29 +30,74 @@
     }
   ],
   "resources_text": "Developmental trauma doesn't always look like what you see in movies. Sometimes it looks like:",
+  "adaptations_text": "These aren't character flaws. They're adaptations you developed to survive situations that were too much to handle at the time. The problem? What helped you survive back then is now keeping you from truly living.",
+  "trauma_therapist_text": "As a trauma therapist in Leesburg, I work with adults who are ready to understand why they do what they do and finally create lasting change.",
+  "root_title": "Therapy That Actually Gets to the Root",
+  "root_content": "You've probably tried therapy before. Maybe it felt like venting without real progress. Or your therapist was nice but didn't push you enough.\n\nI blend EMDR therapy, Internal Family Systems (IFS), mindfulness, DBT, and ACT to create a treatment approach that's tailored to you.\n\nEMDR (Eye Movement Desensitization and Reprocessing) helps your brain reprocess traumatic memories so they stop hijacking your present. I'm EMDR Certified, which means I've completed advanced training beyond basic certification.\n\nParts Work (IFS-informed) helps you understand the different parts of yourself that are often in conflict. The part that wants to be vulnerable and the part that's terrified of getting hurt. The part that's angry and the part that feels guilty for being angry.\n\nMindfulness, DBT, and ACT give you practical tools to regulate your nervous system, manage intense emotions, and build a life that aligns with your values.\n\n**This isn't about fixing you. You're not broken. It's about healing the wounds that convinced you that you were.**",
+  "is_this_you_title": "Is this you?",
+  "is_this_you_items": [
+    {
+      "title": "Individual Adults",
+      "body": "You're successful on paper but feel empty inside. You've spent decades taking care of others and lost yourself along the way. You're ready to figure out who you are outside of your roles and responsibilities."
+    },
+    {
+      "title": "Couples Therapy",
+      "subtitle": "(Including Non-Monogamous and Polyamorous Relationships)",
+      "body": "Your relationship is struggling under the weight of unspoken resentments, different attachment styles, or past trauma showing up in your partnership. Whether you're monogamous, non-monogamous, or polyamorous, I provide judgment-free couples therapy that honors your relationship structure."
+    },
+    {
+      "title": "Unique Relationship Dynamics",
+      "body": "Many therapists aren't trained in the unique dynamics of consensual non-monogamy. I am. If you're navigating jealousy, boundary challenges, or communication breakdowns in your non-traditional relationship, you don't have to explain yourself here.\n\nI offer both in-person therapy in Leesburg, VA and virtual therapy throughout Virginia."
+    }
+  ],
+  "how_to_start_title": "here's how to get started:",
+  "how_to_start_items": [
+    {
+      "number": "01",
+      "title": "Consultation",
+      "text": "Schedule a free 15-minute phone consultation. We'll talk about what you're dealing with and whether we're a good fit."
+    },
+    {
+      "number": "02",
+      "title": "Intake",
+      "text": "Book your first session if it feels right. No pressure, no sales pitch."
+    },
+    {
+      "number": "03",
+      "title": "Sessions",
+      "text": "Begin the work of understanding yourself, healing old wounds, and building a life that aligns with your values and desires."
+    }
+  ],
+  "callout_title": "You don't have to struggle alone.",
+  "callout_text": "Life can sometimes feel unbearable. Maybe you’ve tried dealing with your issues by talking to close friends, searching internet rabbit holes, compartmentalizing, and/or distracting yourself with things like scrolling, substances, or spending.\n\nWherever you go, though, there you are. The issue remains, and though you may have had temporary relief, you feel more alone, even shameful, afterward.\n\nWhether you’re experiencing new challenges or iterations of long-standing ones, therapy can help. You deserve to feel seen, heard, and supported. You can have a more balanced, joyful existence.\n\n**Healing is possible, and I can help.**",
+  "callout_image": "/wildwood/images/side-image.webp",
+  "final_cta_tagline": "TAKE A BREATH. YOU’RE IN THE RIGHT PLACE.",
+  "final_cta_title": "THIS IS WHERE CHANGE BEGINS.",
+  "final_cta_button_text": "Book a Call",
   "feature_link_text": "Learn more about our approach",
-  "kaylie_bio": "As a Licensed Professional Counselor and trauma-informed therapist, I am dedicated to walking alongside you as you navigate life's complexities. My approach is rooted in empathy, evidence-based practices, and a deep respect for the individual resilience each client brings to the therapeutic space. Together, we will work to uncover your strengths, process past experiences, and build a foundation for a more grounded and fulfilling future.",
-  "feature_title": "When Old Wounds Keep Showing Up in Your Present",
-  "kaylie_subtitle": "Compassionate care for your healing journey.",
+  "kaylie_bio": "My approach is warm, direct, and grounded in evidence-based practices. I won't just nod sympathetically while you talk. I'll challenge you when you need it, celebrate your progress, and help you connect the dots between your past and present.\n\nI believe healing happens *in relationship*. That means our therapeutic relationship matters just as much as any techniques we use.\n\nOutside of sessions, I'm committed to ongoing training and staying current with trauma research. Your healing deserves a therapist who never stops learning.",
+  "feature_title": "Reclaiming Your Narrative in a Space Built for Healing.",
+  "kaylie_subtitle": "Owner, Board-Certified Licensed Professional Counselor, EMDR Certified Therapist",
   "feature_image": "/wildwood/images/side-image.webp",
   "hero_title": "You've Been Holding It Together for Everyone Else. What About *You?*",
   "feature_link_url": "/about",
-  "feature_text": "These aren't character flaws. They're adaptations you developed to survive situations that were too much to handle at the time.\n\nThe problem? What helped you survive back then is now keeping you from truly living.\n\nAs a trauma therapist in Leesburg, I work with adults who are ready to understand why they do what they do and finally create lasting change.",
+  "feature_text": "You’ve spent years mastering the art of \"fine,\" but underneath, the weight of it all is starting to feel heavy. At Wildwood, we move beyond traditional talk therapy. By integrating EMDR and IFS-informed parts work, we help you process the roots of your exhaustion so you can finally stop holding it together and start *living*. This is your space to be human, not just productive.",
   "hero_image": "/wildwood/images/main.webp",
   "kaylie_link_text": "Learn more about me",
   "cta_text": "Schedule a Call",
+  "specialties_header": "My Specialties",
   "specialties": [
     {
       "name": "Trauma + EMDR",
       "url": "/trauma-and-emdr"
     },
     {
-      "name": "Anxiety & Perfectionism",
-      "url": "/anxiety-and-perfectionism"
+      "name": "ENM + Polyamorous Relationships",
+      "url": "/relationships"
     },
     {
-      "name": "Relationships",
-      "url": "/relationships"
+      "name": "Anxiety & Depression",
+      "url": "/anxiety-and-perfectionism"
     }
   ],
   "hero_subtitle": "EMDR and Trauma-Informed Therapy in Leesburg, VA for adults and couples ready to stop surviving and start living.",

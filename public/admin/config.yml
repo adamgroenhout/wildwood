@@ -29,6 +29,9 @@ collections:
           - { label: "Coming Soon Text", name: "coming_soon_text", widget: "string" }
           - { label: "Staff Login Text", name: "staff_login_text", widget: "string" }
           - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Header CTA Text", name: "header_cta_text", widget: "string" }
+          - { label: "Header CTA Link", name: "header_cta_href", widget: "string" }
+          - { label: "Land Acknowledgment", name: "land_acknowledgment", widget: "markdown" }
           - label: "Contact Information"
             name: "contact"
             widget: "object"
@@ -52,6 +55,19 @@ collections:
                 fields:
                   - { label: "Link Name", name: "name", widget: "string" }
                   - { label: "Link URL", name: "href", widget: "string" }
+          - label: "Footer Columns"
+            name: "footer_columns"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Column Title", name: "title", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                summary: "{{name}}"
+                fields:
+                  - { label: "Link Name", name: "name", widget: "string" }
+                  - { label: "Link URL", name: "href", widget: "string" }
       - name: "home"
         label: "Home Page"
         file: "src/content/homepage.json"
@@ -61,6 +77,7 @@ collections:
           - { label: "Hero Image", name: "hero_image", widget: "image" }
           - { label: "CTA Text", name: "cta_text", widget: "string" }
           - { label: "CTA URL", name: "cta_url", widget: "string" }
+          - { label: "Specialties Header", name: "specialties_header", widget: "string" }
           - label: "Specialties"
             name: "specialties"
             widget: "list"
@@ -75,6 +92,7 @@ collections:
           - { label: "Feature Text", name: "feature_text", widget: "markdown" }
           - { label: "Feature Link Text", name: "feature_link_text", widget: "string" }
           - { label: "Feature Link URL", name: "feature_link_url", widget: "string" }
+          - { label: "Wounds Section Header", name: "wounds_header", widget: "string" }
           - { label: "Resources Title", name: "resources_title", widget: "string" }
           - { label: "Resources Text", name: "resources_text", widget: "markdown" }
           - label: "Resources Items"
@@ -83,6 +101,32 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+          - { label: "Adaptations Text", name: "adaptations_text", widget: "markdown" }
+          - { label: "Trauma Therapist Text", name: "trauma_therapist_text", widget: "markdown" }
+          - { label: "Root Title", name: "root_title", widget: "string" }
+          - { label: "Root Content", name: "root_content", widget: "markdown" }
+          - { label: "Is This You Title", name: "is_this_you_title", widget: "string" }
+          - label: "Is This You Items"
+            name: "is_this_you_items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "How to Start Title", name: "how_to_start_title", widget: "string" }
+          - label: "How to Start Steps"
+            name: "how_to_start_items"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "markdown" }
+          - { label: "Callout Title", name: "callout_title", widget: "string" }
+          - { label: "Callout Text", name: "callout_text", widget: "markdown" }
+          - { label: "Callout Image", name: "callout_image", widget: "image" }
+          - { label: "Final CTA Tagline", name: "final_cta_tagline", widget: "string" }
+          - { label: "Final CTA Title", name: "final_cta_title", widget: "string" }
+          - { label: "Final CTA Button Text", name: "final_cta_button_text", widget: "string" }
           - { label: "Kaylie Intro Title", name: "kaylie_title", widget: "string" }
           - { label: "Kaylie Subtitle", name: "kaylie_subtitle", widget: "string" }
           - { label: "Kaylie Bio", name: "kaylie_bio", widget: "markdown" }
@@ -95,13 +139,24 @@ collections:
           - { label: "SEO Title", name: "seo_title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Bio Content", name: "bio", widget: "markdown" }
-          - label: "Lists"
+          - label: "Extra Content Sections"
+            name: "extra_sections"
+            widget: "list"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Body Content", name: "body", widget: "markdown" }
+              - { label: "Section Style", name: "style", widget: "select", options: ["standard", "alternate", "dark"], default: "standard" }
+              - { label: "Alignment", name: "alignment", widget: "select", options: ["left", "center"], default: "left" }
+          - label: "Collapsible Lists"
             name: "sections"
             widget: "list"
             summary: "{{title}}"
             fields:
               - { label: "Section Title", name: "title", widget: "string" }
               - { label: "Items", name: "items", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+          - { label: "Final CTA Header", name: "final_cta_header", widget: "string" }
+          - { label: "Final CTA Tagline", name: "final_cta_tagline", widget: "string" }
           - { label: "CTA Text", name: "cta_text", widget: "string" }
           - { label: "CTA URL", name: "cta_url", widget: "string" }
       - name: "contact"
@@ -140,6 +195,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "markdown" }
+          - { label: "Studio Gallery Title", name: "studio_title", widget: "string" }
           - label: "Studio Images"
             name: "studio_images"
             widget: "list"
@@ -168,6 +224,8 @@ collections:
                   - { label: "Price", name: "price", widget: "string" }
                   - { label: "Is Italic", name: "is_italic", widget: "boolean", default: false }
           - { label: "Footer CTA Text", name: "footer_cta_text", widget: "string" }
+          - { label: "Footer CTA Button Text", name: "footer_cta_button_text", widget: "string" }
+          - { label: "Footer CTA URL", name: "footer_cta_url", widget: "string" }
       - name: "telehealth"
         label: "Telehealth Page"
         file: "src/content/telehealth.json"

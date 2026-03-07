@@ -10,6 +10,7 @@ const {
 	hero_image, 
 	cta_text, 
 	cta_url, 
+	specialties_header,
 	specialties, 
 	intro_title, 
 	intro_text, 
@@ -18,15 +19,38 @@ const {
 	feature_text, 
 	feature_link_text, 
 	feature_link_url,
+	wounds_header,
 	resources_title,
 	resources_text,
 	resources_items,
+	adaptations_text,
+	trauma_therapist_text,
+	root_title,
+	root_content,
+	is_this_you_title,
+	is_this_you_items,
+	how_to_start_title,
+	how_to_start_items,
+	callout_title,
+	callout_text,
+	callout_image,
+	final_cta_tagline,
+	final_cta_title,
+	final_cta_button_text,
 	kaylie_title,
 	kaylie_subtitle,
 	kaylie_bio,
 	kaylie_link_text
 } = homepageData;
 const base = import.meta.env.BASE_URL;
+
+// Helper to format URLs correctly with base path
+const formatUrl = (url: string) => {
+  if (!url) return '#';
+  if (url === '#' || url.startsWith('http')) return url;
+  if (url.startsWith(base)) return url;
+  return `${base}${url.startsWith('/') ? url.slice(1) : url}`;
+};
 ---
 
 <Layout title="Wildwood Psychotherapy | Trauma-Informed Therapy in Leesburg, VA">
@@ -43,7 +67,7 @@ const base = import.meta.env.BASE_URL;
 			</div>
 			
 			<div class="relative z-10 text-center text-white px-4 max-w-4xl">
-				<p class="text-lg uppercase tracking-widest font-sans italic font-bold mb-6 opacity-0 animate-[fadeInUp_0.8s_ease-out_forwards]">
+				<p class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-sans font-medium mb-8 opacity-0 animate-[fadeInUp_0.8s_ease-out_forwards]">
 					{hero_subtitle}
 				</p>
 				<h1 class="text-6xl md:text-8xl font-serif mb-10 leading-tight text-balance opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
@@ -57,7 +81,7 @@ const base = import.meta.env.BASE_URL;
 					
 					<div class="flex flex-wrap justify-center gap-4 mt-4">
 						{specialties.map(spec => (
-							<a href={`${base}${spec.url.startsWith('/') ? spec.url.slice(1) : spec.url}`} class="border border-white/40 px-6 py-2 text-sm hover:border-white transition-all duration-300 hover:bg-white/5 active:scale-95">
+							<a href={formatUrl(spec.url)} class="border border-white/40 px-6 py-2 text-sm hover:border-white transition-all duration-300 hover:bg-white/5 active:scale-95">
 								{spec.name}
 							</a>
 						))}
@@ -70,7 +94,9 @@ const base = import.meta.env.BASE_URL;
 		<section class="bg-alternate py-32 px-4">
 			<div class="max-w-4xl mx-auto text-center">
 				<h2 class="text-4xl md:text-6xl font-serif mb-10 text-balance">{intro_title}</h2>
-				<div class="text-lg leading-relaxed max-w-2xl mx-auto opacity-90 prose prose-invert" set:html={marked.parse(intro_text || '')} />
+				<div class="text-lg leading-relaxed max-w-2xl mx-auto opacity-90 prose prose-invert">
+					{intro_text.split('\n\n').map(p => <p class="mb-6 last:mb-0">{p}</p>)}
+				</div>
 			</div>
 		</section>
 
@@ -87,30 +113,37 @@ const base = import.meta.env.BASE_URL;
 				<div class="w-full md:w-1/2 space-y-6">
 					<h3 class="text-4xl font-serif text-balance">{feature_title}</h3>
 					<div class="leading-relaxed opacity-90 prose prose-invert" set:html={marked.parse(feature_text || '')} />
-					<a href={`${base}${feature_link_url.startsWith('/') ? feature_link_url.slice(1) : feature_link_url}`} class="inline-block text-sm uppercase tracking-widest border-b border-white/20 pb-1 transition-all duration-300 hover:border-[#B17048] hover:text-[#B17048] link-underline">
-						{feature_link_text}
-					</a>
+					<div class="flex justify-end pt-4">
+						<a href={formatUrl(feature_link_url)} class="inline-flex items-center gap-2 text-sm uppercase tracking-widest border-b border-white/20 pb-1 transition-all duration-300 hover:border-[#B17048] hover:text-[#B17048] group">
+							<span>{feature_link_text}</span>
+							<svg class="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+							</svg>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		{/* Section 4: Expandable Content Section */}
 		<section class="bg-[#414244] text-[#f9f7f0] py-32 px-4">
-			<div class="max-w-4xl mx-auto">
-				<div class="grid md:grid-cols-2 gap-16 items-start">
-					<div class="space-y-6">
-						<h2 class="text-4xl md:text-5xl font-serif text-balance">{resources_title}</h2>
-						<div class="text-lg opacity-80 leading-relaxed prose prose-invert" set:html={marked.parse(resources_text || '')} />
+			<div class="max-w-6xl mx-auto space-y-16">
+				<h2 class="text-4xl md:text-7xl font-serif text-center italic opacity-90">{wounds_header}</h2>
+				
+				<div class="grid md:grid-cols-2 gap-20 items-start">
+					<div class="space-y-8 text-left pt-2">
+						<h3 class="text-3xl md:text-5xl font-serif text-balance leading-tight">{resources_title}</h3>
+						<div class="text-lg opacity-80 leading-relaxed prose prose-invert max-w-md" set:html={marked.parse(resources_text || '')} />
 					</div>
-					
-					<div class="space-y-4">
+
+					<div class="space-y-2">
 						{resources_items.map((item) => (
-							<details class="group border-b border-white/10 pb-4">
-								<summary class="flex justify-between items-center cursor-pointer list-none py-2 text-lg font-serif italic hover:text-white transition-colors">
+							<details class="group border-b border-white/10 last:border-0 pb-6 pt-2">
+								<summary class="flex justify-between items-center cursor-pointer list-none py-2 text-xl font-serif italic hover:text-[#B17048] transition-colors">
 									<span>{item.title}</span>
-									<span class="text-2xl transition-transform group-open:rotate-45 block leading-none">+</span>
+									<span class="text-3xl transition-transform group-open:rotate-45 block leading-none">+</span>
 								</summary>
-								<div class="pt-4 pb-2 opacity-70 leading-relaxed text-sm prose prose-invert" set:html={marked.parse(item.content || '')} />
+								<div class="pt-4 pb-2 opacity-70 leading-relaxed text-base prose prose-invert" set:html={marked.parse(item.content || '')} />
 							</details>
 						))}
 					</div>
@@ -118,11 +151,35 @@ const base = import.meta.env.BASE_URL;
 
 				<div class="mt-24 pt-20 border-t border-white/10 max-w-3xl mx-auto text-center space-y-8">
 					<p class="text-2xl md:text-3xl font-serif italic leading-snug">
-						These aren't character flaws. They're adaptations you developed to survive situations that were too much to handle at the time. The problem? What helped you survive back then is now keeping you from truly living.
+						{adaptations_text}
 					</p>
 					<p class="text-lg opacity-80 leading-relaxed uppercase tracking-widest text-sm">
-						As a trauma therapist in Leesburg, I work with adults who are ready to understand why they do what they do and finally create lasting change.
+						{trauma_therapist_text}
 					</p>
+				</div>
+			</div>
+		</section>
+
+		{/* Section 4.5: Root Therapy Section */}
+		<section class="bg-[#eeebdf] text-[#414244] py-32 px-4">
+			<div class="max-w-4xl mx-auto text-center space-y-10">
+				<h2 class="text-4xl md:text-6xl font-serif leading-tight">{root_title}</h2>
+				<div class="max-w-3xl mx-auto text-lg leading-relaxed opacity-90 prose text-center">
+					<div set:html={marked.parse(root_content || '')} />
+				</div>
+
+				<div class="mt-24 pt-20 border-t border-black/10 max-w-3xl mx-auto text-center space-y-12">
+					<h3 class="text-3xl md:text-5xl font-serif italic">{is_this_you_title}</h3>
+					
+					<div class="space-y-10 text-lg leading-relaxed opacity-90 prose text-center">
+						{is_this_you_items.map(item => (
+							<div>
+								<h4 class="text-xl uppercase tracking-widest font-bold mb-4">{item.title}</h4>
+								{item.subtitle && <p class="italic mb-4">{item.subtitle}</p>}
+								<div set:html={marked.parse(item.body || '')} />
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
@@ -148,7 +205,7 @@ const base = import.meta.env.BASE_URL;
 							<div class="text-lg leading-relaxed opacity-90 max-w-3xl prose" set:html={marked.parse(kaylie_bio || '')} />
 							
 							<div class="flex justify-end">
-								<a href={`${base}about`} class="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium hover:text-[#B17048] transition-colors group">
+								<a href={formatUrl('/about')} class="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium hover:text-[#B17048] transition-colors group">
 									<span>{kaylie_link_text}</span>
 									<svg class="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -161,28 +218,35 @@ const base = import.meta.env.BASE_URL;
 			</div>
 		</section>
 
+		{/* Section 6: Specialties Summary */}
+		<section class="bg-alternate py-32 px-4 border-t border-black/5">
+			<div class="max-w-4xl mx-auto text-center space-y-12">
+				<h2 class="text-4xl md:text-6xl font-serif uppercase">{specialties_header}</h2>
+				<div class="flex flex-col items-center gap-y-6 text-sm md:text-base font-medium tracking-[0.2em] uppercase opacity-80">
+					{specialties.map((spec, index) => (
+						<>
+							<span>{spec.name}</span>
+							{index < specialties.length - 1 && <div class="w-12 h-px bg-black/20"></div>}
+						</>
+					))}
+				</div>
+			</div>
+		</section>
+
 		{/* Section 7: How to Get Started */}
 		<section class="bg-[#B17048] text-[#F9F7F0] py-32 px-4">
 			<div class="max-w-4xl mx-auto text-center space-y-12">
-				<h2 class="text-4xl md:text-6xl font-serif italic lowercase tracking-tight">here's how to get started:</h2>
+				<h2 class="text-4xl md:text-6xl font-serif italic lowercase tracking-tight">{how_to_start_title}</h2>
 				<div class="w-3/4 h-px bg-white/30 mx-auto"></div>
 				
-				<div class="grid md:grid-cols-3 gap-12 mt-16">
-					<div class="space-y-4">
-						<span class="text-4xl font-serif opacity-40">01</span>
-						<h3 class="text-xl uppercase tracking-widest font-bold">Consultation</h3>
-						<p class="text-sm opacity-80 leading-relaxed">Schedule a free 15-minute call to see if we're a good fit.</p>
-					</div>
-					<div class="space-y-4">
-						<span class="text-4xl font-serif opacity-40">02</span>
-						<h3 class="text-xl uppercase tracking-widest font-bold">Intake</h3>
-						<p class="text-sm opacity-80 leading-relaxed">Complete your initial assessment and discuss your goals.</p>
-					</div>
-					<div class="space-y-4">
-						<span class="text-4xl font-serif opacity-40">03</span>
-						<h3 class="text-xl uppercase tracking-widest font-bold">Sessions</h3>
-						<p class="text-sm opacity-80 leading-relaxed">Begin your journey towards healing and growth.</p>
-					</div>
+				<div class="grid md:grid-cols-3 gap-20 mt-20">
+					{how_to_start_items.map(item => (
+						<div class="space-y-6">
+							<span class="text-4xl font-serif opacity-40">{item.number}</span>
+							<h3 class="text-xl uppercase tracking-widest font-bold">{item.title}</h3>
+							<div class="text-sm opacity-80 leading-relaxed" set:html={marked.parse(item.text || '')} />
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
@@ -192,19 +256,16 @@ const base = import.meta.env.BASE_URL;
 			<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
 				<div class="w-full md:w-1/2 text-left space-y-8">
 					<h2 class="text-3xl md:text-5xl font-sans font-bold tracking-[0.2em] uppercase leading-tight text-balance">
-						You don't have to struggle alone.
+						{callout_title}
 					</h2>
-					<div class="space-y-6 text-lg leading-relaxed opacity-90">
-						<p>Life can sometimes feel unbearable. Maybe you’ve tried dealing with your issues by talking to close friends, searching internet rabbit holes, compartmentalizing, and/or distracting yourself with things like scrolling, substances, or spending.</p>
-						<p>Wherever you go, though, there you are. The issue remains, and though you may have had temporary relief, you feel more alone, even shameful, afterward.</p>
-						<p>Whether you’re experiencing new challenges or iterations of long-standing ones, therapy can help. You deserve to feel seen, heard, and supported. You can have a more balanced, joyful existence.</p>
-						<p class="font-bold italic">Healing is possible, and I can help.</p>
-					</div>
+					<div class="space-y-6 text-lg leading-relaxed opacity-90 prose" set:html={marked.parse(callout_text || '')} />
 				</div>
 				<div class="w-full md:w-1/2">
-					<div class="w-full aspect-[4/3] bg-black/5 rounded-sm flex items-center justify-center italic text-black/20 text-sm tracking-widest uppercase">
-						Image Placeholder
-					</div>
+					<img 
+						src={callout_image.startsWith('http') ? callout_image : (callout_image.startsWith(base) ? callout_image : `${base}${callout_image.startsWith('/') ? callout_image.slice(1) : callout_image}`)}
+						alt="Callout Image"
+						class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl"
+					/>
 				</div>
 			</div>
 		</section>
@@ -212,19 +273,21 @@ const base = import.meta.env.BASE_URL;
 		{/* Section 9: Final CTA Section */}
 		<section class="flex flex-col md:flex-row min-h-[600px]">
 			<div class="w-full md:w-1/2 bg-alternate flex items-center justify-center p-0">
-				<div class="w-full h-full min-h-[400px] bg-black/5 flex items-center justify-center italic text-black/20 text-sm tracking-widest uppercase">
-					Image Placeholder
-				</div>
+				<img 
+					src={hero_image.startsWith('http') ? hero_image : (hero_image.startsWith(base) ? hero_image : `${base}${hero_image.startsWith('/') ? hero_image.slice(1) : hero_image}`)}
+					alt="Final CTA Image"
+					class="w-full h-full object-cover grayscale opacity-60"
+				/>
 			</div>
 			<div class="w-full md:w-1/2 bg-[#294b27] text-white flex flex-col items-center justify-center p-12 text-center space-y-10">
 				<div class="space-y-6">
-					<h2 class="text-lg md:text-xl uppercase tracking-[0.2em] font-sans opacity-80">TAKE A BREATH. YOU’RE IN THE RIGHT PLACE.</h2>
-					<p class="text-4xl md:text-6xl font-serif italic leading-tight">THIS IS WHERE CHANGE BEGINS.</p>
+					<h2 class="text-lg md:text-xl uppercase tracking-[0.2em] font-sans opacity-80">{final_cta_tagline}</h2>
+					<p class="text-4xl md:text-6xl font-serif italic leading-tight">{final_cta_title}</p>
 				</div>
 				
 				<div class="pt-6">
 					<a href={cta_url} class="inline-block border border-white px-10 py-4 text-sm font-medium hover:bg-white hover:text-[#294b27] transition-all uppercase tracking-widest text-center shadow-lg active:scale-95">
-						Book a Call
+						{final_cta_button_text}
 					</a>
 				</div>
 			</div>

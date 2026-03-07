@@ -4,7 +4,7 @@ import Carousel from '../components/Carousel.astro';
 import contactData from '../content/contact.json';
 import { marked } from 'marked';
 
-const { title, intro_title, intro_text, cta_text, cta_url, location, parking, arrival, studio_images } = contactData;
+const { title, intro_title, intro_text, cta_text, cta_url, location, parking, arrival, studio_title, studio_images } = contactData;
 
 const carouselImages = studio_images?.map(item => item.image) || [];
 ---
@@ -56,7 +56,7 @@ const carouselImages = studio_images?.map(item => item.image) || [];
 
 					{carouselImages.length > 0 && (
 						<div class="mt-12">
-							<h3 class="text-2xl font-serif mb-6 text-center italic">Entering the Space</h3>
+							<h3 class="text-2xl font-serif mb-6 text-center italic">{studio_title}</h3>
 							<Carousel images={carouselImages} />
 						</div>
 					)}
