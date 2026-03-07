@@ -5,10 +5,10 @@ import Section from '../components/Section.astro';
 import { marked } from 'marked';
 
 const privacyEntry = await getEntry('pages', 'privacy');
-const { content } = privacyEntry?.data || {};
+const { title, seo_title, content } = privacyEntry?.data || {};
 ---
 
-<Layout title="Privacy Policy | Wildwood Psychotherapy">
+<Layout title={seo_title}>
 	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">

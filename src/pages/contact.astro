@@ -8,12 +8,12 @@ import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
 const contactEntry = await getEntry('pages', 'contact');
-const { title, intro_title, intro_text, cta_text, cta_url, location, parking, arrival, studio_title, studio_images } = contactEntry?.data || {};
+const { title, seo_title, intro_title, intro_text, cta_text, cta_url, location, parking, arrival, studio_title, studio_images } = contactEntry?.data || {};
 
 const carouselImages = studio_images?.map((item: any) => formatUrl(item.image)) || [];
 ---
 
-<Layout title="Contact | Wildwood Psychotherapy">
+<Layout title={seo_title}>
 	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">

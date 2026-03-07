@@ -25,8 +25,10 @@
   --font-serif: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 
   /* Section Spacing Standards */
-  --spacing-section-standard-y: 5rem; /* 80px */
-  --spacing-section-standard-y-md: 8rem; /* 128px */
+  --spacing-section-standard-pt: 4rem; /* 64px */
+  --spacing-section-standard-pt-md: 6rem; /* 96px */
+  --spacing-section-standard-pb: 4rem; /* 64px */
+  --spacing-section-standard-pb-md: 6rem; /* 96px */
   
   --spacing-section-small-y: 3rem; /* 48px */
   --spacing-section-small-y-md: 5rem; /* 80px */
@@ -36,8 +38,8 @@
 
   --spacing-hero-pt: 6rem; /* 96px */
   --spacing-hero-pt-md: 8rem; /* 128px */
-  --spacing-hero-pb: 3rem; /* 48px */
-  --spacing-hero-pb-md: 4rem; /* 64px */
+  --spacing-hero-pb: 4rem; /* 64px */
+  --spacing-hero-pb-md: 6rem; /* 96px */
 
   --spacing-hero-content-gap: 4rem; /* 64px */
   --spacing-hero-content-gap-md: 6rem; /* 96px */
@@ -189,15 +191,34 @@
   }
 
   .prose-container {
-    padding-top: var(--spacing-section-standard-y);
-    padding-bottom: var(--spacing-section-standard-y);
+    padding-top: var(--spacing-section-standard-pt);
+    padding-bottom: var(--spacing-section-standard-pb);
   }
 
   @media (min-width: 768px) {
     .prose-container {
-      padding-top: var(--spacing-section-standard-y-md);
-      padding-bottom: var(--spacing-section-standard-y-md);
+      padding-top: var(--spacing-section-standard-pt-md);
+      padding-bottom: var(--spacing-section-standard-pb-md);
     }
+  }
+
+  /* Ensure padding is the only factor for section spacing (Deep Reset) */
+  section > *:first-child,
+  section > *:first-child > *:first-child,
+  section > *:first-child > *:first-child > *:first-child,
+  section > *:first-child > *:first-child > *:first-child > *:first-child,
+  .prose-container > *:first-child,
+  .prose > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  section > *:last-child,
+  section > *:last-child > *:last-child,
+  section > *:last-child > *:last-child > *:last-child,
+  section > *:last-child > *:last-child > *:last-child > *:last-child,
+  .prose-container > *:last-child,
+  .prose > *:last-child {
+    margin-bottom: 0 !important;
   }
   
   .prose p { margin-top: 1.25em; margin-bottom: 1.25em; }
@@ -205,20 +226,79 @@
   .prose ul { list-style-type: disc; padding-left: 1.625em; margin-top: 1.25em; margin-bottom: 1.25em; }
   .prose li { margin-top: 0.5em; margin-bottom: 0.5em; }
   .prose strong { color: inherit; font-weight: 700; }
-  .prose a { color: var(--color-terracotta); text-decoration: underline; font-weight: 500; }
+  .prose a:not(.btn) { color: var(--color-terracotta); text-decoration: underline; font-weight: 500; }
   .prose blockquote { border-left: 4px solid var(--color-terracotta); padding-left: 1em; font-style: italic; opacity: 0.9; }
 
-  /* Primary Button Styling */
-  .bg-terracotta {
-    background-color: var(--color-terracotta);
-    color: var(--color-paper);
+  /* Global Button System */
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem; /* px-10 py-4 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.12em; /* tracking-widest */
+    text-align: center;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: var(--radius-brand);
+    cursor: pointer;
+    text-decoration: none !important;
+    line-height: 1;
   }
 
-  .bg-terracotta:hover {
-    background-color: var(--color-terracotta-dark);
-    transform: translateY(-2px);
+  .btn:active {
+    transform: scale(0.95);
+  }
+
+  .btn-terracotta {
+    background-color: var(--color-terracotta);
+    color: var(--color-paper);
+    border: 1px solid var(--color-terracotta);
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-terracotta:hover {
+    background-color: var(--color-terracotta-dark);
+    border-color: var(--color-terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+    color: var(--color-paper);
+  }
+
+  .btn-white {
+    background-color: transparent;
+    color: var(--color-paper);
+    border: 1px solid var(--color-paper);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-white:hover {
+    background-color: var(--color-paper);
+    color: var(--color-olive);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--color-olive);
+    border: 1px solid var(--color-olive);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-olive);
+    color: var(--color-paper);
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-paper);
+    border: 1px solid rgba(249, 247, 240, 0.2);
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--color-paper);
+    color: var(--color-olive);
   }
 
   /* Link Underline Animation */

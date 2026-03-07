@@ -22,8 +22,8 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif text-balance">{title}</h1>
-				{subtitle && <p class="subtitle-serif text-center mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)] text-balance opacity-80">{subtitle}</p>}
+				<h1 class="display-serif m-0 text-balance">{title}</h1>
+				{subtitle && <p class="subtitle-serif m-0 text-center mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)] text-balance opacity-80">{subtitle}</p>}
 			</div>
 		</Section>
 		
@@ -37,7 +37,7 @@ const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
 				if (section.type === 'text') {
 					return (
 						<div class={`${section.style === 'highlighted' ? "bg-current/5 p-8 border border-current/10 rounded-brand mb-12" : "mb-8 last:mb-0"}`}>
-							{section.title && <h2 class="h1-serif mb-6 text-balance">{section.title}</h2>}
+							{section.title && <h2 class="h1-serif mb-6 text-center mx-auto text-balance">{section.title}</h2>}
 							<div class="space-y-4" set:html={marked(section.body)} />
 						</div>
 					);

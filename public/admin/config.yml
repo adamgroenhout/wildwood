@@ -72,7 +72,7 @@ collections:
         label: "Home Page"
         file: "src/content/homepage.json"
         fields:
-          - { label: "SEO Title", name: "seo_title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string", required: false }
           - { label: "Hero Image", name: "hero_image", widget: "image" }
@@ -143,7 +143,7 @@ collections:
         file: "src/content/about.json"
         fields:
           - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "SEO Title", name: "seo_title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Bio Content", name: "bio", widget: "markdown" }
           - label: "Extra Content Sections"
@@ -172,6 +172,7 @@ collections:
         file: "src/content/contact.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Intro Title", name: "intro_title", widget: "string" }
           - { label: "Intro Text", name: "intro_text", widget: "markdown" }
           - { label: "CTA Text", name: "cta_text", widget: "string" }
@@ -215,6 +216,7 @@ collections:
         file: "src/content/faqs.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Meta Description", name: "meta_description", widget: "markdown" }
           - label: "FAQs"
             name: "faqs"
@@ -239,6 +241,7 @@ collections:
         file: "src/content/telehealth.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - label: "Why Telehealth"
             name: "why_telehealth"
@@ -270,6 +273,7 @@ collections:
         file: "src/content/group-therapy.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - label: "Intro"
             name: "intro"
@@ -312,6 +316,7 @@ collections:
         file: "src/content/holding-it-together.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - label: "Hero Section"
             name: "hero_section"
@@ -367,6 +372,7 @@ collections:
         file: "src/content/good-faith-estimate.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Content", name: "content", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "markdown" } }
           - { label: "Highlight Box", name: "highlight_box", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "markdown" } }
@@ -383,6 +389,7 @@ collections:
         file: "src/content/events.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - label: "Sections"
             name: "sections"
@@ -422,6 +429,7 @@ collections:
         file: "src/content/privacy.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
           - { label: "Policy Content", name: "content", widget: "markdown" }
 
   - name: "services"
@@ -434,7 +442,7 @@ collections:
     fields:
       - { label: "Page Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Seo Title", name: "seo_title", widget: "string" }
+      - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
       - label: "Page Sections"
         name: "sections"
         widget: "list"

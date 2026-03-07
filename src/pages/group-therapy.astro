@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
@@ -56,9 +57,9 @@ const {
             <p class="eyebrow mb-6 opacity-70">{featured_group?.subtitle}</p>
             <div class="prose body-lg max-w-2xl mx-auto mb-8 text-center" set:html={marked.parse(featured_group?.text || '')} />
 						<div class="pt-4">
-							<a href={formatUrl(featured_group?.cta_url || '#')} class="border border-olive text-olive px-8 py-3 eyebrow hover:bg-olive hover:text-paper transition-all rounded-brand inline-block">
+							<Button href={featured_group?.cta_url || '#'} theme="outline">
 								{featured_group?.cta_text}
-							</a>
+							</Button>
 						</div>
 					</div>
 
@@ -74,9 +75,9 @@ const {
 					</div>
 
           <div class="pt-16">
-            <a href={formatUrl(cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+            <Button href={cta_url || '#'} theme="terracotta">
               {cta_text}
-            </a>
+            </Button>
           </div>
 				</div>
 			</div>

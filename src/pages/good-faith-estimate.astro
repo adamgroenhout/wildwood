@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import gfeData from '../content/good-faith-estimate.json';
+import { getEntry } from 'astro:content';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
-const { title, subtitle, content, highlight_box, footer_text, footer_url, keep_in_mind } = gfeData;
+const gfeEntry = await getEntry('pages', 'good-faith-estimate');
+const { title, seo_title, subtitle, content, highlight_box, footer_text, footer_url, keep_in_mind } = gfeEntry?.data || {};
 
 // Handle the footer link more robustly
 const linkPlaceholder = "www.cms.gov/nosurprises";
-const footerParts = footer_text.split(linkPlaceholder);
+const footerParts = (footer_text || "").split(linkPlaceholder);
 ---
 
-<Layout title="Good Faith Estimate | Wildwood Psychotherapy" description="Information about the Good Faith Estimate for Wildwood Psychotherapy services.">
+<Layout title={seo_title}>
 	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">

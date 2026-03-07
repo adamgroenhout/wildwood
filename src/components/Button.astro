@@ -16,13 +16,13 @@ const {
 } = Astro.props;
 
 const themeClasses = {
-  terracotta: 'bg-terracotta text-paper hover:bg-terracotta-dark shadow-lg',
-  outline: 'border border-paper/20 text-paper hover:bg-paper hover:text-olive hover:shadow-lg',
-  white: 'border border-paper text-paper hover:bg-paper hover:text-olive shadow-lg',
-  'olive-outline': 'border border-olive text-olive hover:bg-olive hover:text-paper',
+  terracotta: 'btn-terracotta',
+  outline: 'btn-outline',
+  white: 'btn-white',
+  'olive-outline': 'btn-outline',
 };
 
-const baseClasses = 'inline-block px-10 py-4 text-sm font-medium transition-all uppercase tracking-widest text-center active:scale-95 rounded-brand';
+const baseClasses = 'btn';
 ---
 
 <a 

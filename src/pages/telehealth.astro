@@ -2,23 +2,24 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
 const telehealthEntry = await getEntry('pages', 'telehealth');
 const { 
   title, 
+  seo_title,
   subtitle, 
-  why_telehealth,
-  what_to_expect,
-  bottom_text,
+  why_telehealth, 
+  what_to_expect, 
+  bottom_text, 
   cta_text, 
   cta_url 
 } = telehealthEntry?.data || {};
 ---
 
-<Layout title="Telehealth | Wildwood Psychotherapy">
-	<main>
+<Layout title={seo_title}>	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
 				<h1 class="display-serif text-balance">{title}</h1>
@@ -51,10 +52,10 @@ const {
 					<div class="text-center space-y-12">
 						<div class="prose body-lg max-w-2xl mx-auto italic opacity-90 text-center" set:html={marked.parse(bottom_text || '')} />
 						
-						<div class="pt-8">
-              <a href={formatUrl(cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
-                {cta_text}
-              </a>
+						<div class="pt-8 text-center">
+						  <Button href={cta_url || '#'} theme="terracotta">
+						    {cta_text}
+						  </Button>
 						</div>
 					</div>
 				</div>

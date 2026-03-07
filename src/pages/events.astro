@@ -5,6 +5,8 @@ import Section from '../components/Section.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
+import Button from '../components/Button.astro';
+
 const eventsEntry = await getEntry('pages', 'events');
 const { title, seo_title, subtitle, content, sections } = eventsEntry?.data || {};
 ---
@@ -13,8 +15,8 @@ const { title, seo_title, subtitle, content, sections } = eventsEntry?.data || {
 	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="display-serif mb-10 text-balance">{title}</h1>
-				{subtitle && <p class="subtitle-serif opacity-80 text-balance mx-auto max-w-2xl text-center">{subtitle}</p>}
+				<h1 class="display-serif m-0 text-balance">{title}</h1>
+				{subtitle && <p class="subtitle-serif m-0 mt-8 opacity-80 text-balance mx-auto max-w-2xl text-center">{subtitle}</p>}
 			</div>
 		</Section>
 
@@ -23,8 +25,8 @@ const { title, seo_title, subtitle, content, sections } = eventsEntry?.data || {
 				<div class="space-y-24">
 					{content?.map((p: string) => <div class="prose body-lg max-w-none text-center" set:html={marked.parse(p)} />)}
 
-					{sections?.map((section: any) => (
-						<div class="space-y-12 pt-16 border-t border-current/10">
+					{sections?.map((section: any, index: number) => (
+						<div class={`space-y-12 ${index !== 0 ? 'pt-16 border-t border-current/10' : ''}`}>
 							<div class="max-w-3xl mx-auto text-center space-y-6">
 								<h2 class="h1-serif italic">{section.title}</h2>
 								{section.text && <div class="body-lg opacity-90 prose max-w-none" set:html={marked.parse(section.text)} />}
@@ -44,9 +46,9 @@ const { title, seo_title, subtitle, content, sections } = eventsEntry?.data || {
 									</div>
 									{section.highlight.cta_text && (
 										<div class="pt-4 text-center">
-											<a href={formatUrl(section.highlight.cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+											<Button href={section.highlight.cta_url || '#'} theme="terracotta">
 												{section.highlight.cta_text}
-											</a>
+											</Button>
 										</div>
 									)}
 								</div>
@@ -75,9 +77,9 @@ const { title, seo_title, subtitle, content, sections } = eventsEntry?.data || {
 
 											{item.cta_text && (
 												<div class="pt-4 text-center">
-													<a href={formatUrl(item.cta_url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
+													<Button href={item.cta_url || '#'} theme="terracotta">
 														{item.cta_text}
-													</a>
+													</Button>
 												</div>
 											)}
 										</div>

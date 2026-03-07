@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 import { marked } from 'marked';
 import { formatUrl } from '../utils/paths';
 
@@ -9,6 +10,7 @@ const hitEntry = await getEntry('pages', 'holding-it-together');
 const { 
   title, 
   subtitle, 
+  seo_title,
   hero_section,
   who_for_section,
   program_details,
@@ -16,86 +18,92 @@ const {
 } = hitEntry?.data || {};
 ---
 
-<Layout title="Holding It Together | Wildwood Psychotherapy">
+<Layout title={seo_title}>
 	<main>
 		<Section theme="alternate" padding="hero" class="text-center">
 			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif mb-10">{title}</h1>
-				{subtitle && <p class="subtitle-serif mt-8 opacity-80 text-center">{subtitle}</p>}
+				<h1 class="display-serif m-0">{title}</h1>
+				{subtitle && <p class="subtitle-serif m-0 mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)] opacity-80 text-center text-balance mx-auto max-w-2xl">{subtitle}</p>}
 			</div>
 		</Section>
 
 		<Section theme="alternate">
-			<div class="max-w-4xl mx-auto space-y-24">
+			<div class="max-w-4xl mx-auto">
         {/* Intro Section */}
-				<div class="prose body-lg max-w-none space-y-12">
-					<div class="bg-current/5 p-8 border border-current/10 rounded-brand text-center">
-						<h2 class="h2-serif italic mb-6">{hero_section?.title}</h2>
-						<div class="max-w-2xl mx-auto space-y-6 opacity-90">
-              <div set:html={marked.parse(hero_section?.text1 || '')} />
-              <div set:html={marked.parse(hero_section?.text2 || '')} />
-              <div set:html={marked.parse(hero_section?.text3 || '')} />
-            </div>
-					</div>
+				<div class="bg-current/5 p-10 md:p-16 border border-current/10 rounded-brand text-center shadow-xl mb-24">
+					<h2 class="h1-serif italic mb-8">{hero_section?.title}</h2>
+					<div class="max-w-2xl mx-auto space-y-8 opacity-90 body-lg prose text-center">
+            <div set:html={marked.parse(hero_section?.text1 || '')} />
+            <div set:html={marked.parse(hero_section?.text2 || '')} />
+            <div set:html={marked.parse(hero_section?.text3 || '')} />
+          </div>
 				</div>
 
         {/* Who For Section */}
-        <div class="space-y-12">
-          <h2 class="h1-serif text-center">{who_for_section?.title}</h2>
+        <div class="space-y-16 py-16">
+          <h2 class="h1-serif text-center italic">{who_for_section?.title}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {who_for_section?.points?.map((point: string) => (
               <div class="bg-current/5 border border-current/10 p-8 rounded-brand shadow-sm">
-                <p class="opacity-90">{point}</p>
+                <p class="body-lg opacity-90">{point}</p>
               </div>
             ))}
           </div>
-          <p class="text-center italic opacity-70">{who_for_section?.footer_italic}</p>
+          <p class="text-center subtitle-serif italic opacity-70">{who_for_section?.footer_italic}</p>
         </div>
+      </div>
+    </Section>
 
+    <Section theme="alternate">
+      <div class="max-w-4xl mx-auto">
         {/* Program Details */}
-        <div class="space-y-12 pt-12 border-t border-current/10">
-          <h2 class="h1-serif text-center">{program_details?.title}</h2>
+        <div class="space-y-16">
+          <h2 class="h1-serif text-center italic">{program_details?.title}</h2>
           
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-current/5 p-6 border border-current/5 rounded-brand text-center">
-              <p class="eyebrow mb-2">Duration</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-current/5 p-8 border border-current/10 rounded-brand text-center shadow-sm">
+              <p class="eyebrow mb-3 opacity-60">Duration</p>
               <p class="h3-serif">{program_details?.duration}</p>
             </div>
-            <div class="bg-current/5 p-6 border border-current/5 rounded-brand text-center">
-              <p class="eyebrow mb-2">Format</p>
+            <div class="bg-current/5 p-8 border border-current/10 rounded-brand text-center shadow-sm">
+              <p class="eyebrow mb-3 opacity-60">Format</p>
               <p class="h3-serif">{program_details?.format}</p>
             </div>
-            <div class="bg-current/5 p-6 border border-current/5 rounded-brand text-center">
-              <p class="eyebrow mb-2">Location</p>
+            <div class="bg-current/5 p-8 border border-current/10 rounded-brand text-center shadow-sm">
+              <p class="eyebrow mb-3 opacity-60">Location</p>
               <p class="h3-serif">{program_details?.location}</p>
             </div>
           </div>
 
-          <div class="bg-current/5 p-10 border border-current/10 rounded-brand max-w-3xl mx-auto">
-            <h3 class="eyebrow mb-8 text-center">{program_details?.weekly_focus?.title}</h3>
-            <div class="space-y-4 text-left max-w-md mx-auto">
+          <div class="bg-current/5 p-10 md:p-16 border border-current/10 rounded-brand max-w-3xl mx-auto shadow-lg">
+            <h3 class="eyebrow mb-10 text-center opacity-70">{program_details?.weekly_focus?.title}</h3>
+            <div class="space-y-6 text-left max-w-md mx-auto">
               {program_details?.weekly_focus?.weeks?.map((week: string, index: number) => (
-                <div class="flex gap-6 items-baseline border-b border-current/5 pb-3 last:border-0">
-                  <span class="h3-serif italic opacity-40">Week {index + 1}</span>
-                  <span class="opacity-90">{week}</span>
+                <div class="flex gap-8 items-baseline border-b border-current/10 pb-4 last:border-0">
+                  <span class="h3-serif italic opacity-70 shrink-0">Week {index + 1}</span>
+                  <span class="body-lg opacity-90">{week}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
+      </div>
+    </Section>
 
+    <Section theme="charcoal">
+      <div class="max-w-4xl mx-auto text-center space-y-12">
         {/* Footer CTA */}
-        <div class="text-center space-y-12 pt-12">
-          <h2 class="display-serif italic text-center">{footer_cta?.title}</h2>
-          <p class="max-w-2xl mx-auto opacity-90">{footer_cta?.text}</p>
-          <div class="flex flex-wrap justify-center gap-6 pt-4">
-            <a href={formatUrl(footer_cta?.primary_button?.url || '#')} class="bg-terracotta text-paper px-10 py-4 eyebrow hover:bg-terracotta-dark transition-all rounded-brand shadow-lg inline-block">
-              {footer_cta?.primary_button?.text}
-            </a>
-            <a href={formatUrl(footer_cta?.secondary_button?.url || '#')} class="border border-olive text-olive px-10 py-4 eyebrow hover:bg-olive hover:text-paper transition-all rounded-brand inline-block">
-              {footer_cta?.secondary_button?.text}
-            </a>
-          </div>
+        <h2 class="display-serif italic text-center text-balance">{footer_cta?.title}</h2>
+        <div class="max-w-2xl mx-auto opacity-90 body-lg prose text-center">
+          <p>{footer_cta?.text}</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 pt-8">
+          <Button href={footer_cta?.primary_button?.url || '#'} theme="terracotta">
+            {footer_cta?.primary_button?.text}
+          </Button>
+          <Button href={footer_cta?.secondary_button?.url || '#'} theme="white">
+            {footer_cta?.secondary_button?.text}
+          </Button>
         </div>
 			</div>
 		</Section>
