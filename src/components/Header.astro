@@ -7,8 +7,8 @@ const settingsEntry = await getEntry('pages', 'settings');
 const { site_name, logo, navigation, header_cta_text, header_cta_href } = settingsEntry?.data || {};
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-olive/95 backdrop-blur-sm border-b border-white/5">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<header class="fixed top-0 left-0 right-0 z-50 bg-olive/95 backdrop-blur-sm border-b border-white/5 pointer-events-none">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto">
 		<div class="flex justify-between items-center h-20">
 			<div class="flex-shrink-0">
 				<a href={formatUrl('home')} id="logo-link" class="flex items-center gap-3 text-lg md:text-xl tracking-tight uppercase text-white" style="font-family: var(--font-serif);">
@@ -37,7 +37,7 @@ const { site_name, logo, navigation, header_cta_text, header_cta_href } = settin
 							)}
 						</a>
 						{item.subItems && (
-							<div class="absolute left-0 mt-2 w-56 bg-olive border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+							<div class="absolute left-0 mt-2 w-56 bg-olive border border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-1 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto">
 								{item.subItems.map(subItem => (
 									<a href={formatUrl(subItem.href)} class="block px-4 py-3 eyebrow text-white/70 hover:bg-white/5 hover:text-white transition-colors">
 										{subItem.name}
@@ -67,7 +67,7 @@ const { site_name, logo, navigation, header_cta_text, header_cta_href } = settin
 	</div>
 
 	<!-- Mobile Navigation Drawer -->
-	<div id="mobile-menu" class="hidden lg:hidden bg-olive border-t border-white/10 px-4 pt-2 pb-6 space-y-1 shadow-2xl transition-all duration-300">
+	<div id="mobile-menu" class="hidden lg:hidden bg-olive border-t border-white/10 px-4 pt-2 pb-6 space-y-1 shadow-2xl transition-all duration-300 pointer-events-none">
 		{navigation?.map(item => (
 			<div class="border-b border-white/5 last:border-0">
 				<div class="flex items-center justify-between">
@@ -93,7 +93,7 @@ const { site_name, logo, navigation, header_cta_text, header_cta_href } = settin
 				)}
 			</div>
 		))}
-		<div class="pt-6">
+		<div class="pt-6 px-3">
 			<a href={formatUrl(header_cta_href)} class="block text-center px-6 py-4 bg-terracotta text-white eyebrow hover:bg-terracotta-dark transition-all shadow-lg active:scale-[0.98]">
 				{header_cta_text}
 			</a>
@@ -126,12 +126,14 @@ const { site_name, logo, navigation, header_cta_text, header_cta_href } = settin
 			button.onclick = () => {
 				const isHidden = menu.classList.contains('hidden');
 				if (isHidden) {
-					menu.classList.remove('hidden');
+					menu.classList.remove('hidden', 'pointer-events-none');
+					menu.classList.add('pointer-events-auto');
 					menuIcon.classList.add('hidden');
 					closeIcon.classList.remove('hidden');
 					document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
 				} else {
-					menu.classList.add('hidden');
+					menu.classList.add('hidden', 'pointer-events-none');
+					menu.classList.remove('pointer-events-auto');
 					menuIcon.classList.remove('hidden');
 					closeIcon.classList.add('hidden');
 					document.body.style.overflow = '';
