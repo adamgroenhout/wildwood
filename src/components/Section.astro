@@ -1,7 +1,7 @@
 ---
 interface Props {
   theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate' | 'terracotta' | 'none';
-  padding?: 'standard' | 'large' | 'small' | 'hero' | 'none';
+  padding?: 'standard' | 'large' | 'small' | 'hero' | 'top-only' | 'x-only' | 'none';
   class?: string;
   id?: string;
 }
@@ -31,6 +31,7 @@ const paddingClasses = {
   small: 'py-[var(--spacing-section-small-y)] md:py-[var(--spacing-section-small-y-md)] px-4',
   hero: 'pt-[var(--spacing-hero-pt)] md:pt-[var(--spacing-hero-pt-md)] pb-[var(--spacing-hero-pb)] md:pb-[var(--spacing-hero-pb-md)] px-4',
   'top-only': 'pt-[var(--spacing-section-standard-pt)] md:pt-[var(--spacing-section-standard-pt-md)] pb-0 px-4',
+  'x-only': 'px-4',
   none: '',
 };
 ---

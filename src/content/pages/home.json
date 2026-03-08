@@ -88,7 +88,7 @@
       "body": "As a trauma therapist in Leesburg, I work with adults who are ready to understand why they do what they do and finally create lasting change.",
       "theme": "charcoal",
       "alignment": "center",
-      "padding": "none"
+      "padding": "x-only"
     },
     {
       "type": "text",
