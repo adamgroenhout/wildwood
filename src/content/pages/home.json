@@ -83,13 +83,15 @@
       "padding": "top-only"
     },
     {
-      "type": "text",
+      "type": "image_text",
       "subtitle": "A Note on Adaptation",
       "title": "These aren't character flaws.",
       "body": "They're adaptations you developed to survive situations that were too much to handle at the time. The problem? What helped you survive back then is now keeping you from truly living.\n\nAs a trauma therapist in Leesburg, I work with adults who are ready to understand why they do what they do and finally create lasting change.",
       "theme": "charcoal",
-      "alignment": "center",
-      "padding": "standard"
+      "image_position": "right",
+      "image_alt": "Peaceful forest trail",
+      "padding": "standard",
+      "image": "/wildwood2/images/a_calming_photorealistic_image_o.png"
     },
     {
       "type": "text",

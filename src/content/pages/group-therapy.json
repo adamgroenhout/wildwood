@@ -3,10 +3,13 @@
   "seo_title": "Group Therapy for People-Pleasers in Leesburg, VA",
   "blocks": [
     {
-      "type": "text",
+      "type": "image_text",
       "title": "You look like you have it all together. But inside? You're drowning.",
       "body": "You show up for everyone. You say yes when you want to scream no. You carry everyone else's emotions while yours pile up in the corner, ignored and heavy.\n\nAnd the worst part? Nobody even knows you're struggling because you're too busy making sure THEY'RE okay.\n\n> If you're tired of being the person everyone leans on while you quietly fall apart, you're in the right place.",
-      "theme": "cream"
+      "theme": "cream",
+      "image_position": "left",
+      "image_alt": "Welcoming group therapy circle",
+      "image": "/wildwood2/images/a_welcoming_softly_lit_room_with.png"
     },
     {
       "type": "grid",

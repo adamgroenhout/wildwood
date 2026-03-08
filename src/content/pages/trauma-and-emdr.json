@@ -20,12 +20,14 @@
       "padding": "standard"
     },
     {
-      "type": "text",
+      "type": "image_text",
       "title": "When Your Body is Stuck in the Past",
       "body": "Your nervous system is stuck in a threat response that made sense at one point in your life, but now it's running the show when it shouldn't be.",
       "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard"
+      "image_position": "left",
+      "image_alt": "Flowing river over stones",
+      "padding": "standard",
+      "image": "/wildwood2/images/a_tranquil_photorealistic_image_.png"
     },
     {
       "type": "text",
