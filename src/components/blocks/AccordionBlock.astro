@@ -19,15 +19,28 @@ const { data } = Astro.props;
 ---
 
 <Section theme={data.theme || 'charcoal'} padding={data.padding || 'standard'}>
-  <div class={`max-w-6xl mx-auto ${data.layout === 'split' ? 'grid md:grid-cols-2 gap-12 md:gap-20 items-start' : 'space-y-12 max-w-4xl'}`}>
+  <div class={`max-w-7xl mx-auto ${data.layout === 'split' ? 'grid lg:grid-cols-12 gap-12 lg:gap-24 items-start' : 'space-y-16 max-w-4xl'}`}>
     
-    <div class={`space-y-6 ${data.layout === 'split' ? 'text-left pt-2' : 'text-center'}`}>
-      {data.subtitle && <p class={`display-serif italic opacity-90 ${data.layout === 'split' ? '' : 'text-center'}`}>{data.subtitle}</p>}
-      {data.title && <h2 class={`h1-serif text-balance leading-tight ${data.layout === 'split' ? '' : 'text-center'}`}>{data.title}</h2>}
-      {data.body && <div class={`body-lg opacity-80 prose max-w-none ${data.layout === 'split' ? 'text-left' : 'mx-auto text-center'}`} set:html={marked.parse(data.body)} />}
+    <div class={`space-y-8 ${data.layout === 'split' ? 'lg:col-span-5 text-left' : 'text-center'}`}>
+      <div class="space-y-4">
+        {data.subtitle && (
+          <p class={`eyebrow text-terracotta ${data.layout === 'split' ? '' : 'text-center'}`}>
+            {data.subtitle}
+          </p>
+        )}
+        {data.title && (
+          <h2 class={`h2-serif text-balance leading-tight ${data.layout === 'split' ? '' : 'text-center'}`}>
+            {data.title}
+          </h2>
+        )}
+      </div>
+      
+      {data.body && (
+        <div class={`body-lg opacity-85 prose max-w-none ${data.layout === 'split' ? 'text-left' : 'mx-auto text-center'}`} set:html={marked.parse(data.body)} />
+      )}
     </div>
 
-    <div class="w-full">
+    <div class={`w-full ${data.layout === 'split' ? 'lg:col-span-7 pt-4' : ''}`}>
       <Accordion items={data.items.map(item => ({ title: item.title, content: item.content }))} />
     </div>
 

@@ -10,6 +10,7 @@ interface Props {
       title?: string;
       subtitle?: string;
       text?: string;
+      body?: string;
       number?: string;
     }>;
     theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
@@ -31,28 +32,37 @@ const colClass = gridCols[data.columns || '3'];
 ---
 
 <Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'}>
-  <div class="max-w-6xl mx-auto space-y-16 text-center">
+  <div class="max-w-6xl mx-auto space-y-16">
     
     {(data.title || data.subtitle) && (
-      <div class="space-y-6">
-        {data.title && <h2 class="display-serif italic lowercase tracking-tight">{data.title}</h2>}
-        {data.subtitle && <div class="w-3/4 h-px bg-current/30 mx-auto mt-4"></div>}
+      <div class="space-y-4 text-center max-w-3xl mx-auto">
+        {data.subtitle && (
+          <p class="eyebrow text-terracotta">
+            {data.subtitle}
+          </p>
+        )}
+        {data.title && (
+          <h2 class="display-serif italic lowercase tracking-tight">
+            {data.title}
+          </h2>
+        )}
+        {data.title && !data.subtitle && <div class="w-24 h-px bg-terracotta/30 mx-auto mt-8"></div>}
       </div>
     )}
     
-    <div class={`grid ${colClass} gap-10 lg:gap-16 ${data.style === 'minimal' ? 'text-center' : 'text-left'}`}>
+    <div class={`grid ${colClass} gap-x-10 gap-y-16 lg:gap-x-16 lg:gap-y-20 ${data.style === 'minimal' ? 'text-center' : 'text-left'}`}>
       {data.items.map((item) => (
         <div class:list={[
-          "space-y-6 transition-[transform,box-shadow] duration-500",
+          "space-y-8 transition-[transform,box-shadow] duration-500",
           data.style === 'cards' ? "bg-paper p-8 md:p-10 rounded-brand shadow-soft hover:shadow-elevated hover:-translate-y-1 border border-black/5" : ""
         ]}>
           {data.style === 'numbered' && item.number && (
-            <span class="display-serif opacity-20 block mb-6 text-5xl">{item.number}</span>
+            <span class="display-serif opacity-20 block mb-2 text-6xl text-terracotta">{item.number}</span>
           )}
           <div class="space-y-4">
-            {item.title && <h3 class="eyebrow text-terracotta">{item.title}</h3>}
+            {item.title && <h3 class="eyebrow text-terracotta tracking-wider">{item.title}</h3>}
             {item.subtitle && <p class="h3-serif !italic leading-snug">{item.subtitle}</p>}
-            {item.text && <div class="text-sm opacity-80 leading-relaxed prose prose-sm max-w-none" set:html={marked.parse(item.text)} />}
+            {(item.text || item.body) && <div class="body-lg opacity-85 leading-relaxed prose prose-sm max-w-none" set:html={marked.parse((item.text || item.body) as string)} />}
           </div>
         </div>
       ))}

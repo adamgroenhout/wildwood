@@ -49,8 +49,8 @@
     },
     {
       "type": "accordion",
-      "title": "Common Signs of Developmental Trauma",
-      "subtitle": "When Old Wounds Keep Showing Up in Your Present",
+      "title": "When Old Wounds Keep Showing Up in Your Present",
+      "subtitle": "Common Signs of Developmental Trauma",
       "body": "Developmental trauma doesn't always look like what you see in movies. Sometimes it looks like:",
       "items": [
         {
@@ -104,22 +104,21 @@
       "items": [
         {
           "title": "Individual Adults",
-          "body": "You're successful on paper but feel empty inside. You've spent decades taking care of others and lost yourself along the way. You're ready to figure out who you are outside of your roles and responsibilities."
+          "text": "You're successful on paper but feel empty inside. You've spent decades taking care of others and lost yourself along the way. You're ready to figure out who you are outside of your roles and responsibilities."
         },
         {
           "title": "Couples Therapy",
-          "subtitle": "(Including Non-Monogamous and Polyamorous Relationships)",
-          "body": "Your relationship is struggling under the weight of unspoken resentments, different attachment styles, or past trauma showing up in your partnership. Whether you're monogamous, non-monogamous, or polyamorous, I provide judgment-free couples therapy that honors your relationship structure."
+          "text": "**Including Non-Monogamous and Polyamorous Relationships**\n\nYour relationship is struggling under the weight of unspoken resentments, different attachment styles, or past trauma showing up in your partnership. Whether you're monogamous, non-monogamous, or polyamorous, I provide judgment-free couples therapy that honors your relationship structure."
         },
         {
           "title": "Unique Relationship Dynamics",
-          "body": "Many therapists aren't trained in the unique dynamics of consensual non-monogamy. I am. If you're navigating jealousy, boundary challenges, or communication breakdowns in your non-traditional relationship, you don't have to explain yourself here.\n\nI offer both in-person therapy in Leesburg, VA and virtual therapy throughout Virginia."
+          "text": "Many therapists aren't trained in the unique dynamics of consensual non-monogamy. I am. If you're navigating jealousy, boundary challenges, or communication breakdowns in your non-traditional relationship, you don't have to explain yourself here.\n\nI offer both in-person therapy in Leesburg, VA and virtual therapy throughout Virginia."
         }
       ],
-      "style": "minimal",
-      "columns": "2",
+      "style": "cards",
+      "columns": "3",
       "theme": "cream",
-      "padding": "none"
+      "padding": "standard"
     },
     {
       "body": "My approach is warm, direct, and grounded in evidence-based practices. I won't just nod sympathetically while you talk. I'll challenge you when you need it, celebrate your progress, and help you connect the dots between your past and present.\n\nI believe healing happens *in relationship*. That means our therapeutic relationship matters just as much as any techniques we use.\n\nOutside of sessions, I'm committed to ongoing training and staying current with trauma research. Your healing deserves a therapist who never stops learning.",
