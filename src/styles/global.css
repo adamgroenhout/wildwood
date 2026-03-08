@@ -241,6 +241,15 @@
     .prose-container {
       padding-top: var(--spacing-section-standard-pt-md);
       padding-bottom: var(--spacing-section-standard-pb-md);
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .prose-container {
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
   }
 
