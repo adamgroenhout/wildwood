@@ -29,24 +29,24 @@
   --transition-smooth: opacity 0.6s var(--ease-gentle), transform 0.6s var(--ease-gentle);
 
   /* Section Spacing Standards */
-  --spacing-section-standard-pt: 5rem; /* 80px */
-  --spacing-section-standard-pt-md: 8rem; /* 128px */
-  --spacing-section-standard-pb: 5rem; /* 80px */
-  --spacing-section-standard-pb-md: 8rem; /* 128px */
+  --spacing-section-standard-pt: 4rem; /* 64px */
+  --spacing-section-standard-pt-md: 6rem; /* 96px */
+  --spacing-section-standard-pb: 4rem; /* 64px */
+  --spacing-section-standard-pb-md: 6rem; /* 96px */
   
-  --spacing-section-small-y: 3.5rem; /* 56px */
-  --spacing-section-small-y-md: 6rem; /* 96px */
+  --spacing-section-small-y: 3rem; /* 48px */
+  --spacing-section-small-y-md: 4rem; /* 64px */
   
-  --spacing-section-large-y: 10rem; /* 160px */
-  --spacing-section-large-y-md: 14rem; /* 224px */
+  --spacing-section-large-y: 6rem; /* 96px */
+  --spacing-section-large-y-md: 10rem; /* 160px */
 
-  --spacing-hero-pt: 8rem; /* 128px */
-  --spacing-hero-pt-md: 10rem; /* 160px */
-  --spacing-hero-pb: 5rem; /* 80px */
-  --spacing-hero-pb-md: 8rem; /* 128px */
+  --spacing-hero-pt: 6rem; /* 96px */
+  --spacing-hero-pt-md: 8rem; /* 128px */
+  --spacing-hero-pb: 4rem; /* 64px */
+  --spacing-hero-pb-md: 6rem; /* 96px */
 
-  --spacing-hero-content-gap: 5rem; /* 80px */
-  --spacing-hero-content-gap-md: 8rem; /* 128px */
+  --spacing-hero-content-gap: 4rem; /* 64px */
+  --spacing-hero-content-gap-md: 6rem; /* 96px */
 
   --spacing-hero-title-gap: 2rem; /* 32px */
   --spacing-hero-title-gap-md: 3rem; /* 48px */
