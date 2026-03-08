@@ -5,7 +5,8 @@ import { formatUrl } from '../utils/paths';
 import { Image } from 'astro:assets';
 
 const { site_name, tagline, logo, coming_soon_text, staff_login_text } = settings;
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
 <Layout title={`${site_name} | Coming Soon`} hideNav={true}>
