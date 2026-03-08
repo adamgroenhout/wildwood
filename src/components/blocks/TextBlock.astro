@@ -9,7 +9,7 @@ interface Props {
     body: string;
     theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
     alignment?: 'left' | 'center';
-    padding?: 'standard' | 'large' | 'small' | 'top-only' | 'x-only' | 'none';
+    padding?: 'standard' | 'large' | 'small' | 'top-only' | 'bottom-only' | 'x-only' | 'none';
   }
 }
 
@@ -35,7 +35,7 @@ const alignmentClass = data.alignment === 'center' ? 'text-center mx-auto' : 'te
     )}
     
     {data.body && (
-      <div class={`body-lg opacity-85 prose ${data.alignment === 'center' ? 'mx-auto text-left' : ''}`} set:html={marked.parse(data.body)} />
+      <div class={`body-lg opacity-85 prose ${data.alignment === 'center' ? 'mx-auto text-left' : ''} ${!data.title && data.subtitle ? 'mt-4' : ''}`} set:html={marked.parse(data.body)} />
     )}
   </div>
 </Section>
