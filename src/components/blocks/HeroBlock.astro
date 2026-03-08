@@ -60,11 +60,11 @@ const alignmentClass = data.alignment === 'left' ? 'text-left items-start' : 'te
         )}
         
         {data.specialties && data.specialties.length > 0 && (
-          <div class={`flex flex-wrap gap-6 ${data.alignment === 'left' ? 'justify-start' : 'justify-center'}`}>
+          <div class={`flex flex-wrap gap-4 sm:gap-6 mt-4 ${data.alignment === 'left' ? 'justify-start' : 'justify-center'}`}>
             {data.specialties.map((spec: any, idx: number) => (
               <a 
                 href={formatUrl(spec.url)} 
-                class="eyebrow text-[10px] border border-current/20 px-5 py-2 hover:border-current/60 transition-all duration-500 hover:bg-current/5 active:scale-95 rounded-brand"
+                class={`btn ${data.theme === 'dark' || data.theme === 'olive' ? 'btn-white' : 'btn-outline'} text-[10px] sm:text-xs !px-6 !py-3 backdrop-blur-sm`}
               >
                 {spec.name}
               </a>
