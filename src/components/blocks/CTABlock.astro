@@ -1,0 +1,63 @@
+---
+import Section from '../Section.astro';
+import Button from '../Button.astro';
+import { formatUrl } from '../../utils/paths';
+import { Image } from 'astro:assets';
+
+interface Props {
+  data: {
+    title: string;
+    tagline?: string;
+    button_text: string;
+    button_url: string;
+    image?: string;
+    image_alt?: string;
+    theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'terracotta' | 'alternate';
+    layout?: 'split' | 'centered';
+  }
+}
+
+const { data } = Astro.props;
+const themeClass = `bg-${data.theme || 'olive'}`;
+const isDark = ['olive', 'terracotta', 'charcoal'].includes(data.theme || 'olive');
+const buttonTheme = isDark ? 'white' : 'terracotta';
+---
+
+{data.layout === 'split' ? (
+  <Section theme="none" padding="none" class="flex flex-col md:flex-row min-h-[600px]">
+    <div class="w-full md:w-1/2 bg-alternate flex items-center justify-center p-0 overflow-hidden">
+      {data.image && (
+        <Image 
+          src={formatUrl(data.image)}
+          alt={data.image_alt || ''}
+          width={1000}
+          height={800}
+          class="w-full h-full object-cover grayscale opacity-60"
+        />
+      )}
+    </div>
+    <div class={`w-full md:w-1/2 ${themeClass} flex flex-col items-center justify-center p-12 text-center space-y-10 ${isDark ? 'theme-dark' : ''}`}>
+      <div class="space-y-6">
+        {data.tagline && <h2 class="eyebrow opacity-80">{data.tagline}</h2>}
+        <p class="display-serif italic leading-tight">{data.title}</p>
+      </div>
+      <div class="pt-6">
+        <Button href={data.button_url} theme={buttonTheme}>
+          {data.button_text}
+        </Button>
+      </div>
+    </div>
+  </Section>
+) : (
+  <Section theme={data.theme || 'olive'} class={`text-center space-y-10 ${isDark ? 'theme-dark' : ''}`}>
+    <div class="max-w-3xl mx-auto space-y-6">
+      {data.tagline && <h2 class="eyebrow opacity-80">{data.tagline}</h2>}
+      <p class="display-serif italic leading-tight">{data.title}</p>
+    </div>
+    <div class="pt-6">
+      <Button href={data.button_url} theme={buttonTheme}>
+        {data.button_text}
+      </Button>
+    </div>
+  </Section>
+)}

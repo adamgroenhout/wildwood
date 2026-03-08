@@ -4,7 +4,7 @@ import { formatUrl } from '../utils/paths';
 import { Image } from 'astro:assets';
 import Button from './Button.astro';
 
-const settingsEntry = await getEntry('pages', 'settings');
+const settingsEntry = await getEntry('settings', 'settings');
 const { site_name, logo, navigation, header_cta_text, header_cta_href } = settingsEntry?.data || {};
 ---
 

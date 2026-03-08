@@ -9,7 +9,7 @@ const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
-<Layout title={`${site_name} | Coming Soon`} hideNav={true}>
+<Layout title={`${site_name} | ${coming_soon_text}`} hideNav={true}>
 	<main class="h-screen flex flex-col items-center justify-center bg-olive text-paper p-4 theme-dark">
 		<div class="max-w-md w-full text-center space-y-12 animate-fade-in">
 			<div class="flex flex-col items-center gap-6">

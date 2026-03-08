@@ -1,0 +1,53 @@
+{
+  "title": "Schedule Your Free Consultation",
+  "blocks": [
+    {
+      "type": "text",
+      "title": "A Space Where You Don't Have to Carry It All.",
+      "body": "Finding the right therapist is a lot like finding a home. It has to feel right. Because the connection between us is the single most important factor in \"successful\" therapy, I offer a complimentary 15-minute consultation call for all new clients.\n\nThis is a low-pressure space for us to discuss what’s bringing you to therapy, explore how I can help, discuss possible modalities like EMDR or IFS-informed parts work, and ensure we are a good fit before we begin the deep work together.",
+      "theme": "alternate",
+      "alignment": "center"
+    },
+    {
+      "type": "cta",
+      "title": "Get in Touch",
+      "button_text": "Book Your Consultation",
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "terracotta"
+    },
+    {
+      "type": "text",
+      "title": "Location",
+      "body": "**Wildwood Psychotherapy**\n19 Wirt St SW, Suite 205\nLeesburg, VA 20175\n\nPhone: (703) 493-0459\nEmail: info@wildwoodpsychotherapy.co",
+      "theme": "cream"
+    },
+    {
+      "type": "grid",
+      "title": "Parking",
+      "items": [
+        {
+          "title": "Free Parking",
+          "text": "The Liberty Street parking lot at 204 Liberty St, SW typically has the best availability."
+        },
+        {
+          "title": "Alternative",
+          "text": "The Town Hall garage at 10 Loudoun St, SW is a reliable paid option that generally allows the first two hours for free. Please read any signage for specifics."
+        },
+        {
+          "title": "Street Parking",
+          "text": "Metered spots are available on Wirt St SW as well as the intersection of Liberty St and Royal St SW next to the Birkby House."
+        }
+      ],
+      "columns": "3",
+      "style": "minimal",
+      "theme": "sage"
+    },
+    {
+      "type": "text",
+      "title": "Arriving for Your In-Person Session",
+      "body": "The office is located at **19 Wirt St SW** in the heart of Leesburg. You'll see a round sign marked 19 Wirt on the building, the same building as Shake & Bops Cafe.\n\nTo reach the entrance:\nFacing the front of the building, look to the left. You will see two small stone steps leading to a narrow brick walkway.\nFollow the path: Walk down the brick path along the side of the building.\nThe Entrance: When you reach the bank of mailboxes, turn right. You'll see a white door with a welcome mat.\n\nOnce inside:\nHead upstairs: Take the stairs immediately to your left. Straight through will take you to the cafe.\n\nMake yourself at home: The waiting area is at the top of the stairs. Please feel free to use the restroom or help yourself to a cold drink from the fridge. I'll come out to greet you at our scheduled time.",
+      "theme": "alternate"
+    }
+  ],
+  "seo_title": "Schedule Your Free Consultation"
+}

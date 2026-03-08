@@ -1,0 +1,58 @@
+{
+  "title": "Book Club, Workshops, & Community Events",
+  "blocks": [
+    {
+      "type": "text",
+      "title": "Therapeutic Book Club",
+      "body": "This isn't your neighborhood book club (and, hey, we love a neighborhood book club!). While it definitely has a social component, our virtual book club focuses on self-reflection and building and sharing insight.",
+      "theme": "cream",
+      "alignment": "left"
+    },
+    {
+      "type": "text",
+      "title": "Spring Season: March to May 2026",
+      "body": "**Book:** One selected book per season\n**Meetings:** Three live meetings, once each month, from 6-7:15 PM EST: March 24th, April 21st, May 19th\n**Cost:** $150 (total for the season)\n**Group Size:** Ten-person maximum\n\n[Join the Club](https://wildwoodpsychotherapy.clientsecure.me/)",
+      "theme": "sage"
+    },
+    {
+      "type": "text",
+      "title": "Community Events",
+      "theme": "cream",
+      "alignment": "left"
+    },
+    {
+      "type": "grid",
+      "items": [
+        {
+          "title": "Breathing Room",
+          "subtitle": "In-person at Rust Library | FREE",
+          "text": "Feeling overwhelmed? Could you just use a break, a moment to breathe? Join us for Breathing Room, a free community wellness event designed to help you find calm and clarity through simple, bite-sized mindfulness exercises.\n\n_This event is open to the public. No pressure to participate beyond your comfort level. Whether you’re new to mindfulness or looking to deepen your practice, you’re welcome._"
+        }
+      ],
+      "columns": "2",
+      "style": "minimal",
+      "theme": "alternate"
+    },
+    {
+      "type": "text",
+      "title": "For Therapists & Clinicians",
+      "theme": "cream",
+      "alignment": "left"
+    },
+    {
+      "type": "grid",
+      "items": [
+        {
+          "title": "Quarterly Networking Lunch",
+          "subtitle": " | ",
+          "text": "Looking to connect with fellow therapists and mental health professionals in Loudoun County? Join us for a relaxed, community-focused quarterly networking lunch. This gathering is a welcoming space for Loudoun-based clinicians to meet, share resources, and build relationships.\n\nWhether you're a seasoned practitioner, recently licensed, or just starting in private practice, you're welcome here. No pressure to present or perform—just come as you are.\n\n[Get on the invite list](https://wildwoodpsychotherapy.clientsecure.me/)"
+        }
+      ],
+      "columns": "2",
+      "style": "minimal",
+      "theme": "alternate"
+    }
+  ],
+  "seo_title": "Book Club, Workshops, & Community Events",
+  "subtitle": "Find connection and growth through community."
+}

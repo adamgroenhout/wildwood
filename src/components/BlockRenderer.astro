@@ -1,0 +1,33 @@
+---
+import HeroBlock from './blocks/HeroBlock.astro';
+import TextBlock from './blocks/TextBlock.astro';
+import ImageTextBlock from './blocks/ImageTextBlock.astro';
+import AccordionBlock from './blocks/AccordionBlock.astro';
+import GridBlock from './blocks/GridBlock.astro';
+import CTABlock from './blocks/CTABlock.astro';
+
+interface Props {
+  blocks: any[];
+}
+
+const { blocks } = Astro.props;
+
+if (!blocks) {
+  return null;
+}
+
+const blockMap: Record<string, any> = {
+  hero: HeroBlock,
+  text: TextBlock,
+  image_text: ImageTextBlock,
+  accordion: AccordionBlock,
+  grid: GridBlock,
+  cta: CTABlock,
+};
+---
+
+{blocks.map((block) => {
+  const Component = blockMap[block.type];
+  if (!Component) return null;
+  return <Component data={block} />;
+})}

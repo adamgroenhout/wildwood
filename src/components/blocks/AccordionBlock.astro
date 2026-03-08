@@ -1,0 +1,35 @@
+---
+import Section from '../Section.astro';
+import Accordion from '../Accordion.astro';
+import { marked } from 'marked';
+
+interface Props {
+  data: {
+    title?: string;
+    subtitle?: string;
+    body?: string;
+    items: Array<{ title: string; content: string }>;
+    theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
+    layout?: 'split' | 'stacked';
+    padding?: 'standard' | 'large' | 'small' | 'none';
+  }
+}
+
+const { data } = Astro.props;
+---
+
+<Section theme={data.theme || 'charcoal'} padding={data.padding || 'standard'}>
+  <div class={`max-w-6xl mx-auto ${data.layout === 'split' ? 'grid md:grid-cols-2 gap-12 md:gap-20 items-start' : 'space-y-12 max-w-4xl'}`}>
+    
+    <div class={`space-y-6 ${data.layout === 'split' ? 'text-left pt-2' : 'text-center'}`}>
+      {data.subtitle && <p class={`display-serif italic opacity-90 ${data.layout === 'split' ? '' : 'text-center'}`}>{data.subtitle}</p>}
+      {data.title && <h2 class={`h1-serif text-balance leading-tight ${data.layout === 'split' ? '' : 'text-center'}`}>{data.title}</h2>}
+      {data.body && <div class={`body-lg opacity-80 prose max-w-none ${data.layout === 'split' ? 'text-left' : 'mx-auto text-center'}`} set:html={marked.parse(data.body)} />}
+    </div>
+
+    <div class="w-full">
+      <Accordion items={data.items.map(item => ({ title: item.title, content: item.content }))} />
+    </div>
+
+  </div>
+</Section>

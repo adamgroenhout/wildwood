@@ -1,86 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import Button from '../components/Button.astro';
-import { marked } from 'marked';
-import { formatUrl } from '../utils/paths';
+import BlockRenderer from '../components/BlockRenderer.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const serviceEntries = await getCollection('services');
-  return serviceEntries.map(entry => ({
+  const pageEntries = await getCollection('site_pages');
+  
+  return pageEntries.map(entry => ({
     params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { title, subtitle, seo_title, sections, cta_text, cta_url } = entry.data;
+const { title, subtitle, seo_title, blocks } = entry.data;
 ---
 
-<Layout title={seo_title}>
+<Layout title={seo_title || title}>
 	<main>
-		<Section theme="alternate" padding="hero" class="text-center">
-			<div class="max-w-4xl mx-auto">
-				<h1 class="display-serif m-0 text-balance">{title}</h1>
-				{subtitle && <p class="subtitle-serif m-0 text-center mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)] text-balance opacity-80">{subtitle}</p>}
-			</div>
-		</Section>
-		
-		{/* Split sections into two groups to force a background color change halfway through */}
-		{(() => {
-			const midPoint = Math.ceil(sections.length / 2);
-			const firstHalf = sections.slice(0, midPoint);
-			const secondHalf = sections.slice(midPoint);
-			
-			const renderSection = (section: any) => {
-				if (section.type === 'text') {
-					return (
-						<div class={`${section.style === 'highlighted' ? "bg-current/5 p-8 border border-current/10 rounded-brand mb-12" : "mb-8 last:mb-0"}`}>
-							{section.title && <h2 class="h1-serif mb-6 text-center mx-auto text-balance">{section.title}</h2>}
-							<div class="space-y-4" set:html={marked(section.body)} />
-						</div>
-					);
-				} else if (section.type === 'list') {
-					return (
-						<div class="mb-12 last:mb-0">
-							{section.title && <h2 class="h1-serif mb-6 text-center italic text-balance">{section.title}</h2>}
-							<ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0">
-								{section.items.map((item: string) => (
-									<li class="border-l-4 border-terracotta/40 pl-4 py-2 hover:border-terracotta transition-colors">{item}</li>
-								))}
-							</ul>
-						</div>
-					);
-				}
-				return null;
-			};
-
-			return (
-				<>
-					<Section theme="alternate" padding="none">
-						<div class="max-w-4xl mx-auto prose-container">
-							<div class="prose body-lg max-w-none opacity-90">
-								{firstHalf.map(renderSection)}
-							</div>
-						</div>
-					</Section>
-
-					<Section theme="alternate" padding="none">
-						<div class="max-w-4xl mx-auto prose-container">
-							<div class="prose body-lg max-w-none opacity-90">
-								{secondHalf.map(renderSection)}
-								
-								<div class="mt-16 text-center border-t border-black/5 pt-16">
-									<Button href={cta_url} theme="terracotta">
-										{cta_text}
-									</Button>
-								</div>
-							</div>
-						</div>
-					</Section>
-				</>
-			);
-		})()}
+		{/* Check if the user already added a hero block. If not, give them a standard page header using the title. */}
+		{!blocks?.some((b: any) => b.type === 'hero') && (
+			<Section theme="alternate" padding="hero" class="text-center">
+				<div class="max-w-4xl mx-auto">
+					<h1 class="display-serif m-0 text-balance">{title}</h1>
+					{subtitle && <p class="subtitle-serif m-0 text-center mt-[var(--spacing-hero-title-gap)] md:mt-[var(--spacing-hero-title-gap-md)] text-balance opacity-80">{subtitle}</p>}
+				</div>
+			</Section>
+		)}
+		{blocks && <BlockRenderer blocks={blocks} />}
 	</main>
 </Layout>

@@ -1,0 +1,73 @@
+---
+import Section from '../Section.astro';
+import Button from '../Button.astro';
+import { formatUrl } from '../../utils/paths';
+import { Image } from 'astro:assets';
+
+interface Props {
+  data: {
+    hero_title: string;
+    hero_subtitle?: string;
+    hero_image?: string;
+    hero_alt?: string;
+    cta_text?: string;
+    cta_url?: string;
+    theme?: 'dark' | 'light' | 'terracotta' | 'olive';
+    alignment?: 'center' | 'left';
+    specialties?: Array<{ name: string; url: string }>;
+  }
+}
+
+const { data } = Astro.props;
+const themeClass = data.theme === 'dark' || data.theme === 'olive' ? 'bg-olive theme-dark' : 'bg-paper theme-light';
+const alignmentClass = data.alignment === 'left' ? 'text-left items-start' : 'text-center items-center';
+---
+
+<Section theme="none" padding="hero" class={`relative min-h-screen flex flex-col justify-center items-center overflow-hidden pb-24 md:pb-32 ${themeClass}`}>
+  <div class="absolute inset-0 z-0">
+    {data.hero_image && (
+      <Image 
+        src={formatUrl(data.hero_image)}
+        alt={data.hero_alt || ''} 
+        width={1920}
+        height={1080}
+        class={`w-full h-full object-cover filter ${data.theme === 'dark' || data.theme === 'olive' ? 'brightness-[0.4]' : 'brightness-[0.8]'}`}
+        loading="eager"
+      />
+    )}
+  </div>
+  
+  <div class={`relative z-10 px-4 max-w-4xl flex flex-col ${alignmentClass} w-full`}>
+    {data.hero_subtitle && (
+      <p class="eyebrow mb-8 animate-[fadeInUp_0.8s_ease-out_forwards] opacity-90">
+        {data.hero_subtitle}
+      </p>
+    )}
+    
+    {data.hero_title && (
+      <h1 class={`display-serif mb-6 text-balance animate-[fadeInUp_0.8s_ease-out_0.2s_forwards] ${data.alignment === 'left' ? 'text-left' : 'text-center'}`}>
+        {data.hero_title.split('*').map((part: string, i: number) => i % 2 === 1 ? <em class="italic">{part}</em> : part)}
+      </h1>
+    )}
+    
+    {(data.cta_text || data.specialties?.length) && (
+      <div class={`flex flex-col gap-8 mt-6 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards] ${alignmentClass}`}>
+        {data.cta_text && data.cta_url && (
+          <Button href={data.cta_url} theme="terracotta">
+            {data.cta_text}
+          </Button>
+        )}
+        
+        {data.specialties && data.specialties.length > 0 && (
+          <div class={`flex flex-wrap gap-4 ${data.alignment === 'left' ? 'justify-start' : 'justify-center'}`}>
+            {data.specialties.map((spec: any) => (
+              <a href={formatUrl(spec.url)} class="border border-current/40 px-6 py-2 text-sm hover:border-current transition-all duration-300 hover:bg-current/5 active:scale-95 rounded-brand">
+                {spec.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    )}
+  </div>
+</Section>

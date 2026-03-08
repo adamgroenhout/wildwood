@@ -1,0 +1,57 @@
+---
+import Section from '../Section.astro';
+import { marked } from 'marked';
+
+interface Props {
+  data: {
+    title?: string;
+    subtitle?: string;
+    items: Array<{
+      title?: string;
+      subtitle?: string;
+      text?: string;
+      number?: string;
+    }>;
+    theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
+    columns?: '2' | '3' | '4';
+    style?: 'cards' | 'minimal' | 'numbered';
+    padding?: 'standard' | 'large' | 'small' | 'none';
+  }
+}
+
+const { data } = Astro.props;
+
+const gridCols = {
+  '2': 'md:grid-cols-2',
+  '3': 'md:grid-cols-3',
+  '4': 'md:grid-cols-2 lg:grid-cols-4',
+};
+
+const colClass = gridCols[data.columns || '3'];
+---
+
+<Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'}>
+  <div class="max-w-6xl mx-auto space-y-16 text-center">
+    
+    {(data.title || data.subtitle) && (
+      <div class="space-y-6">
+        {data.title && <h2 class="display-serif italic lowercase tracking-tight">{data.title}</h2>}
+        {data.subtitle && <div class="w-3/4 h-px bg-current/30 mx-auto mt-4"></div>}
+      </div>
+    )}
+    
+    <div class={`grid ${colClass} gap-12 lg:gap-20 ${data.style === 'minimal' ? 'text-center' : 'text-left'}`}>
+      {data.items.map((item) => (
+        <div class="space-y-4">
+          {data.style === 'numbered' && item.number && (
+            <span class="display-serif opacity-40 block mb-4">{item.number}</span>
+          )}
+          {item.title && <h3 class="eyebrow">{item.title}</h3>}
+          {item.subtitle && <p class="subtitle-serif opacity-90">{item.subtitle}</p>}
+          {item.text && <div class="text-sm opacity-80 leading-relaxed prose" set:html={marked.parse(item.text)} />}
+        </div>
+      ))}
+    </div>
+
+  </div>
+</Section>

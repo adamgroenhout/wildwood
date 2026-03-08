@@ -1,0 +1,82 @@
+{
+  "title": "Frequently Asked Questions",
+  "seo_title": "FAQ about Therapy at Wildwood Psychotherapy in Leesburg, VA",
+  "blocks": [
+    {
+      "type": "text",
+      "body": "Find answers to common questions about trauma therapy, EMDR, insurance, rates, and more at Wildwood Psychotherapy in Leesburg, Virginia.",
+      "theme": "cream",
+      "alignment": "center"
+    },
+    {
+      "type": "accordion",
+      "items": [
+        {
+          "title": "What are some of the things people come to you for?",
+          "content": "Trauma and PTSD (including single-incident events like sexual assaults or witnessing or experiencing life-threatening events), anxiety and panic attacks, relationship issues (communication breakdowns, trust issues, navigating non-monogamy), chronic stress and burnout, life transitions, identity exploration, and nervous system regulation. I work with people who are tired of just managing symptoms and want actual transformation. If you're exhausted from pretending you're fine when your body is screaming otherwise, or you keep repeating the same relationship patterns and can't figure out why, you're in the right place."
+        },
+        {
+          "title": "Do you take insurance?",
+          "content": "I am an out-of-network provider and do not bill insurance directly. Choosing to work outside of insurance protects your privacy and gives us flexibility to move at a pace that supports meaningful, trauma-informed work. I can provide a superbill for potential reimbursement."
+        },
+        {
+          "title": "What does EMDRIA Certified Therapist™ mean?",
+          "content": "No, I don't take insurance directly. I'm an out-of-network provider, which means you pay my full fee at the time of service. However, I can provide you with a superbill (detailed receipt with diagnosis) that you can submit to your insurance company for potential reimbursement if you have out-of-network benefits. Many insurance plans will reimburse a portion of out-of-network therapy costs. I recommend calling your insurance company to ask about your out-of-network mental health benefits before we start working together."
+        },
+        {
+          "title": "What are your rates?",
+          "content": "\n\n*Initial Individual Intake (60 mins): $220*\n*Individual Session (50 mins): $200*\n*Individual Extended Session (90 minutes): $360*\n*Initial Couples/Relationship Intake (60 minutes): $250*\n*Couples/Relationship Session (50 mins): $225*\n*Couples Extended Session (90 Minutes): $405*\n*<a href=\"/wildwood/intensives\" class=\"hover:text-terracotta transition-colors\">Intensives</a>: Starting at $1600*"
+        },
+        {
+          "title": "Where are you located?",
+          "content": "The office is located in historic downtown Leesburg at **19 Wirt St SW** near Town Hall. It's in the same building as Shake and Bops Botanical Cafe, on the 2nd floor. The office itself is tucked away behind a private brick walkway to ensure privacy."
+        },
+        {
+          "title": "Do you offer virtual therapy?",
+          "content": "Yes. I offer secure, HIPAA-compliant virtual therapy sessions for clients anywhere in Virginia. Virtual sessions work great for individual therapy, EMDR, and many couples. Some people prefer the convenience of meeting from home, while others like the structure of coming to the office. We can figure out what works best for you."
+        },
+        {
+          "title": "What is your cancellation policy?",
+          "content": "I require 24 hours' notice for cancellations or rescheduling. If you cancel with less than 24 hours' notice or miss your appointment without canceling, you'll be charged the full session fee. I get that life happens, but I hold this time specifically for you, and last-minute cancellations mean I can't offer that slot to someone else who needs it."
+        },
+        {
+          "title": "How long does therapy take?",
+          "content": "It depends on what you're working on and what you want to accomplish. Some people come for a few months to work through a specific issue. Others stay longer to do deeper work on relationship patterns or complex trauma. I'm not interested in keeping you in therapy forever. My goal is to help you get what you need and move on with your life. We'll talk about your goals in the first session and revisit them regularly so you know where you're at."
+        },
+        {
+          "title": "What happens in the first session?",
+          "content": "We'll start by reviewing key practice policies (e.g., informed consent, cancellation policy). Then we'll shift to talking about what brought you in, what you're struggling with, and what you want to be different. I'll ask questions about your history, current relationships, and what you've already tried. This is also where you get to ask me questions and see if we're a good fit. By the end of the session, you'll have a clear sense of what working together would look like and whether this feels right for you."
+        },
+        {
+          "title": "How do I know if you're the right therapist for me?",
+          "content": "Honestly? You won't know until we talk. Therapy only works if you feel safe and understood with your therapist. Some people know in the first session that we're a good match. Others need a few sessions to be sure. If you're reading this and thinking \"she gets it,\" that's a good sign. Schedule a consultation, and we'll figure out together if this is the right fit."
+        },
+        {
+          "title": "Do you offer couples therapy?",
+          "content": "Yes. I specialize in couples therapy for people navigating non-monogamy, polyamory, and open relationships. I also work with couples dealing with trust issues, communication breakdowns, or trying to rebuild after infidelity. I don't do couples therapy to save marriages. I do it to help people figure out what they actually want and whether they can build something sustainable together."
+        },
+        {
+          "title": "How do I schedule an appointment?",
+          "content": "[Click here](https://wildwoodpsychotherapy.clientsecure.me/). You'll fill out a brief form and choose a time that works for you. I'll reach out to confirm and send you electronic intake documents before our first session. If you have questions before scheduling, you can also contact me via email, secure portal messaging, or phone."
+        },
+        {
+          "title": "Do you offer evening or weekend appointments?",
+          "content": "No. I don't currently offer evening or weekend sessions. I typically see clients Monday-Thursday, 8 AM-3 PM. The only exception may be for scheduled intensives."
+        },
+        {
+          "title": "Can I bring my partner to individual therapy sessions?",
+          "content": "Occasionally, yes. If there's something specific we need to address together, or it would be helpful for your partner to understand what you're working on, we can schedule a session where they join. But your individual therapy is *your* space. If you want ongoing couples work, I'd refer you all out for separate couples therapy."
+        }
+      ],
+      "theme": "alternate",
+      "layout": "stacked"
+    },
+    {
+      "type": "cta",
+      "title": "Have more questions? Contact me.",
+      "button_text": "Get Started",
+      "button_url": "/contact",
+      "theme": "terracotta"
+    }
+  ]
+}
