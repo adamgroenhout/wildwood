@@ -3,7 +3,7 @@ import { getEntry } from 'astro:content';
 import { formatUrl } from '../utils/paths';
 
 const settingsEntry = await getEntry('settings', 'settings');
-const { site_name, tagline, land_acknowledgment, footer_columns, staff_logout_text, copyright_text } = settingsEntry?.data || {};
+const { site_name, tagline, land_acknowledgment, footer_columns, staff_logout_text, staff_login_text, copyright_text } = settingsEntry?.data || {};
 
 const year = new Date().getFullYear();
 const base = import.meta.env.BASE_URL;
@@ -34,22 +34,33 @@ const base = import.meta.env.BASE_URL;
 		)}
 		<div class="flex justify-between items-center text-xs opacity-40">
 			<p>&copy; {year} {site_name}. {copyright_text || 'All rights reserved.'}</p>
-			<button 
-				id="logout-button" 
-				class="hidden hover:text-terracotta transition-colors eyebrow text-[10px]"
-			>
-				{staff_logout_text || 'Staff Logout'}
-			</button>
+			<div>
+				<a 
+					id="login-link" 
+					href={`${base}admin`}
+					class="hover:text-terracotta transition-colors eyebrow text-[10px]"
+				>
+					{staff_login_text || 'Staff Login'}
+				</a>
+				<button 
+					id="logout-button" 
+					class="hidden hover:text-terracotta transition-colors eyebrow text-[10px]"
+				>
+					{staff_logout_text || 'Staff Logout'}
+				</button>
+			</div>
 		</div>
 	</div>
 </footer>
 
 <script is:inline define:vars={{ base }}>
-	// Check if user is logged in to show logout button
+	// Check if user is logged in to show logout button instead of login link
 	const user = localStorage.getItem('decap-cms-user') || localStorage.getItem('netlify-cms-user');
+	const loginLink = document.getElementById('login-link');
 	const logoutBtn = document.getElementById('logout-button');
 	
-	if (user && logoutBtn) {
+	if (user && logoutBtn && loginLink) {
+		loginLink.classList.add('hidden');
 		logoutBtn.classList.remove('hidden');
 		logoutBtn.addEventListener('click', () => {
 			localStorage.removeItem('decap-cms-user');
