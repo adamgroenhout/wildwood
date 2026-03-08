@@ -11,7 +11,7 @@
     {
       "type": "text",
       "title": "Spring Season: March to May 2026",
-      "body": "**Book:** One selected book per season\n**Meetings:** Three live meetings, once each month, from 6-7:15 PM EST: March 24th, April 21st, May 19th\n**Cost:** $150 (total for the season)\n**Group Size:** Ten-person maximum\n\n<a href=\"https://wildwoodpsychotherapy.clientsecure.me/\" class=\"btn btn-terracotta\">Join the Club</a>",
+      "body": "**Book:** One selected book per season\n**Meetings:** Three live meetings, once each month, from 6-7:15 PM EST: March 24th, April 21st, May 19th\n**Cost:** $150 (total for the season)\n**Group Size:** Ten-person maximum\n\n<div class=\"text-center mt-8\"><a href=\"https://wildwoodpsychotherapy.clientsecure.me/\" class=\"btn btn-terracotta\">Join the Club</a></div>",
       "theme": "sage"
     },
     {
@@ -45,7 +45,7 @@
         {
           "title": "Quarterly Networking Lunch",
           "subtitle": " | ",
-          "text": "Looking to connect with fellow therapists and mental health professionals in Loudoun County? Join us for a relaxed, community-focused quarterly networking lunch. This gathering is a welcoming space for Loudoun-based clinicians to meet, share resources, and build relationships.\n\nWhether you're a seasoned practitioner, recently licensed, or just starting in private practice, you're welcome here. No pressure to present or perform—just come as you are.\n\n<a href=\"https://wildwoodpsychotherapy.clientsecure.me/\" class=\"btn btn-terracotta\">Get on the invite list</a>"
+          "text": "Looking to connect with fellow therapists and mental health professionals in Loudoun County? Join us for a relaxed, community-focused quarterly networking lunch. This gathering is a welcoming space for Loudoun-based clinicians to meet, share resources, and build relationships.\n\nWhether you're a seasoned practitioner, recently licensed, or just starting in private practice, you're welcome here. No pressure to present or perform—just come as you are.\n\n<div class=\"text-center mt-8\"><a href=\"https://wildwoodpsychotherapy.clientsecure.me/\" class=\"btn btn-terracotta\">Get on the invite list</a></div>"
         }
       ],
       "columns": "2",
