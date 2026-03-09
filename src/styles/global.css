@@ -158,14 +158,14 @@
   /* Reveal on Scroll Core */
   .reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: var(--transition-smooth);
     will-change: transform, opacity;
   }
 
   .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
