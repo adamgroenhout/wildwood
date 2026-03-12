@@ -137,6 +137,14 @@
       ]
     },
     {
+      "type": "cta",
+      "theme": "alternate",
+      "layout": "centered",
+      "button_text": "Schedule a Free Consultation",
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "title": " "
+    },
+    {
       "type": "text",
       "theme": "alternate",
       "alignment": "left",
