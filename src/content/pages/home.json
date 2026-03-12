@@ -147,7 +147,7 @@
     },
     {
       "type": "grid",
-      "title": "My Specialties",
+      "title": "Space for the Complex",
       "items": [
         {
           "title": "Trauma + EMDR",
@@ -171,7 +171,8 @@
       "style": "cards",
       "columns": "3",
       "theme": "alternate",
-      "padding": "standard"
+      "padding": "standard",
+      "subtitle": "My Specialties"
     },
     {
       "type": "grid",
