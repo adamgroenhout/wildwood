@@ -38,14 +38,6 @@
       "padding": "standard"
     },
     {
-      "type": "text",
-      "title": "What that actually looks like in your life:",
-      "body": "If you've been searching for \"EMDR therapy near me\" or \"trauma therapist Leesburg,\" you probably already know this is what you need. If you landed here because you Googled \"why do I keep ruining my relationships\" or \"can't relax ever,\" then welcome. This is exactly where you need to be.",
-      "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard"
-    },
-    {
       "type": "grid",
       "title": "EMDR is particularly effective for:",
       "items": [
@@ -71,6 +63,14 @@
       "columns": "2",
       "style": "minimal",
       "theme": "cream",
+      "padding": "standard"
+    },
+    {
+      "type": "text",
+      "title": "What that actually looks like in your life:",
+      "body": "If you've been searching for \"EMDR therapy near me\" or \"trauma therapist Leesburg,\" you probably already know this is what you need. If you landed here because you Googled \"why do I keep ruining my relationships\" or \"can't relax ever,\" then welcome. This is exactly where you need to be.",
+      "theme": "alternate",
+      "alignment": "left",
       "padding": "standard"
     },
     {
