@@ -105,7 +105,7 @@
     {
       "type": "text",
       "title": "Beyond the Surface: Healing That Holds",
-      "body": "You’ve likely tried therapy before. Maybe it felt like venting without real progress, or your therapist was nice but didn't quite help you move the needle. At Wildwood, we move beyond just talking about the problem. We utilize a blend of evidence-based, deep-reaching tools to help you stop surviving and start thriving.\n\n**This isn't about fixing you. You're not broken. It's about healing the wounds that convinced you that you were.**",
+      "body": "You’ve likely tried therapy before. Maybe it felt like venting without real progress, or your therapist was nice but didn't quite help you move the needle. At Wildwood, we move beyond just talking about the problem. We utilize a blend of evidence-based, deep-reaching tools to help you stop surviving and start thriving.",
       "theme": "cream",
       "alignment": "center",
       "padding": "standard"
@@ -135,6 +135,13 @@
           "text": "Using mindfulness, DBT, and ACT, we give you the skills to regulate your nervous system in real-time, building a life that feels grounded and intentional."
         }
       ]
+    },
+    {
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "body": "> ### This isn't about fixing you; you aren’t broken. It’s about healing the wounds that convinced you that you were."
     },
     {
       "type": "grid",
