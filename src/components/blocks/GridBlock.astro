@@ -1,5 +1,6 @@
 ---
 import Section from '../Section.astro';
+import Button from '../Button.astro';
 import { formatUrl } from '../../utils/paths';
 import { marked } from 'marked';
 
@@ -16,6 +17,8 @@ interface Props {
       link_url?: string;
       link_text?: string;
     }>;
+    button_text?: string;
+    button_url?: string;
     theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
     columns?: '2' | '3' | '4';
     style?: 'cards' | 'minimal' | 'numbered';
@@ -32,9 +35,10 @@ const gridCols = {
 };
 
 const colClass = gridCols[data.columns || '3'];
+const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
 ---
 
-<Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'}>
+<Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'} class={isDark ? 'theme-dark' : ''}>
   <div class="max-w-6xl mx-auto space-y-16">
     
     {(data.title || data.subtitle) && (
@@ -89,6 +93,14 @@ const colClass = gridCols[data.columns || '3'];
         </div>
       ))}
     </div>
+
+    {data.button_text && data.button_url && (
+      <div class="pt-12 text-center">
+        <Button href={data.button_url} theme={isDark ? 'white' : 'terracotta'}>
+          {data.button_text}
+        </Button>
+      </div>
+    )}
 
   </div>
 </Section>

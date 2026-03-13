@@ -1,5 +1,6 @@
 ---
 import Section from '../Section.astro';
+import Button from '../Button.astro';
 import { marked } from 'marked';
 
 interface Props {
@@ -7,6 +8,8 @@ interface Props {
     title?: string;
     subtitle?: string;
     body: string;
+    button_text?: string;
+    button_url?: string;
     theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
     alignment?: 'left' | 'center';
     padding?: 'standard' | 'large' | 'small' | 'top-only' | 'bottom-only' | 'x-only' | 'none';
@@ -14,9 +17,10 @@ interface Props {
 }
 
 const { data } = Astro.props;
+const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
 ---
 
-<Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'}>
+<Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'} class={isDark ? 'theme-dark' : ''}>
   <div class="max-w-4xl mx-auto space-y-8">
     {(data.title || data.subtitle) && (
       <div class="space-y-4 text-center max-w-3xl mx-auto">
@@ -41,8 +45,20 @@ const { data } = Astro.props;
     {data.body && (
       <div class:list={[
         "body-lg opacity-85 prose mx-auto text-left text-pretty",
-        !data.title && data.subtitle ? 'mt-4' : ''
+        !data.title && data.subtitle ? 'mt-4' : '',
+        data.alignment === 'center' ? 'text-center' : ''
       ]} set:html={marked.parse(data.body)} />
+    )}
+
+    {data.button_text && data.button_url && (
+      <div class:list={[
+        "pt-8",
+        data.alignment === 'center' ? 'text-center' : ''
+      ]}>
+        <Button href={data.button_url} theme={isDark ? 'white' : 'terracotta'}>
+          {data.button_text}
+        </Button>
+      </div>
     )}
   </div>
 </Section>

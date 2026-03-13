@@ -1,6 +1,7 @@
 ---
 import Section from '../Section.astro';
 import Accordion from '../Accordion.astro';
+import Button from '../Button.astro';
 import { marked } from 'marked';
 
 interface Props {
@@ -8,6 +9,8 @@ interface Props {
     title?: string;
     subtitle?: string;
     body?: string;
+    button_text?: string;
+    button_url?: string;
     items: Array<{ title: string; content: string }>;
     theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'alternate';
     layout?: 'split' | 'stacked';
@@ -16,9 +19,10 @@ interface Props {
 }
 
 const { data } = Astro.props;
+const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
 ---
 
-<Section theme={data.theme || 'charcoal'} padding={data.padding || 'standard'}>
+<Section theme={data.theme || 'charcoal'} padding={data.padding || 'standard'} class={isDark ? 'theme-dark' : ''}>
   <div class={`max-w-7xl mx-auto ${data.layout === 'split' ? 'grid lg:grid-cols-12 gap-12 lg:gap-24 items-start' : 'space-y-16 max-w-4xl'}`}>
     
     <div class={`space-y-8 ${data.layout === 'split' ? 'lg:col-span-5 text-left' : 'text-center'}`}>
@@ -43,11 +47,27 @@ const { data } = Astro.props;
       {data.body && (
         <div class={`body-lg opacity-85 prose max-w-none text-pretty ${data.layout === 'split' ? 'text-left' : 'mx-auto text-center'}`} set:html={marked.parse(data.body)} />
       )}
+
+      {data.layout === 'split' && data.button_text && data.button_url && (
+        <div class="pt-4">
+          <Button href={data.button_url} theme={isDark ? 'white' : 'terracotta'}>
+            {data.button_text}
+          </Button>
+        </div>
+      )}
     </div>
 
     <div class={`w-full ${data.layout === 'split' ? 'lg:col-span-7 pt-4' : ''}`}>
       <Accordion items={data.items.map(item => ({ title: item.title, content: item.content }))} />
     </div>
+
+    {data.layout === 'stacked' && data.button_text && data.button_url && (
+      <div class="pt-8 text-center">
+        <Button href={data.button_url} theme={isDark ? 'white' : 'terracotta'}>
+          {data.button_text}
+        </Button>
+      </div>
+    )}
 
   </div>
 </Section>

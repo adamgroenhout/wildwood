@@ -114,6 +114,8 @@ collections:
               - { label: "Title", name: "title", widget: "text", required: false }
               - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
               - { label: "Body", name: "body", widget: "markdown" }
+              - { label: "Button Text", name: "button_text", widget: "string", required: false }
+              - { label: "Button URL", name: "button_url", widget: "string", required: false }
               - { label: "Theme", name: "theme", widget: "select", options: ["sage", "cream", "sand", "paper", "charcoal", "olive", "alternate"], default: "alternate" }
               - { label: "Alignment", name: "alignment", widget: "select", options: ["left", "center"], default: "left" }
               - { label: "Padding", name: "padding", widget: "select", options: ["standard", "large", "small", "none"], default: "standard" }
@@ -146,6 +148,8 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Button Text", name: "button_text", widget: "string", required: false }
+              - { label: "Button URL", name: "button_url", widget: "string", required: false }
               - { label: "Theme", name: "theme", widget: "select", options: ["sage", "cream", "sand", "paper", "charcoal", "olive", "alternate"], default: "charcoal" }
               - { label: "Layout", name: "layout", widget: "select", options: ["split", "stacked"], default: "stacked" }
               - { label: "Padding", name: "padding", widget: "select", options: ["standard", "large", "small", "none"], default: "standard" }
@@ -166,6 +170,8 @@ collections:
                   - { label: "Number", name: "number", widget: "string", required: false }
                   - { label: "Link URL", name: "link_url", widget: "string", required: false }
                   - { label: "Link Text", name: "link_text", widget: "string", required: false, default: "Learn more" }
+              - { label: "Button Text", name: "button_text", widget: "string", required: false }
+              - { label: "Button URL", name: "button_url", widget: "string", required: false }
               - { label: "Columns", name: "columns", widget: "select", options: ["2", "3", "4"], default: "3" }
               - { label: "Style", name: "style", widget: "select", options: ["cards", "minimal", "numbered"], default: "minimal" }
               - { label: "Theme", name: "theme", widget: "select", options: ["sage", "cream", "sand", "paper", "charcoal", "olive", "alternate"], default: "alternate" }

@@ -134,15 +134,9 @@
           "title": "Somatic & Practical Tools",
           "text": "Using mindfulness, DBT, and ACT, we give you the skills to regulate your nervous system in real-time, building a life that feels grounded and intentional."
         }
-      ]
-    },
-    {
-      "type": "cta",
-      "theme": "alternate",
-      "layout": "centered",
+      ],
       "button_text": "Schedule a Free Consultation",
-      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "title": " "
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/"
     },
     {
       "type": "text",
