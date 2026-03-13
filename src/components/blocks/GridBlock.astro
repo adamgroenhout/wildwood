@@ -52,14 +52,12 @@ const isCentered = alignment === 'center';
           </p>
         )}
         {data.title && (
-          <h2 class:list={["display-serif italic lowercase tracking-tight whitespace-pre-wrap text-pretty", isCentered ? 'text-center' : 'text-left']}>
-            {data.title.split('\n').map((line, i) => (
-              <>
+          <h2 class:list={["display-serif italic lowercase tracking-tight whitespace-pre-wrap text-pretty", isCentered ? 'text-center' : 'text-left']}>{data.title.split('\n').map((line, i) => (
+              <Fragment key={i}>
                 {i > 0 && <br />}
                 {line}
-              </>
-            ))}
-          </h2>
+              </Fragment>
+            ))}</h2>
         )}
         {data.title && !data.subtitle && <div class:list={["w-24 h-px bg-terracotta/30 mt-8", isCentered ? 'mx-auto' : '']}></div>}
       </div>

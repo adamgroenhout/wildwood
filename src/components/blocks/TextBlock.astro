@@ -32,14 +32,12 @@ const isCentered = alignment === 'center';
           </p>
         )}
         {data.title && (
-          <h2 class="h2-serif leading-tight whitespace-pre-wrap text-pretty">
-            {data.title.split('\n').map((line, i) => (
-              <>
+          <h2 class="h2-serif leading-tight whitespace-pre-wrap text-pretty">{data.title.split('\n').map((line, i) => (
+              <Fragment key={i}>
                 {i > 0 && <br />}
                 {line}
-              </>
-            ))}
-          </h2>
+              </Fragment>
+            ))}</h2>
         )}
       </div>
     )}
