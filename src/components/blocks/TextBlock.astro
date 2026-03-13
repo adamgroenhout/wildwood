@@ -18,12 +18,14 @@ interface Props {
 
 const { data } = Astro.props;
 const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
+const alignment = data.alignment || 'left';
+const isCentered = alignment === 'center';
 ---
 
 <Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'} class={isDark ? 'theme-dark' : ''}>
-  <div class="max-w-4xl mx-auto space-y-8">
+  <div class:list={["max-w-4xl mx-auto space-y-8", isCentered ? 'text-center' : 'text-left']}>
     {(data.title || data.subtitle) && (
-      <div class="space-y-4 text-center max-w-3xl mx-auto">
+      <div class:list={["space-y-4", isCentered ? 'text-center max-w-3xl mx-auto' : 'text-left']}>
         {data.subtitle && (
           <p class="eyebrow text-terracotta text-pretty">
             {data.subtitle}
@@ -44,8 +46,8 @@ const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
     
     {data.body && (
       <div class:list={[
-        "body-lg opacity-85 prose mx-auto text-pretty",
-        data.alignment === 'center' ? 'text-center max-w-3xl' : 'text-left',
+        "body-lg opacity-85 prose text-pretty text-left",
+        isCentered ? 'max-w-3xl mx-auto' : '',
         !data.title && data.subtitle ? 'mt-4' : ''
       ]} set:html={marked.parse(data.body)} />
     )}
@@ -53,7 +55,7 @@ const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
     {data.button_text && data.button_url && (
       <div class:list={[
         "pt-8",
-        data.alignment === 'center' ? 'text-center' : ''
+        isCentered ? 'text-center' : 'text-left'
       ]}>
         <Button href={data.button_url} theme={isDark ? 'white' : 'terracotta'}>
           {data.button_text}

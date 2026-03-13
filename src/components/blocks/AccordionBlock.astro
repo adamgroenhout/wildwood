@@ -45,7 +45,7 @@ const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
       </div>
       
       {data.body && (
-        <div class={`body-lg opacity-85 prose max-w-none text-pretty ${data.layout === 'split' ? 'text-left' : 'mx-auto text-center'}`} set:html={marked.parse(data.body)} />
+        <div class={`body-lg opacity-85 prose max-w-none text-pretty text-left ${data.layout === 'split' ? '' : 'mx-auto max-w-3xl'}`} set:html={marked.parse(data.body)} />
       )}
 
       {data.layout === 'split' && data.button_text && data.button_url && (

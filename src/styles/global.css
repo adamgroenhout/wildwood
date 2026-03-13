@@ -102,7 +102,6 @@
     font-size: clamp(2.75rem, 9vw, 5.5rem);
     line-height: 1.05;
     letter-spacing: -0.03em;
-    text-align: center;
   }
 
   .h1-serif {
