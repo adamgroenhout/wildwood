@@ -26,20 +26,20 @@
     },
     {
       "type": "text",
-      "title": "Traditional Therapy vs. Intensive Therapy",
-      "body": "A typical 50-minute session can involve 5-10 minutes of opening and closing each time, leaving only about 35 minutes of processing time. We often spend our time processing the week that just happened. In an intensive, we stop treading water and start diving. It’s the difference between managing symptoms and moving past them. Scheduling may also be more convenient, but the real value is in the sustained momentum. We aren't switching gears and resetting every 50 minutes.\n\nA therapy intensive allows anywhere from 3 hours on one day to 9 hours over three days to dive deeply into the therapeutic work to address targeted goals without the same time constraint and challenge of keeping up momentum. No checking in or having to recap recent events or new issues each week between sessions.\n\nBecause of this, a 3-hour intensive can equate to about 5-6 hours of weekly therapy. Scheduling may also be more convenient. No need to regularly schedule around and take time away from work or family commitments each week.",
-      "theme": "paper",
-      "alignment": "left",
-      "padding": "standard"
-    },
-    {
-      "type": "text",
       "theme": "alternate",
       "alignment": "left",
       "padding": "standard",
       "title": "Why EMDR Thrives in an Intensive Format",
       "subtitle": "Moving from \"Managing\" to \"Reprocessing\" Without the Weekly Reset",
       "body": "Traditional EMDR in 50-minute increments can feel like trying to read a complex novel only ten pages at a time. Just as you’re settling into the story, you have to put it down. For some people, that's exactly what they need to feel contained.\n\nHowever, when we work with EMDR in an intensive format, we capitalize on neural momentum. \n\n* Continuous Processing: We skip the 15-minute check-in and wind down that bookends weekly sessions. This leaves hours of pure, uninterrupted brain-body reprocessing.\n* Safety in Immersion: For many high-achievers in Leesburg, Waterford, and Northern Virginia at large, the hardest part of trauma work is opening the box and then having to close it quickly to go back to work or parenting. Intensives allow you to stay in the work until the distress actually drops, rather than boxing it back up for next Tuesday.\n* Faster Neural Integration: By staying with a memory or a physical sensation for an extended block, your brain can make the connections it needs to file that experience away. Done. Over. Instead of still happening."
+    },
+    {
+      "type": "text",
+      "title": "Traditional Therapy vs. Intensive Therapy",
+      "body": "A typical 50-minute session can involve 5-10 minutes of opening and closing each time, leaving only about 35 minutes of processing time. We often spend our time processing the week that just happened. In an intensive, we stop treading water and start diving. It’s the difference between managing symptoms and moving past them. Scheduling may also be more convenient, but the real value is in the sustained momentum. We aren't switching gears and resetting every 50 minutes.\n\nA therapy intensive allows anywhere from 3 hours on one day to 9 hours over three days to dive deeply into the therapeutic work to address targeted goals without the same time constraint and challenge of keeping up momentum. No checking in or having to recap recent events or new issues each week between sessions.\n\nBecause of this, a 3-hour intensive can equate to about 5-6 hours of weekly therapy. Scheduling may also be more convenient. No need to regularly schedule around and take time away from work or family commitments each week.",
+      "theme": "paper",
+      "alignment": "left",
+      "padding": "standard"
     },
     {
       "type": "text",
