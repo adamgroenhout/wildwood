@@ -88,13 +88,10 @@
     },
     {
       "type": "cta",
-      "tagline": "STILL HAVE QUESTIONS?",
       "title": "Have more questions? Contact me.",
-      "body": "I'm here to help you navigate the process of finding the right therapist for your needs. If you don't see your question answered here, feel free to reach out directly.",
-      "button_text": "Get in Touch",
+      "button_text": "Get Started",
       "button_url": "/contact",
-      "theme": "terracotta",
-      "layout": "centered"
+      "theme": "terracotta"
     }
   ]
 }

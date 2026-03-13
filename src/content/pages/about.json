@@ -81,9 +81,8 @@
     },
     {
       "type": "cta",
-      "tagline": "HEALING HAPPENS HERE",
-      "title": "Ready to get started?",
-      "body": "Your journey toward presence and healing begins with a single step. Schedule a consultation call to learn how we can work together.",
+      "title": "Healing happens here.",
+      "tagline": "Ready to get started?",
       "button_text": "Schedule a Call",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "olive",

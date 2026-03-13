@@ -33,13 +33,10 @@
     },
     {
       "type": "cta",
-      "tagline": "GOVERNMENT RESOURCES",
       "title": "Learn More",
-      "body": "For questions or more information about your right to a Good Faith Estimate, visit www.cms.gov/nosurprises or call 1-800-985-3059.",
-      "button_text": "Visit CMS.gov",
+      "button_text": "For questions or more information about your right to a Good Faith Estimate, visit www.cms.gov/nosurprises or call 1-800-985-3059.",
       "button_url": "http://www.cms.gov/nosurprises",
-      "theme": "olive",
-      "layout": "centered"
+      "theme": "olive"
     }
   ],
   "seo_title": "Good Faith Estimate",
