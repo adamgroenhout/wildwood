@@ -34,15 +34,6 @@
       "image": "/wildwood/images/a_photorealistic_image_of_an_ope.png"
     },
     {
-      "type": "cta",
-      "title": "See Current Groups",
-      "button_text": "See Current Groups",
-      "button_url": "/holding-it-together",
-      "theme": "terracotta",
-      "layout": "centered",
-      "body": "[Holding It Together](/holding-it-together/)"
-    },
-    {
       "type": "grid",
       "title": "Why Community Healing?",
       "items": [
