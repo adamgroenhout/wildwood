@@ -14,14 +14,12 @@
       "hero_subtitle": "Connection & healing in community."
     },
     {
-      "type": "image_text",
-      "title": "You look like you have it all together. But inside? You're drowning.",
-      "body": "You show up for everyone. You say yes when you want to scream no. You carry everyone else's emotions while yours pile up in the corner, ignored and heavy.\n\nAnd the worst part? Nobody even knows you're struggling because you're too busy making sure THEY'RE okay.\n\n> If you're tired of being the person everyone leans on while you quietly fall apart, you're in the right place.",
-      "theme": "cream",
-      "image_position": "left",
-      "image_alt": "Welcoming group therapy circle",
-      "image": "/wildwood/images/a_welcoming_softly_lit_room_with.png",
-      "padding": "standard"
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "subtitle": "Beyond the Individual Journey",
+      "body": "One-on-one therapy offers a deep dive into your personal story, but there's a specific kind of magic that can only happen in the presence of others. Beyond support, our groups are curated, trauma-informed containers designed to help you practice new ways of being in real-time.\n\nWhether you're looking to quiet the noise of perfectionism, process shared trauma, or simply find a space where you don't have to explain yourself, our groups offer a grounded path back to connection."
     },
     {
       "body": "Holding It Together: A 6-Week Journey for High-Functioning Adults",
@@ -102,7 +100,7 @@
           "text": "Join a small, confidential cohort of peers."
         }
       ],
-      "body": "##### Holding It Together: A 6-Week Journey for High-Functioning Adults\n\nA small, trauma-informed circle for those moving past people-pleasing and overwhelm.\n\n##### Have a specific need? [[Join our general group interest list](list)] to be notified of upcoming cohorts.",
+      "body": "One-on-one therapy offers a deep dive into your personal story, but there's a specific kind of magic that can only happen in the presence of others. Beyond support, our groups are curated, trauma-informed containers designed to help you practice new ways of being in real-time.\n\nWhether you're looking to quiet the noise of perfectionism, process shared trauma, or simply find a space where you don't have to explain yourself, our groups offer a grounded path back to connection.",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "alternate",
       "padding": "standard",
