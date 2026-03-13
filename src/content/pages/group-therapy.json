@@ -24,6 +24,14 @@
       "padding": "standard"
     },
     {
+      "type": "cta",
+      "title": "See Current Groups",
+      "button_text": "See Current Groups",
+      "button_url": "/holding-it-together",
+      "theme": "terracotta",
+      "layout": "centered"
+    },
+    {
       "type": "grid",
       "title": "Why Community Healing?",
       "items": [
@@ -53,14 +61,6 @@
       "theme": "alternate",
       "alignment": "left",
       "padding": "standard"
-    },
-    {
-      "type": "cta",
-      "title": "See Current Groups",
-      "button_text": "See Current Groups",
-      "button_url": "/holding-it-together",
-      "theme": "terracotta",
-      "layout": "centered"
     },
     {
       "type": "text",
