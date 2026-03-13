@@ -44,9 +44,9 @@ const isDark = ['charcoal', 'olive', 'terracotta'].includes(data.theme || '');
     
     {data.body && (
       <div class:list={[
-        "body-lg opacity-85 prose mx-auto text-left text-pretty",
-        !data.title && data.subtitle ? 'mt-4' : '',
-        data.alignment === 'center' ? 'text-center' : ''
+        "body-lg opacity-85 prose mx-auto text-pretty",
+        data.alignment === 'center' ? 'text-center max-w-3xl' : 'text-left',
+        !data.title && data.subtitle ? 'mt-4' : ''
       ]} set:html={marked.parse(data.body)} />
     )}
 
