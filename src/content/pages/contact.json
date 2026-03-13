@@ -29,11 +29,14 @@
       "layout": "centered"
     },
     {
-      "type": "text",
+      "type": "map",
       "title": "Location",
-      "body": "19 Wirt St SW, Suite 205\nLeesburg, VA 20175\\\nDowntown Leesburg near the Town Hall and Loudoun Museum\n\nPhone: (703) 493-0459\nEmail: info@wildwoodpsychotherapy.co\n\n![https://maps.app.goo.gl/MnMZViMsUDX4wTj28](/wildwood/images/wildwood-psychotherapy-google-map-image.png)",
+      "address": "19 Wirt St SW, Suite 205\nLeesburg, VA 20175",
+      "body": "Downtown Leesburg near the Town Hall and Loudoun Museum",
+      "phone": "(703) 493-0459",
+      "email": "info@wildwoodpsychotherapy.co",
+      "map_link_url": "https://maps.app.goo.gl/MnMZViMsUDX4wTj28",
       "theme": "cream",
-      "alignment": "center",
       "padding": "standard"
     },
     {
