@@ -134,7 +134,7 @@
     {
       "type": "text",
       "theme": "alternate",
-      "alignment": "left",
+      "alignment": "center",
       "padding": "standard",
       "body": "> ### This isn't about fixing you; you aren’t broken. It’s about healing the wounds that convinced you that you were."
     },
@@ -158,7 +158,8 @@
       "style": "cards",
       "columns": "3",
       "theme": "cream",
-      "padding": "standard"
+      "padding": "standard",
+      "body": "### This isn't about fixing you; you aren’t broken. It’s about healing the wounds that convinced you that you were."
     },
     {
       "body": "My approach is warm, direct, and grounded in evidence-based practices. I won't just nod sympathetically while you talk. I'll challenge you when you need it, celebrate your progress, and help you connect the dots between your past and present.\n\nI believe healing happens *in relationship*. That means our therapeutic relationship matters just as much as any techniques we use.\n\nOutside of sessions, I'm committed to ongoing training and staying current with trauma research. Your healing deserves a therapist who never stops learning.",
