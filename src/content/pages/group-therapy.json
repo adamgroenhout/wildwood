@@ -109,6 +109,36 @@
       "button_text": "Schedule Your Call",
       "type": "grid",
       "columns": "3"
+    },
+    {
+      "type": "grid",
+      "columns": "3",
+      "style": "minimal",
+      "theme": "alternate",
+      "padding": "standard",
+      "subtitle": "Why Wildwood Groups Are Different",
+      "title": "",
+      "items": [
+        {
+          "link_text": "",
+          "title": "Pillar 1",
+          "subtitle": "Small By Design",
+          "number": "1",
+          "text": "We limit our cohorts to 6-8 participants. This ensures the space remains intimate, quiet, and safe enough for deep nervous system work."
+        },
+        {
+          "link_text": "",
+          "subtitle": "Closed Containers",
+          "title": "Pillar 2",
+          "text": "Once a group begins, we do not add new members. This allows the circle to build a unique level of trust and consistency over the weeks."
+        },
+        {
+          "link_text": "",
+          "subtitle": "Autonomy + Mindful Choice",
+          "title": "Pillar 3",
+          "text": "Healing is never forced. We prioritize your right to choose how, and if, you participate in any exercise. Whether we're practicing a grounding tool or sharing reflections, you're always in the driver’s seat. We honor your pace and your *no* as much as your *yes*, creating a space where your autonomy is a priority."
+        }
+      ]
     }
   ],
   "subtitle": "Connection & healing in community."
