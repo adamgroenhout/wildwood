@@ -136,6 +136,15 @@
       "layout": "split",
       "image": "/wildwood/images/a_photorealistic_image_of_a_calm.png",
       "image_alt": "Calm horizon at dawn"
+    },
+    {
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "title": "The Burden of Managing It All",
+      "body": "You're the reliable one. You meet every deadline, anticipate every need, and keep the house running. But internally, the motor never stops. You’re driven by a relentless *should* and a crushing fear that if you slow down, the whole version of the life you've built will come apart.\n\nThat's not just a personality trait. That's a survival strategy. You learned that being perfect is the way to stay safe, but it’s leaving you exhausted and underwhelmed by the very life you've worked so hard to create.",
+      "subtitle": "For many of the adults I see in Leesburg and Waterford, anxiety doesn't look like a panic attack. It looks like *perfectionism.*"
     }
   ]
 }
