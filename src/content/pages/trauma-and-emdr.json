@@ -23,22 +23,15 @@
       "padding": "standard"
     },
     {
-      "type": "text",
-      "title": "Understanding the Always-On Nervous System",
-      "body": "Here's what nobody tells you about trauma: it doesn't live in your thoughts. It lives in your nervous system.\n\nThat's why you can logically understand you're safe now, but your body still reacts like you're not. That's why you know the relationship should feel secure, but you keep waiting for the other shoe to drop. That's why you're exhausted all the time, even though nothing particularly exhausting happened today.",
-      "theme": "paper",
-      "alignment": "left",
-      "padding": "standard"
-    },
-    {
-      "type": "image_text",
-      "title": "When Your Body is Stuck in the Past",
-      "body": "Your nervous system is stuck in a threat response that made sense at one point in your life, but now it's running the show when it shouldn't be.",
+      "body": "That's why you can logically understand you're safe, but your heart races when a door slams or smell a distinct triggering smell.\n\nThat's why you can cognitively know something to be true, but it doesn't *feel* true. \n\nYour nervous system is stuck in a threat response that made sense at one point in your life, but is now running the show when it shouldn't be.\n\n**EMDR is how we give your body the memo that the storm has passed. It's over.**",
+      "image_alt": "",
       "theme": "alternate",
       "image_position": "left",
-      "image_alt": "Flowing river over stones",
       "padding": "standard",
-      "image": "/wildwood/images/a_tranquil_photorealistic_image_.png"
+      "subtitle": "Here's what nobody tells you about trauma: It doesn't just live in your thoughts. It lives in your body.",
+      "title": "Understanding the Always-On Nervous System",
+      "type": "image_text",
+      "image": "/wildwood/images/side-table-with-buzzies-and-stones.png"
     },
     {
       "type": "text",
