@@ -81,6 +81,15 @@
       "padding": "standard"
     },
     {
+      "type": "image_text",
+      "image_position": "right",
+      "theme": "alternate",
+      "padding": "standard",
+      "title": "1. THE DISCOVERY SESSION",
+      "body": "In this 90-minute session, we'll determine your goal(s) for the intensive and prepare for it. We'll look at your support system, stressors, and coping strategies.",
+      "image": "/wildwood/images/pexels-jjskorupski-11114980.jpg"
+    },
+    {
       "type": "text",
       "title": "2. THE WILDWOOD INTENSIVE CUSTOM WORKBOOK",
       "body": "Before your intensive, you'll receive a personalized workbook with assessments and activities to help us prepare. This is your roadmap to ensure every hour of our time together is spent on what matters most.",
@@ -203,15 +212,6 @@
       "theme": "olive",
       "layout": "centered",
       "body": ""
-    },
-    {
-      "type": "image_text",
-      "image_position": "right",
-      "theme": "alternate",
-      "padding": "standard",
-      "title": "1. THE DISCOVERY SESSION",
-      "body": "In this 90-minute session, we'll determine your goal(s) for the intensive and prepare for it. We'll look at your support system, stressors, and coping strategies.",
-      "image": "/wildwood/images/pexels-jjskorupski-11114980.jpg"
     }
   ]
 }
