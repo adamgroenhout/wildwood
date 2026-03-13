@@ -2,15 +2,15 @@
   "title": "You look like you're holding everything together. But inside, it feels heavy.",
   "blocks": [
     {
-      "type": "hero",
-      "hero_title": "You look like you're holding everything together. But inside, it feels heavy.",
-      "hero_subtitle": "Group Therapy for Adults Who Are Quietly Struggling With Overwhelm or Disconnection",
-      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_bala.png",
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "alignment": "center",
       "hero_alt": "Balanced stones representing letting go",
       "theme": "dark",
-      "alignment": "center",
+      "hero_title": "You look like you're holding everything together. But inside, it feels heavy.",
+      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_bala.png",
+      "type": "hero",
       "cta_text": "Join the Interest List",
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/"
+      "hero_subtitle": "Group Therapy for Adults Who Are Quietly Struggling With Overwhelm or Disconnection"
     },
     {
       "type": "image_text",
@@ -18,20 +18,24 @@
       "theme": "cream",
       "image_position": "left",
       "image_alt": "Welcoming group therapy circle",
-      "image": "/wildwood/images/a_welcoming_softly_lit_room_with.png"
+      "image": "/wildwood/images/a_welcoming_softly_lit_room_with.png",
+      "padding": "standard"
     },
     {
       "type": "text",
       "title": "Who this group is for:",
       "body": "* Adults who appear high functioning but feel overwhelmed or numb inside\n* People who support everyone else and struggle to receive support themselves\n* Those experiencing anxiety, depression, burnout, and/or emotional disconnection\n* Anyone tired of feeling alone in their healing and wanting real connection\n\n*This is a trauma-informed, connection-based therapy group that meets in person in Leesburg, Virginia.*",
       "theme": "sage",
-      "alignment": "left"
+      "alignment": "left",
+      "padding": "standard"
     },
     {
       "type": "text",
       "title": "Program Details",
       "body": "**Duration:** 6-week closed therapy group\n**Location:** In person in Leesburg, Virginia\n**Format:** 75-minute sessions each week\n**Cohort Size:** Small cohort (5 to 6 participants)\n**Cost:** $495 full program",
-      "theme": "alternate"
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard"
     },
     {
       "type": "accordion",
@@ -63,12 +67,21 @@
         }
       ],
       "theme": "charcoal",
-      "layout": "stacked"
+      "layout": "stacked",
+      "padding": "standard"
+    },
+    {
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "subtitle": "Investment",
+      "body": "$495 for the full 6-week journey. This includes weekly, 75-minute sessions, curated materials, and a 15-minute 1:1 screening call.\n\n## This group is NOT for you if you:\n\n* Are dealing with active substance abuse issues\n* Are currently in a domestic violence situation\n* Are in crisis mode from recent severe trauma\n* Struggle with extreme emotional dysregulation that hasn't been addressed\n* Tend to dominate conversations and can't tolerate being redirected\n* Have significant untreated personality disorder symptoms\n* Can't commit to the full 6-week program\n\n*If you're unsure whether this is right for you, we'll determine this together on the screening call.*"
     },
     {
       "type": "cta",
       "title": "Ready to put down the weight?",
-      "body": "Join the interest list to receive group details and next steps.",
+      "body": "$495 for the full 6-week journey. This includes weekly, 75-minute sessions, curated materials, and a 15-minute 1:1 screening call.\n\n## This group is NOT for you if you:\n\n* Are dealing with active substance abuse issues\n* Are currently in a domestic violence situation\n* Are in crisis mode from recent severe trauma\n* Struggle with extreme emotional dysregulation that hasn't been addressed\n* Tend to dominate conversations and can't tolerate being redirected\n* Have significant untreated personality disorder symptoms\n* Can't commit to the full 6-week program\n\n*If you're unsure whether this is right for you, we'll determine this together on the screening call.*",
       "button_text": "Join Interest List",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "terracotta",
@@ -76,5 +89,5 @@
     }
   ],
   "seo_title": "Holding It Together",
-  "subtitle": "Group Therapy for Adults Who Are Quietly Struggling With Overwhelm or Disconnection"
+  "subtitle": "A 6-Week In-Person Healing Circle in Leesburg, VA"
 }
