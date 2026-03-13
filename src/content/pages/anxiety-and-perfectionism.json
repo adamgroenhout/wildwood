@@ -42,6 +42,14 @@
       "subtitle": "For most of the Loudoun County and Northern Virginia clients I see, anxiety doesn't look like a panic attack. It looks like *perfectionism.*"
     },
     {
+      "type": "cta",
+      "theme": "olive",
+      "layout": "centered",
+      "title": "You don’t have to carry the weight alone.",
+      "button_text": "Learn more about our \"Holding It Together\" group →",
+      "button_url": "/holding-it-together/"
+    },
+    {
       "type": "text",
       "title": "This Isn't About Thinking Positive Thoughts",
       "body": "I work with people whose bodies are stuck in fight, flight, freeze, and fawn. We don't just talk about your anxiety or depression. We work with what's actually happening in your nervous system that's keeping you stuck there.\n\nEMDR helps your brain process the experiences that taught your nervous system to stay on high alert or shut down completely. Nervous system regulation work helps you learn what safety actually feels like in your body, not just in your head.",
@@ -139,14 +147,15 @@
       "padding": "standard"
     },
     {
-      "type": "cta",
-      "title": "Healing happens here.",
-      "button_text": "Schedule a Free Consultation",
+      "body": "For many high-functioning adults in Northern Virginia, the hardest part of anxiety is feeling like you’re the only one struggling to keep it all together.\n\nIn addition to individual therapy, I facilitate a small, curated [Group Therapy program in Leesburg](https://www.google.com/search?q=/wildwood/group-therapy) specifically for people-pleasers and \"high achievers\" who are ready to put down the mask. It’s a space to practice being seen, setting boundaries, and finding real connection with others who truly understand the load you're carrying.",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "image_alt": "Gentle hand reaching into stream with river rocks representing nervous system regulation and anxiety therapy in Leesburg, VA - Wildwood Psychotherapy.",
       "theme": "olive",
       "layout": "split",
-      "image": "/wildwood/images/pexels-ridvan-ayrik-306414752-13524587.jpg",
-      "image_alt": "Gentle hand reaching into stream with river rocks representing nervous system regulation and anxiety therapy in Leesburg, VA - Wildwood Psychotherapy."
+      "title": "Healing happens here.",
+      "button_text": "Schedule a Free Consultation",
+      "type": "cta",
+      "image": "/wildwood/images/pexels-ridvan-ayrik-306414752-13524587.jpg"
     }
   ]
 }
