@@ -3,8 +3,8 @@
   "blocks": [
     {
       "type": "hero",
-      "hero_title": "Begin Your Journey",
-      "hero_subtitle": "Schedule Your Free Consultation",
+      "hero_title": "Schedule Your Free Consultation",
+      "hero_subtitle": "",
       "hero_image": "/wildwood/images/a_photorealistic_image_of_a_warm.png",
       "hero_alt": "Sunlit hallway representing a welcoming entry",
       "theme": "dark",

@@ -4,8 +4,8 @@
   "blocks": [
     {
       "type": "hero",
-      "hero_title": "Clarity for Your Journey",
-      "hero_subtitle": "Frequently Asked Questions",
+      "hero_title": "Frequently Asked Questions",
+      "hero_subtitle": "",
       "hero_image": "/wildwood/images/a_minimalist_photorealistic_imag_1.png",
       "hero_alt": "Light through a window representing clarity",
       "theme": "dark",
