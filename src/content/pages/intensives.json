@@ -34,6 +34,15 @@
     },
     {
       "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "title": "Moving from \"Managing\" to \"Reprocessing\" without the weekly reset.",
+      "subtitle": "Why EMDR Thrives in an Intensive Format",
+      "body": "Traditional EMDR in 50-minute increments can feel like trying to read a complex novel only ten pages at a time. Just as you’re settling into the story, you have to put it down. For some people, that's exactly what they need to feel contained.\n\nHowever, when we work with EMDR in an intensive format, we capitalize on neural momentum. \n\n* Continuous Processing: We skip the 15-minute check-in and wind down that bookends weekly sessions. This leaves hours of pure, uninterrupted brain-body reprocessing.\n* Safety in Immersion: For many high-achievers in Leesburg, Waterford, and Northern Virginia at large, the hardest part of trauma work is opening the box and then having to close it quickly to go back to work or parenting. Intensives allow you to stay in the work until the distress actually drops, rather than boxing it back up for next Tuesday.\n* Faster Neural Integration: By staying with a memory or a physical sensation for an extended block, your brain can make the connections it needs to file that experience away. Done. Over. Instead of still happening."
+    },
+    {
+      "type": "text",
       "title": "",
       "body": "Whether you're a busy professional with a demanding schedule or someone already in weekly therapy who needs to move past a specific stuck point, an intensive offers a different path.\n\nFor the Busy Professional: Your schedule is constantly full and your brain is always running. You don’t have the bandwidth for the slow drip of weekly appointments and need a format that respects your time while hitting the target directly.\n\nFor the Targeted Deep-Dive: You may already have a therapist you love for weekly support, but you’ve realized that 50 minutes isn't enough to safely unpack and process deep-seated trauma. An intensive allows you to do the heavy lifting of EMDR in a dedicated, protected container before returning to your regular care.\n\nAn intensive may be for you if you:\n\n* Feel \"stuck\" in regular weekly therapy.\n* Need targeted trauma treatment while working with your primary therapist.\n* Often leave sessions feeling frustrated you're on the cusp of a breakthrough but run out of time.\n* Struggle to let yourself \"go there\" and feel painful feelings knowing you'll have to box them up until your next session.\n* Have a busy schedule and can't commit to the slower, prolonged pace of weekly therapy.\n* Spend your therapy hour each week updating on life between sessions instead of addressing root issues.",
       "theme": "alternate",
@@ -80,15 +89,6 @@
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "olive",
       "layout": "centered"
-    },
-    {
-      "type": "text",
-      "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard",
-      "title": "Moving from \"Managing\" to \"Reprocessing\" without the weekly reset.",
-      "subtitle": "Why EMDR Thrives in an Intensive Format",
-      "body": "Traditional EMDR in 50-minute increments can feel like trying to read a complex novel only ten pages at a time. Just as you’re settling into the story, you have to put it down. For some people, that's exactly what they need to feel contained.\n\nHowever, when we work with EMDR in an intensive format, we capitalize on neural momentum. \n\n* Continuous Processing: We skip the 15-minute check-in and wind down that bookends weekly sessions. This leaves hours of pure, uninterrupted brain-body reprocessing.\n* Safety in Immersion: For many high-achievers in Leesburg, Waterford, and Northern Virginia at large, the hardest part of trauma work is opening the box and then having to close it quickly to go back to work or parenting. Intensives allow you to stay in the work until the distress actually drops, rather than boxing it back up for next Tuesday.\n* Faster Neural Integration: By staying with a memory or a physical sensation for an extended block, your brain can make the connections it needs to file that experience away. Done. Over. Instead of still happening."
     }
   ]
 }
