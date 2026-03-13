@@ -148,7 +148,9 @@
       "body": "It's about doing EMDR the way it's designed to work, so you actually heal instead of just *talking* about healing. Most trauma therapy clients meet for 90-minute sessions because the work itself requires it.",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard"
+      "padding": "standard",
+      "button_text": "Schedule a Consultation Call",
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/"
     },
     {
       "type": "text",
