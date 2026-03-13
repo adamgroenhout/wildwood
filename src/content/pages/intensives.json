@@ -25,6 +25,28 @@
       "image": "/wildwood/images/a_photorealistic_image_of_a_quie.png"
     },
     {
+      "type": "grid",
+      "columns": "2",
+      "style": "cards",
+      "theme": "alternate",
+      "padding": "standard",
+      "items": [
+        {
+          "link_text": "",
+          "title": "",
+          "text": "Your schedule is constantly full, and your brain is always running. You don’t have the bandwidth for the slow drip of weekly appointments and need a format that respects your time while hitting the target directly.",
+          "subtitle": "For the Busy Professional: ",
+          "number": "1"
+        },
+        {
+          "link_text": "",
+          "subtitle": "For the Targeted Deep-Dive:",
+          "text": "You may already have a therapist you love for weekly support, but you’ve realized that 50 minutes isn't enough to safely unpack and process deep-seated trauma. An intensive allows you to do the heavy lifting of EMDR in a dedicated, protected container before returning to your regular care.",
+          "number": "2"
+        }
+      ]
+    },
+    {
       "type": "text",
       "theme": "alternate",
       "alignment": "left",
