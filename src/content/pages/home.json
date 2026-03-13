@@ -249,6 +249,14 @@
       "button_text": "Book a Call",
       "type": "cta",
       "image": "/wildwood/images/a_breathtaking_calm_image_of_a_s.png"
+    },
+    {
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "title": "A space for you to feel seen and understood.",
+      "body": "Most people come to Wildwood because they’re tired of band-aid therapy. You don’t need more coping skills for a life that’s burning you out; you need to address the root of the fire.\n\nWhether we're using EMDR to process old trauma or navigating the complexities of ethical non-monogamy, my approach is grounded, direct, and deeply human. We skip the Therapy 101 explanations and dive straight into the work that actually shifts how you feel on a Tuesday morning."
     }
   ]
 }
