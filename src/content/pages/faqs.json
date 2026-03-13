@@ -91,7 +91,8 @@
       "title": "Have more questions? Contact me.",
       "button_text": "Get Started",
       "button_url": "/contact",
-      "theme": "terracotta"
+      "theme": "terracotta",
+      "layout": "centered"
     }
   ]
 }

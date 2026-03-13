@@ -68,10 +68,11 @@
     {
       "type": "cta",
       "title": "Ready to put down the weight?",
-      "tagline": "Join the interest list to receive group details and next steps.",
+      "body": "Join the interest list to receive group details and next steps.",
       "button_text": "Join Interest List",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "theme": "terracotta"
+      "theme": "terracotta",
+      "layout": "centered"
     }
   ],
   "seo_title": "Holding It Together",

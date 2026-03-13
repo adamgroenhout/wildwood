@@ -245,16 +245,15 @@
       "padding": "standard"
     },
     {
-      "body": "#### You’ve mastered the art of fine, but the weight of holding it all is becoming too heavy to carry alone.",
+      "type": "cta",
+      "title": "THIS IS WHERE CHANGE BEGINS.",
+      "body": "TAKE A BREATH. YOU’RE IN THE RIGHT PLACE.\n\n#### You’ve mastered the art of fine, but the weight of holding it all is becoming too heavy to carry alone.",
+      "button_text": "Book a Call",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "image": "/wildwood/images/a_breathtaking_calm_image_of_a_s.png",
       "image_alt": "Final CTA Image",
       "theme": "olive",
-      "layout": "split",
-      "tagline": "TAKE A BREATH. YOU’RE IN THE RIGHT PLACE.",
-      "title": "THIS IS WHERE CHANGE BEGINS.",
-      "button_text": "Book a Call",
-      "type": "cta",
-      "image": "/wildwood/images/a_breathtaking_calm_image_of_a_s.png"
+      "layout": "split"
     }
   ]
 }

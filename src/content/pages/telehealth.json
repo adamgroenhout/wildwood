@@ -42,7 +42,8 @@
       "title": "Start Telehealth",
       "button_text": "Schedule a Call",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "theme": "olive"
+      "theme": "olive",
+      "layout": "centered"
     }
   ],
   "subtitle": "Online therapy via video for adults in Virginia."
