@@ -133,13 +133,13 @@ const { site_name, logo, navigation, header_cta_text, header_cta_href } = settin
 				const isHidden = menu.classList.contains('hidden');
 				if (isHidden) {
 					menu.classList.remove('hidden', 'pointer-events-none');
-					menu.classList.add('pointer-events-auto');
+					menu.classList.add('pointer-events-auto', 'block');
 					menuIcon.classList.add('hidden');
 					closeIcon.classList.remove('hidden');
 					document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
 				} else {
 					menu.classList.add('hidden', 'pointer-events-none');
-					menu.classList.remove('pointer-events-auto');
+					menu.classList.remove('pointer-events-auto', 'block');
 					menuIcon.classList.remove('hidden');
 					closeIcon.classList.add('hidden');
 					document.body.style.overflow = '';

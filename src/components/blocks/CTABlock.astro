@@ -38,7 +38,7 @@ const buttonTheme = isDark ? 'white' : 'terracotta';
         />
       )}
     </div>
-    <div class={`w-full md:w-1/2 ${themeClass} flex flex-col items-center justify-center p-12 text-center space-y-10 ${isDark ? 'theme-dark' : ''}`}>
+    <div class={`w-full md:w-1/2 ${themeClass} flex flex-col items-center justify-center p-12 text-center space-y-10 ${isDark ? 'theme-dark' : ''} relative z-10`}>
       <div class="space-y-6">
         {data.tagline && <h2 class="eyebrow opacity-80 text-pretty">{data.tagline}</h2>}
         <p class="display-serif italic leading-tight whitespace-pre-wrap text-pretty">
@@ -61,7 +61,7 @@ const buttonTheme = isDark ? 'white' : 'terracotta';
     </div>
   </Section>
 ) : (
-  <Section theme={data.theme || 'olive'} class={`text-center space-y-10 ${isDark ? 'theme-dark' : ''}`}>
+  <Section theme={data.theme || 'olive'} class={`text-center space-y-10 ${isDark ? 'theme-dark' : ''} relative z-10`}>
     <div class="max-w-3xl mx-auto space-y-6">
       {data.tagline && <h2 class="eyebrow opacity-80 text-pretty">{data.tagline}</h2>}
       <p class="display-serif italic leading-tight whitespace-pre-wrap text-pretty">
