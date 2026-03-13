@@ -14,18 +14,6 @@
     },
     {
       "type": "text",
-      "body": "\n\n\n\n",
-      "theme": "paper",
-      "alignment": "left"
-    },
-    {
-      "type": "text",
-      "body": "\n\n",
-      "theme": "sage",
-      "alignment": "left"
-    },
-    {
-      "type": "text",
       "title": "Keep In Mind",
       "body": "* A Good Faith Estimate is just that – an estimate that’s made with the information we have when creating it.\n* A Good Faith Estimate is **not** a contract; it does not obligate or bind you to receive mental health care from Wildwood Psychotherapy.\n* As a self-pay client, we are required to provide a Good Faith Estimate to you.\n* Your estimate will be for 12 months of 50-minute once/week sessions unless otherwise noted. This does not account for any breaks for things like illness, vacation, holidays, and/or unexpected events.",
       "theme": "cream",
