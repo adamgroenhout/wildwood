@@ -42,14 +42,13 @@
       "subtitle": "For most of the Loudoun County and Northern Virginia clients I see, anxiety doesn't look like a panic attack. It looks like *perfectionism.*"
     },
     {
-      "type": "cta",
+      "type": "text",
       "theme": "alternate",
-      "layout": "centered",
-      "title": " ",
-      "button_text": "Learn more about our \"Holding It Together\" group →",
-      "button_url": "/holding-it-together/",
-      "body": "For many high-functioning adults in Northern Virginia, the hardest part of anxiety is feeling like you’re the only one struggling to keep it all together.\n\nIn addition to individual therapy, I facilitate a small, curated [Group Therapy program in Leesburg](<>) specifically for people-pleasers and \"high achievers\" who are ready to put down the mask. It’s a space to practice being seen, setting boundaries, and finding real connection with others who truly understand the load you're carrying.",
-      "tagline": "You don’t have to carry the weight alone."
+      "alignment": "left",
+      "padding": "standard",
+      "title": "",
+      "body": "High-functioning anxiety often feels like a solo performance of \"effortless\" capability. But healing doesn't have to be a private project you manage behind closed doors.\n\nIn addition to individual sessions, I facilitate a small [Group Therapy program in Leesburg](https://www.google.com/search?q=/wildwood/group-therapy) specifically for those who are tired of being the anchor for everyone else's storm. It’s a space to trade the \"I've got it\" mask for real presence, finding connection with others who are also learning to exhale.\n\n[Explore the \"Holding It Together\" Group →](https://www.google.com/search?q=/wildwood/holding-it-together)",
+      "subtitle": "The End of Performing"
     },
     {
       "type": "text",
