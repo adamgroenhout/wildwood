@@ -162,6 +162,14 @@
       "body": "### This isn't about fixing you; you aren’t broken. It’s about healing the wounds that convinced you that you were."
     },
     {
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "title": "A space for you to feel seen and understood.",
+      "body": "Most people come to Wildwood because they’re tired of band-aid therapy. You don’t need more coping skills for a life that’s burning you out; you need to address the root of the fire.\n\nWhether we're using EMDR to process old trauma or navigating the complexities of ethical non-monogamy, my approach is grounded, direct, and deeply human. We skip the Therapy 101 explanations and dive straight into the work that actually shifts how you feel on a Tuesday morning.\n\n### Boutique Care in the Heart of Loudoun County\n\nWalk through the doors of our Leesburg office for an in-person session, or join virtually from anywhere in Virginia. Either way, you get a therapist who sees *you*, not a diagnosis."
+    },
+    {
       "body": "My approach is warm, direct, and grounded in evidence-based practices. I won't just nod sympathetically while you talk. I'll challenge you when you need it, celebrate your progress, and help you connect the dots between your past and present.\n\nI believe healing happens *in relationship*. That means our therapeutic relationship matters just as much as any techniques we use.\n\nOutside of sessions, I'm committed to ongoing training and staying current with trauma research. Your healing deserves a therapist who never stops learning.",
       "image_alt": "Kaylie Groenhout",
       "theme": "cream",
@@ -249,14 +257,6 @@
       "button_text": "Book a Call",
       "type": "cta",
       "image": "/wildwood/images/a_breathtaking_calm_image_of_a_s.png"
-    },
-    {
-      "type": "text",
-      "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard",
-      "title": "A space for you to feel seen and understood.",
-      "body": "Most people come to Wildwood because they’re tired of band-aid therapy. You don’t need more coping skills for a life that’s burning you out; you need to address the root of the fire.\n\nWhether we're using EMDR to process old trauma or navigating the complexities of ethical non-monogamy, my approach is grounded, direct, and deeply human. We skip the Therapy 101 explanations and dive straight into the work that actually shifts how you feel on a Tuesday morning.\n\n### Boutique Care in the Heart of Loudoun County\n\nWalk through the doors of our Leesburg office for an in-person session, or join virtually from anywhere in Virginia. Either way, you get a therapist who sees *you*, not a diagnosis."
     }
   ]
 }
