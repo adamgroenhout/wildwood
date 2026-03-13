@@ -91,14 +91,6 @@
     },
     {
       "type": "text",
-      "title": "2. THE WILDWOOD INTENSIVE CUSTOM WORKBOOK",
-      "body": "Before your intensive, you'll receive a personalized workbook with assessments and activities to help us prepare. This is your roadmap to ensure every hour of our time together is spent on what matters most.",
-      "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard"
-    },
-    {
-      "type": "text",
       "title": "3. THE INTENSIVE EXPERIENCE",
       "body": "Your intensive will include targeted treatment as well as resourcing activities like guided imagery, movement, meditation, and a self-care plan, all tailored to you.",
       "theme": "alternate",
