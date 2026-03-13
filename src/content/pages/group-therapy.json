@@ -108,6 +108,18 @@
         }
       ],
       "body": ""
+    },
+    {
+      "body": "Holding It Together: A 6-Week Journey for High-Functioning Adults",
+      "theme": "alternate",
+      "link_url": "https://adamgroenhout.github.io/wildwood/holding-it-together/",
+      "image_position": "left",
+      "padding": "small",
+      "link_text": "View Group Details & Schedule",
+      "subtitle": "Current & Upcoming Groups",
+      "title": "",
+      "type": "image_text",
+      "image": "/wildwood/images/a_photorealistic_image_of_an_ope.png"
     }
   ],
   "subtitle": "Connection & healing in community."
