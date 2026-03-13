@@ -139,6 +139,15 @@
           "text": "Healing is never forced. We prioritize your right to choose how, and if, you participate in any exercise. Whether we're practicing a grounding tool or sharing reflections, you're always in the driver’s seat. We honor your pace and your *no* as much as your *yes*, creating a space where your autonomy is a priority."
         }
       ]
+    },
+    {
+      "type": "text",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard",
+      "title": "Why you should consider group instead of (or in addition to) individual therapy?",
+      "subtitle": "The Unique Power of Groups",
+      "body": "* **Perspective Shift:** In individual therapy, you have a mirror. In a group, you have a prism. Seeing your own struggles reflected in others helps dissolve shame that thrives in isolation.\n* **Real-Life Practice:** A group is a social laboratory. It’s a safe place where you can say, \"*I’m feeling anxious right now,\"* or *\"I want to say no, but I feel like I have to say yes,\"* and receive immediate, supportive feedback in a safe container.\n* **Affordability + Accessibility:** Groups offer a way to access high-level therapeutic support and skill-building at a different investment point than weekly individual sessions."
     }
   ],
   "subtitle": "Connection & healing in community."
