@@ -3,15 +3,15 @@
   "seo_title": "About Wildwood Psychotherapy in Leesburg, VA",
   "blocks": [
     {
-      "type": "hero",
-      "hero_title": "Where clinical expertise meets human connection.",
-      "hero_subtitle": "I’m Kaylie Groenhout, LPC and EMDR Certified Therapist in Leesburg helping high-achieving adults trade performance for presence.",
-      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_lush.png",
-      "hero_alt": "Green sprout representing growth",
-      "cta_text": "Schedule a Call",
       "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "alignment": "center",
+      "hero_alt": "Green sprout representing growth",
       "theme": "dark",
-      "alignment": "center"
+      "hero_title": "Where clinical expertise meets human connection.",
+      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_lush.png",
+      "type": "hero",
+      "cta_text": "Schedule a Call",
+      "hero_subtitle": "I’m Kaylie Groenhout, LPC and EMDR Certified Therapist in Leesburg helping high-achieving adults trade performance for presence."
     },
     {
       "type": "text",
@@ -133,7 +133,7 @@
       "type": "text",
       "subtitle": "Healing in Community",
       "body": "While much of our work happens in the sacred space of one-on-one therapy, I believe there's a unique, profound power in being witnessed by others who share your struggle.\n\nIf you're tired of carrying the weight of holding it all together in isolation, you might find your place in one of our [Leesburg Group Therapy cohorts](https://www.google.com/search?q=/wildwood/group-therapy). It's a space designed to move you from feeling invisible to feeling deeply understood.",
-      "theme": "alternate",
+      "theme": "olive",
       "alignment": "left",
       "padding": "standard"
     },
