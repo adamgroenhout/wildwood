@@ -117,7 +117,7 @@
         }
       ],
       "columns": "2",
-      "style": "minimal",
+      "style": "cards",
       "theme": "cream",
       "padding": "standard"
     },
