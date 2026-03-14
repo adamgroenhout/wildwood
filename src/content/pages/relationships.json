@@ -4,15 +4,15 @@
   "subtitle": "Kink-aware & Polyamory-Affirming Therapy",
   "blocks": [
     {
-      "type": "hero",
-      "hero_title": "Couples Therapy for ENM + Polyamorous Relationships in Leesburg, VA",
-      "hero_subtitle": "Kink-aware & Polyamory-Affirming Therapy",
-      "hero_image": "src/assets/images/a_warm_inviting_photorealistic_s.webp",
-      "hero_alt": "Two comfortable chairs in a sunlit room",
-      "cta_text": "Schedule a Call",
       "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "alignment": "center",
+      "hero_alt": "Two comfortable chairs in a sunlit room",
       "theme": "dark",
-      "alignment": "center"
+      "hero_title": "Couples Therapy for ENM + Polyamorous Relationships in Leesburg, VA",
+      "hero_image": "src/assets/images/a_warm_inviting_photorealistic_s.webp",
+      "type": "hero",
+      "cta_text": "Schedule a Call",
+      "hero_subtitle": "Kink-aware & Polyamory-Affirming Therapy"
     },
     {
       "type": "text",
@@ -39,15 +39,15 @@
       "padding": "standard"
     },
     {
-      "type": "image_text",
-      "title": "The Three Patterns Destroying You Right Now",
-      "subtitle": "The Violation Cycle",
       "body": "You agree on something important. Boundaries, promises, commitments that matter. Then one of you breaks it. The other explodes. You fight. You make up. You promise it won't happen again.\n\nAnd then it happens again.\n\nThe problem isn't that you don't love each other. It's that you haven't learned how to slow down enough to keep your word when your nervous system gets activated. So the agreements mean nothing when the moment hits.",
-      "image": "src/assets/images/a_cozy_inviting_scene_of_two_war.webp",
       "image_alt": "Coffee mugs emphasizing pausing",
-      "image_position": "right",
       "theme": "alternate",
-      "padding": "standard"
+      "image_position": "right",
+      "padding": "standard",
+      "subtitle": "The Violation Cycle",
+      "title": "The Three Patterns Destroying You Right Now",
+      "type": "image_text",
+      "image": "src/assets/images/a_cozy_inviting_scene_of_two_war.webp"
     },
     {
       "type": "image_text",
@@ -113,7 +113,7 @@
         }
       ],
       "columns": "2",
-      "style": "minimal",
+      "style": "cards",
       "theme": "cream",
       "padding": "standard"
     },
