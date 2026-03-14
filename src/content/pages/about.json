@@ -68,9 +68,9 @@
       "theme": "alternate",
       "alignment": "center",
       "padding": "large",
-      "subtitle": "We bridge the gap between understanding your story and actually changing how you feel within it.",
+      "subtitle": "",
       "title": "",
-      "body": "  ."
+      "body": "## We bridge the gap between understanding your story and actually changing how you feel within it."
     },
     {
       "type": "text",
