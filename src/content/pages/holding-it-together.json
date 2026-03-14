@@ -2,39 +2,35 @@
   "title": "Holding It Together: 6-Week, In-Person Group Therapy in Leesburg",
   "blocks": [
     {
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "alignment": "center",
-      "hero_alt": "Balanced stones representing letting go",
-      "theme": "dark",
-      "hero_title": "Holding It Together: 6-Week, \nIn-Person Group Therapy in Leesburg",
-      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_bala.png",
       "type": "hero",
+      "hero_title": "Holding It Together: 6-Week, \nIn-Person Group Therapy in Leesburg",
+      "hero_subtitle": "For the high-functioning adult moving from seamless performance to authentic connection.",
+      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_bala.png",
+      "hero_alt": "Balanced stones representing letting go",
       "cta_text": "Request Your 15-Minute Screening Call",
-      "hero_subtitle": "For the high-functioning adult moving from seamless performance to authentic connection."
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "image_text",
       "body": "You're the person everyone relies on. You anticipate needs, meet every deadline, and keep the motor running. But inside, the engine is, well, overheating. You're exhausted from the quiet pressure of always being *fine*. This is the place where you finally don't have to be.",
-      "theme": "cream",
-      "image_position": "left",
-      "image_alt": "Welcoming group therapy circle",
       "image": "/wildwood/images/a_welcoming_softly_lit_room_with.png",
+      "image_alt": "Welcoming group therapy circle",
+      "image_position": "left",
+      "theme": "cream",
       "padding": "standard"
     },
     {
       "type": "text",
+      "subtitle": "The Journey",
+      "body": "### Weeks 1-2: Finding Your Feet (Grounding)\n\n#### We start with the body. You’ll learn practical ways to notice the bouncing knee, tight chest, or antsy energy and bring yourself back to the present before the overwhelm takes over.\n\n### Weeks 3-4: The Power of the Pause\n\n#### We look at the Autopilot Yes. You’ll practice The Pause, learning to check in with what *you* need before reflexively responding to everyone else's.\n\n### Week 5-6: Being Seen\n\n#### The final shift: moving from performing to *being*. We practice relational courage, the art of letting yourself be witnessed without a mask, and realizing your needs aren't a burden. (Seriously.)",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "subtitle": "The Journey",
-      "body": "### Weeks 1-2: Finding Your Feet (Grounding)\n\n#### We start with the body. You’ll learn practical ways to notice the bouncing knee, tight chest, or antsy energy and bring yourself back to the present before the overwhelm takes over.\n\n### Weeks 3-4: The Power of the Pause\n\n#### We look at the Autopilot Yes. You’ll practice The Pause, learning to check in with what *you* need before reflexively responding to everyone else's.\n\n### Week 5-6: Being Seen\n\n#### The final shift: moving from performing to *being*. We practice relational courage, the art of letting yourself be witnessed without a mask, and realizing your needs aren't a burden. (Seriously.)"
+      "padding": "standard"
     },
     {
       "type": "grid",
-      "columns": "4",
-      "style": "cards",
-      "theme": "alternate",
-      "padding": "standard",
       "subtitle": "Program Details",
       "items": [
         {
@@ -62,7 +58,11 @@
           "text": "$495 for the complete 6-week program \n\n(Superbills available for out-of-network benefits.)",
           "number": "4"
         }
-      ]
+      ],
+      "columns": "4",
+      "style": "cards",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "text",
@@ -74,9 +74,6 @@
     },
     {
       "type": "accordion",
-      "theme": "charcoal",
-      "layout": "stacked",
-      "padding": "standard",
       "items": [
         {
           "title": "What if I see someone I know from the community?",
@@ -98,12 +95,14 @@
           "title": "Can I use my insurance for this?",
           "content": "Wildwood is an out-of-network provider. We provide a monthly Superbill for Group Therapy (CPT Code 90853). Depending on their benefits, many clients receive at least partial reimbursement from their insurance providers, but we recommend checking your specific out-of-network benefits first."
         }
-      ]
+      ],
+      "theme": "charcoal",
+      "layout": "stacked",
+      "padding": "standard"
     },
     {
       "type": "cta",
       "title": "Finally, a place where \"fine\" isn't required.",
-      "body": "",
       "button_text": "Schedule My 15-Minute Group Screening",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "terracotta",

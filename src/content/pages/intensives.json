@@ -4,32 +4,28 @@
   "subtitle": "When 50 minutes a week isn’t enough to reach the roots.",
   "blocks": [
     {
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "alignment": "center",
-      "hero_alt": "Quiet sunlit library for intensive focus",
-      "theme": "dark",
-      "hero_title": "Deep Work, Accelerated: Therapy Intensives in Leesburg, VA",
-      "hero_image": "/wildwood/images/a_deepfocus_photorealistic_image.png",
       "type": "hero",
+      "hero_title": "Deep Work, Accelerated: Therapy Intensives in Leesburg, VA",
+      "hero_subtitle": "When 50 minutes a week isn’t enough to reach the roots.",
+      "hero_image": "/wildwood/images/a_deepfocus_photorealistic_image.png",
+      "hero_alt": "Quiet sunlit library for intensive focus",
       "cta_text": "Check Intensive Availability",
-      "hero_subtitle": "When 50 minutes a week isn’t enough to reach the roots."
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "image_text",
       "title": "JUMP-START THE HEALING PROCESS",
       "body": "Therapy intensives are an alternative to traditional weekly therapy. Instead of meeting routinely for 50 minutes once a week for an indefinite amount of time, intensives provide highly-focused, unhurried time for you to address a specific concern or goal.\n\nA therapy intensive can look like a 3-hour session in one day or 3-hour sessions over several consecutive days. This lets us dive deeper into the therapeutic process without interruption, which can lead to faster relief.\n\nIntensives can be more efficient because they allow targeted, concentrated focus on an issue. Ultimately, they may be a more cost-effective path for some folks as they aren't in therapy for months or years, saving on the cost of regular travel, childcare, or time off.",
-      "theme": "alternate",
-      "image_position": "left",
+      "image": "/wildwood/images/a_photorealistic_image_of_a_quie.png",
       "image_alt": "Quiet sunlit room for intensive focus",
-      "padding": "standard",
-      "image": "/wildwood/images/a_photorealistic_image_of_a_quie.png"
+      "image_position": "left",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "grid",
-      "columns": "2",
-      "style": "cards",
-      "theme": "olive",
-      "padding": "standard",
       "items": [
         {
           "link_text": "",
@@ -44,16 +40,20 @@
           "text": "You may already have a therapist you love for weekly support, but you’ve realized that 50 minutes isn't enough to safely unpack and process deep-seated trauma. An intensive allows you to do the heavy lifting of EMDR in a dedicated, protected container before returning to your regular care.",
           "number": "2"
         }
-      ]
+      ],
+      "columns": "2",
+      "style": "cards",
+      "theme": "olive",
+      "padding": "standard"
     },
     {
       "type": "text",
       "title": "",
+      "subtitle": "You may be ready for an intensive if you:",
       "body": "* Feel \"stuck\" in regular weekly therapy\n* Often leave sessions feeling frustrated you're on the cusp of a breakthrough but run out of time\n* Struggle to let yourself \"go there\" and feel painful feelings knowing you'll have to box them up until your next session\n* Have a busy schedule and can't commit to the slower, prolonged pace of weekly therapy\n* Spend your therapy hour each week updating on life between sessions instead of addressing root issues",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "subtitle": "You may be ready for an intensive if you:"
+      "padding": "standard"
     },
     {
       "type": "text",
@@ -65,21 +65,21 @@
     },
     {
       "type": "text",
-      "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard",
       "title": "Why EMDR Thrives in an Intensive Format",
       "subtitle": "Moving from \"Managing\" to \"Reprocessing\" Without the Weekly Reset",
-      "body": "While talk therapy helps you understand your story, EMDR in an intensive format helps your brain re-file it. When we work in extended blocks, we capitalize on neural momentum.\n\n* Continuous Processing: We skip the weekly check-in. This leaves hours of uninterrupted time for your brain to stay in the processing phase until the distress actually shifts.\n* Safety in Immersion: The hardest part of trauma work is opening the box and having to close it quickly to go back to work or life outside the session. Intensives allow you to stay with the experience until your nervous system feels settled.\n* Reprocessing, Not Just Managing: By staying with the momentum, your brain can finally file traumatic memories away as *past events*, rather than things that feel like they are still happening today. Done. Over. Instead of \"in progress.\""
+      "body": "While talk therapy helps you understand your story, EMDR in an intensive format helps your brain re-file it. When we work in extended blocks, we capitalize on neural momentum.\n\n* Continuous Processing: We skip the weekly check-in. This leaves hours of uninterrupted time for your brain to stay in the processing phase until the distress actually shifts.\n* Safety in Immersion: The hardest part of trauma work is opening the box and having to close it quickly to go back to work or life outside the session. Intensives allow you to stay with the experience until your nervous system feels settled.\n* Reprocessing, Not Just Managing: By staying with the momentum, your brain can finally file traumatic memories away as *past events*, rather than things that feel like they are still happening today. Done. Over. Instead of \"in progress.\"",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard"
     },
     {
       "type": "image_text",
-      "image_position": "right",
-      "theme": "alternate",
-      "padding": "standard",
       "title": "1. THE DISCOVERY SESSION",
       "body": "In this 90-minute session, we'll determine your goal(s) for the intensive and prepare for it. We'll look at your support system, stressors, and coping strategies.\n\n# 2. THE WILDWOOD INTENSIVE CUSTOM WORKBOOK\n\nBefore your intensive, you'll receive a personalized digital workbook with assessments and activities to help us prepare. This is your roadmap to ensure every hour of our time together is spent on what matters most.",
-      "image": "/wildwood/images/pexels-jjskorupski-11114980.jpg"
+      "image": "/wildwood/images/pexels-jjskorupski-11114980.jpg",
+      "image_position": "right",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "text",
@@ -98,31 +98,27 @@
       "padding": "standard"
     },
     {
-      "body": "Have a client who's stuck in their work with you due to developmental or single-incident trauma? I love collaborating with other providers and using EMDR intensives to bridge the gap. You keep the bond with your client; I spend 1-3 days with them doing the heavy lifting of targeted reprocessing. At the end, they transition back to you for ongoing care. Think of it as a specialized tool for your clinical toolkit.\n\n#### How We Collaborate:\n\n* Secure ROI/Case Consultation before we begin\n* Targeted focus on one stuck target or theme\n* Seamless hand-off back to you with an integration summary",
-      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "alignment": "left",
-      "theme": "alternate",
-      "padding": "standard",
-      "subtitle": "For Fellow Therapists",
+      "type": "text",
       "title": "Adjunct EMDR for Your Clients",
+      "subtitle": "For Fellow Therapists",
+      "body": "Have a client who's stuck in their work with you due to developmental or single-incident trauma? I love collaborating with other providers and using EMDR intensives to bridge the gap. You keep the bond with your client; I spend 1-3 days with them doing the heavy lifting of targeted reprocessing. At the end, they transition back to you for ongoing care. Think of it as a specialized tool for your clinical toolkit.\n\n#### How We Collaborate:\n\n* Secure ROI/Case Consultation before we begin\n* Targeted focus on one stuck target or theme\n* Seamless hand-off back to you with an integration summary",
       "button_text": "Schedule a Consultation Call",
-      "type": "text"
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "alternate",
+      "alignment": "left",
+      "padding": "standard"
     },
     {
       "type": "text",
+      "title": "Investment & Logistics",
+      "subtitle": "Choosing a dedicated format for the work you need and deserve.",
+      "body": "Therapy intensives are a front-loaded investment of time and resources. By condensing months of traditional therapy into a few days, you reduce the long-term overhead of healing, meaning, minimizing things like time away from work, the cost of childcare, and the emotional exhaustion of the weekly reset.",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "body": "Therapy intensives are a front-loaded investment of time and resources. By condensing months of traditional therapy into a few days, you reduce the long-term overhead of healing, meaning, minimizing things like time away from work, the cost of childcare, and the emotional exhaustion of the weekly reset.",
-      "title": "Investment & Logistics",
-      "subtitle": "Choosing a dedicated format for the work you need and deserve."
+      "padding": "standard"
     },
     {
       "type": "grid",
-      "columns": "3",
-      "style": "minimal",
-      "theme": "alternate",
-      "padding": "standard",
       "title": "",
       "subtitle": "",
       "items": [
@@ -147,13 +143,14 @@
           "text": "*A comprehensive three-day retreat-style intensive for deep, systemic change.*\n\n* Comprehensive Pre-Intensive Discovery Session (90 mins)\n* Intensive Workbook & Customized Self-Care Plan\n* 9 hours of Intensive Reprocessing (split over three days)\n* Post-Intensive Integration Session (90 mins)",
           "number": "3"
         }
-      ]
+      ],
+      "columns": "3",
+      "style": "minimal",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "accordion",
-      "theme": "charcoal",
-      "layout": "stacked",
-      "padding": "standard",
       "title": "Logistics & Frequently Asked Questions",
       "items": [
         {
@@ -186,7 +183,10 @@
         }
       ],
       "button_text": "Schedule a Free Consultation to Explore Intensives.",
-      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/"
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "charcoal",
+      "layout": "stacked",
+      "padding": "standard"
     },
     {
       "type": "cta",
@@ -194,8 +194,7 @@
       "button_text": "Schedule a Free Consultation to Explore Intensives",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "olive",
-      "layout": "centered",
-      "body": ""
+      "layout": "centered"
     }
   ]
 }

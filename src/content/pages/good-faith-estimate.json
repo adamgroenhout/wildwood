@@ -7,10 +7,10 @@
       "hero_subtitle": "Your right to clear, upfront pricing.",
       "hero_image": "/wildwood/images/a_minimalist_photorealistic_imag_gfe.png",
       "hero_alt": "Clear glass of water representing transparency",
-      "theme": "dark",
-      "alignment": "center",
       "cta_text": "Learn More",
-      "cta_url": "http://www.cms.gov/nosurprises"
+      "cta_url": "http://www.cms.gov/nosurprises",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "text",
@@ -22,7 +22,6 @@
     {
       "type": "cta",
       "title": "Learn More",
-      "body": "For questions or more information about your right to a Good Faith Estimate, visit www.cms.gov/nosurprises or call 1-800-985-3059.",
       "button_text": "Visit CMS.gov",
       "button_url": "http://www.cms.gov/nosurprises",
       "theme": "olive",
