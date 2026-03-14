@@ -14,6 +14,7 @@ interface Props {
     image_alt?: string;
     theme?: 'sage' | 'cream' | 'sand' | 'paper' | 'charcoal' | 'olive' | 'terracotta' | 'alternate';
     layout?: 'split' | 'centered';
+    image_style?: 'bleed' | 'contained';
   }
 }
 
@@ -26,14 +27,14 @@ const asset = resolveAsset(data.image || '');
 
 {data.layout === 'split' ? (
   <Section theme="none" padding="none" class="flex flex-col md:flex-row min-h-[600px] relative z-10">
-    <div class="w-full md:w-1/2 bg-alternate flex items-center justify-center p-0 overflow-hidden">
+    <div class={`w-full md:w-1/2 bg-alternate flex items-center justify-center overflow-hidden ${data.image_style === 'contained' ? 'p-12 lg:p-24' : 'p-0'}`}>
       {asset && (
         <Image 
           src={asset}
           alt={data.image_alt || ''}
           width={1000}
           height={800}
-          class="w-full h-full object-cover grayscale opacity-60"
+          class={data.image_style === 'contained' ? 'w-full h-auto object-cover rounded-brand shadow-soft' : 'w-full h-full object-cover grayscale opacity-60'}
         />
       )}
     </div>
