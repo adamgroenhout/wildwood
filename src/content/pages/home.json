@@ -3,15 +3,14 @@
   "seo_title": "Wildwood Psychotherapy | Trauma-Informed Therapy in Leesburg, VA",
   "blocks": [
     {
-      "type": "hero",
-      "hero_title": "EMDR and Trauma-Informed Therapy for Adults and Couples in Leesburg, VA",
-      "hero_subtitle": "You spend your life taking care of everyone else. It’s time to take care of YOU.",
-      "hero_image": "src/assets/images/main.webp",
-      "hero_alt": "Hero Background",
-      "cta_text": "Schedule a Call",
       "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "theme": "dark",
       "alignment": "center",
+      "hero_alt": "Hero Background",
+      "theme": "dark",
+      "hero_title": "EMDR and Trauma-Informed Therapy for Adults and Couples in Leesburg, VA",
+      "hero_image": "src/assets/images/main.webp",
+      "type": "hero",
+      "cta_text": "Schedule a Call",
       "specialties": [
         {
           "name": "Trauma + EMDR",
@@ -25,7 +24,8 @@
           "name": "Anxiety & Depression",
           "url": "/anxiety-and-perfectionism"
         }
-      ]
+      ],
+      "hero_subtitle": "You spend your life taking care of everyone else. It’s time to take care of YOU."
     },
     {
       "type": "text",
@@ -38,16 +38,16 @@
       "padding": "standard"
     },
     {
-      "type": "image_text",
-      "title": "A Sanctuary for the Over-Functioner",
       "body": "Underneath the surface, the weight of holding it all together is starting to feel heavy. At Wildwood, we move beyond traditional talk therapy. By integrating EMDR and IFS-informed parts work, we help you process the roots of your exhaustion so you can finally stop holding it together and start *living*. This is your space to be human, not just productive.",
-      "image": "src/assets/images/side-image.webp",
       "image_alt": "Feature Image",
-      "image_position": "left",
-      "link_text": "Learn more about our approach",
-      "link_url": "/about",
       "theme": "alternate",
-      "padding": "small"
+      "link_url": "/about",
+      "image_position": "left",
+      "padding": "small",
+      "link_text": "Learn more about our approach",
+      "title": "A Sanctuary for the Over-Functioner",
+      "type": "image_text",
+      "image": "src/assets/images/side-image.webp"
     },
     {
       "type": "accordion",
@@ -85,15 +85,15 @@
       "padding": "top-only"
     },
     {
-      "type": "image_text",
-      "title": "These aren't character flaws.",
-      "subtitle": "A Note on Adaptation",
       "body": "They are the brilliant, instinctual ways you learned to protect yourself when the world felt like too much. But the strategies that ensured your survival *then* are often the very things standing in the way of your vitality *now*. You don't need to be fixed. You deserve to be unburdened.",
-      "image": "src/assets/images/a_calming_photorealistic_image_o.png",
       "image_alt": "Peaceful wooded path as found in Leesburg, VA, representing the journey of trauma recovery at Wildwood Psychotherapy.",
-      "image_position": "right",
       "theme": "charcoal",
-      "padding": "standard"
+      "image_position": "right",
+      "padding": "standard",
+      "subtitle": "A Note on Adaptation",
+      "title": "These aren't character flaws.",
+      "type": "image_text",
+      "image": "src/assets/images/a_calming_photorealistic_image_o.png"
     },
     {
       "type": "text",
@@ -133,7 +133,7 @@
     },
     {
       "type": "text",
-      "body": "## This isn't about fixing you; you aren’t broken. It’s about healing the wounds that convinced you that you were.",
+      "body": "###### This isn't about fixing you; you aren’t broken. It’s about healing the wounds that convinced you that you were.",
       "theme": "alternate",
       "alignment": "center",
       "padding": "standard"
@@ -169,17 +169,17 @@
       "padding": "standard"
     },
     {
-      "type": "image_text",
-      "title": "I'm Kaylie.",
-      "subtitle": "Owner, Board-Certified Licensed Professional Counselor, EMDR Certified Therapist",
       "body": "You deserve more than a therapist who just listens and nods. You deserve a partner in your growth. My approach is warm and grounded, but I’m not afraid to be direct. I’ll challenge the patterns that no longer serve you and help you connect the dots between your past and your present.\n\nI believe that real healing happens in the space between us. That’s why I’m committed to showing up as a real human in our sessions, bringing clinical expertise, specialized trauma training, and a deep respect for the work you're doing.",
-      "image": "src/assets/images/kaylie-groenhout-headshot.jpg",
       "image_alt": "Kaylie Groenhout",
-      "image_position": "left",
-      "link_text": "Learn more about my background and certifications",
-      "link_url": "/about",
       "theme": "cream",
-      "padding": "standard"
+      "link_url": "/about",
+      "image_position": "left",
+      "padding": "standard",
+      "link_text": "Learn more about my background and certifications",
+      "subtitle": "Owner, Board-Certified Licensed Professional Counselor, EMDR Certified Therapist",
+      "title": "I'm Kaylie.",
+      "type": "image_text",
+      "image": "src/assets/images/kaylie-groenhout-headshot.jpg"
     },
     {
       "type": "grid",
@@ -246,15 +246,15 @@
       "padding": "standard"
     },
     {
-      "type": "cta",
-      "title": "THIS IS WHERE CHANGE BEGINS.",
-      "tagline": "TAKE A BREATH. YOU’RE IN THE RIGHT PLACE.",
-      "button_text": "Book a Call",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "image": "src/assets/images/a_breathtaking_calm_image_of_a_s.png",
       "image_alt": "Final CTA Image",
       "theme": "olive",
-      "layout": "split"
+      "layout": "split",
+      "tagline": "TAKE A BREATH. YOU’RE IN THE RIGHT PLACE.",
+      "title": "THIS IS WHERE CHANGE BEGINS.",
+      "button_text": "Book a Call",
+      "type": "cta",
+      "image": "src/assets/images/a_breathtaking_calm_image_of_a_s.png"
     }
   ]
 }
