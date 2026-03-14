@@ -4,15 +4,15 @@
   "subtitle": "Kink-aware & Polyamory-Affirming Therapy",
   "blocks": [
     {
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "alignment": "center",
-      "hero_alt": "Two comfortable chairs in a sunlit room",
-      "theme": "dark",
-      "hero_title": "Couples Therapy for ENM + Polyamorous Relationships in Leesburg, VA",
-      "hero_image": "/wildwood/images/a_warm_inviting_photorealistic_s.png",
       "type": "hero",
+      "hero_title": "Couples Therapy for ENM + Polyamorous Relationships in Leesburg, VA",
+      "hero_subtitle": "Kink-aware & Polyamory-Affirming Therapy",
+      "hero_image": "/wildwood/images/a_warm_inviting_photorealistic_s.png",
+      "hero_alt": "Two comfortable chairs in a sunlit room",
       "cta_text": "Schedule a Call",
-      "hero_subtitle": "Kink-aware & Polyamory-Affirming Therapy"
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "text",
@@ -24,11 +24,11 @@
     },
     {
       "type": "text",
+      "subtitle": "A Sanctuary for Your Partnership in Leesburg, VA",
+      "body": "Most relationship advice tells you to \"communicate better\" or \"use I-statements.\" But if your internal system is screaming, a script may help, but it won't save you. I’m here to help you look past the surface arguments and figure out what this relationship can realistically become.\n\nTo do that, we have to identify the invisible cycles that are actually running the show.",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "subtitle": "A Sanctuary for Your Partnership in Leesburg, VA",
-      "body": "Most relationship advice tells you to \"communicate better\" or \"use I-statements.\" But if your internal system is screaming, a script may help, but it won't save you. I’m here to help you look past the surface arguments and figure out what this relationship can realistically become.\n\nTo do that, we have to identify the invisible cycles that are actually running the show."
+      "padding": "standard"
     },
     {
       "type": "text",
@@ -42,20 +42,20 @@
       "type": "image_text",
       "title": "The Three Patterns Destroying You Right Now",
       "body": "### The Violation Cycle\n\nYou agree on something important. Boundaries, promises, commitments that matter. Then one of you breaks it. The other explodes. You fight. You make up. You promise it won't happen again.\n\nAnd then it happens again.\n\nThe problem isn't that you don't love each other. It's that you haven't learned how to slow down enough to keep your word when your nervous system gets activated. So the agreements mean nothing when the moment hits.\n\n### The Guilt-Driven People-Pleasing\n\nOne of you constantly bends to avoid conflict. Says yes when you mean no. Agrees to things that violate your own needs. You think you're keeping the peace.\n\nYou're actually building resentment that will eventually explode in ways neither of you sees coming.\n\n### The Desperate Reassurance Loop\n\nOne of you needs constant proof that what they want is okay, that this relationship can handle this, that the other wants this, too, and isn’t going to leave. So you push for reassurance through the exact behaviors that push your partner further away.\n\nThe more you seek proof of love, the less safe your partner feels giving it.\n\nSound familiar?",
-      "theme": "alternate",
-      "image_position": "right",
+      "image": "/wildwood/images/a_cozy_inviting_scene_of_two_war.png",
       "image_alt": "Coffee mugs emphasizing pausing",
-      "padding": "standard",
-      "image": "/wildwood/images/a_cozy_inviting_scene_of_two_war.png"
+      "image_position": "right",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "text",
+      "title": "The Shift You’re Actually Looking For",
+      "subtitle": "The Morning After the Work",
+      "body": "\n\n\n\nYou trust each other’s word again because you’ve both learned how to keep it. You understand your own triggers and each other’s, and you know how to navigate them without shame...",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "body": "\n\n\n\nYou trust each other’s word again because you’ve both learned how to keep it. You understand your own triggers and each other’s, and you know how to navigate them without shame...",
-      "title": "The Shift You’re Actually Looking For",
-      "subtitle": "The Morning After the Work"
+      "padding": "standard"
     },
     {
       "type": "text",
@@ -76,11 +76,11 @@
     {
       "type": "text",
       "title": "Slowing Down the Clock to Speed Up the Healing",
+      "subtitle": "Most couples at Wildwood meet for 90-minute sessions.",
       "body": "Not because you have more problems, but because real relationship repair and real-time regulation require the space that 50 minutes often simply can't provide. We don't just talk about the patterns; we give your bodies the time they need to actually break them, to feel the fear, the worry, the safety instead of only talking about it.\n\nHere's what actually happens in a standard therapy session with couples:\n\nThe first 15 minutes? You're settling in, catching me up on what happened since last week, explaining the latest fight or violation.\n\nThe next 20 minutes? We're finally getting to the actual issue underneath the surface conflict. But just when you're starting to crack open the vulnerable truth, we're out of time.\n\nThe last 15 minutes? We're rushing to wrap up, trying to land somewhere that doesn't leave you activated all week.\n\nYou leave feeling like you touched something important but didn't actually process it. And the cycle continues.",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "subtitle": "Most couples at Wildwood meet for 90-minute sessions."
+      "padding": "standard"
     },
     {
       "type": "grid",
@@ -113,18 +113,15 @@
       "padding": "standard"
     },
     {
+      "type": "cta",
+      "title": "Ready to get started?",
       "body": "You're committed to each other, but the way you’ve structured your life together is evolving. Whether you're navigating an open marriage or a complex polyamorous transition, the heavy silence of those midnight hours usually isn't about the other people in your lives, but about the connection between the two of you right here.\n\nWhether you're navigating a long-standing open marriage or just beginning to explore the transition from monogamy, you need a space where your home base relationship is protected and prioritized.\n\nAt Wildwood, we focus on the health of your relationship as a unit. We navigate the complexities of ENM not as a problem to be solved, but as the context in which we strengthen your connection, deepen your security, and ensure your foundation stays rock-solid.",
+      "button_text": "Start the Honest Work",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "image": "/wildwood/images/a_warm_photorealistic_image_of_a.png",
       "image_alt": "Warm therapist office",
       "theme": "olive",
-      "layout": "split",
-      "title": "Ready to get started?",
-      "button_text": "Start the Honest Work",
-      "type": "cta",
-      "image": "/wildwood/images/a_warm_photorealistic_image_of_a.png"
-    },
-    {
-      "body": "You’re committed to each other, but the way you’ve structured your life together is evolving. Whether you’re navigating a long-standing open marriage or a complex transition, the heavy silence of those midnight hours usually isn't about the other people in your lives, but about the connection between the two of you right here.\n\nAt Wildwood, we provide a sanctuary for the relationship as it actually is, not just as you'd like it to be. We focus on the health of your partnership as a unit, providing tools to strengthen your connection where possible, and the clarity to get honest about your alignment where it’s not."
+      "layout": "split"
     }
   ]
 }

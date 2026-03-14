@@ -17,12 +17,15 @@ const BLOCK_SCHEMA = {
 function cleanBlocks(blocks) {
   if (!Array.isArray(blocks)) return blocks;
 
-  return blocks.map(block => {
+  return blocks.filter(block => {
     const type = block.type;
     if (!type) {
-      console.warn(`Block missing 'type' field:`, block);
-      return block;
+      console.warn(`Block missing 'type' field, removing:`, block);
+      return false; // Remove blocks without a type
     }
+    return true;
+  }).map(block => {
+    const type = block.type;
     const validFields = BLOCK_SCHEMA[type];
 
     if (!validFields) {
@@ -37,9 +40,6 @@ function cleanBlocks(blocks) {
       }
     });
 
-    // Special handling for nested lists if needed, 
-    // but the top-level filtering usually solves the "ghost text" issue
-    
     return cleanedBlock;
   });
 }

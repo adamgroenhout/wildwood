@@ -3,8 +3,6 @@ name: Content Guard (Ghost Data Cleanup)
 on:
   push:
     branches: [main]
-    paths:
-      - 'src/content/pages/**'
   workflow_dispatch:
 
 jobs:

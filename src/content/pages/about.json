@@ -3,31 +3,31 @@
   "seo_title": "About Wildwood Psychotherapy in Leesburg, VA",
   "blocks": [
     {
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "alignment": "center",
-      "hero_alt": "Green sprout representing growth",
-      "theme": "dark",
-      "hero_title": "Where clinical expertise meets human connection.",
-      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_lush.png",
       "type": "hero",
+      "hero_title": "Where clinical expertise meets human connection.",
+      "hero_subtitle": "I’m Kaylie Groenhout, LPC and EMDR Certified Therapist in Leesburg helping high-achieving adults trade performance for presence.",
+      "hero_image": "/wildwood/images/a_photorealistic_image_of_a_lush.png",
+      "hero_alt": "Green sprout representing growth",
       "cta_text": "Schedule a Call",
-      "hero_subtitle": "I’m Kaylie Groenhout, LPC and EMDR Certified Therapist in Leesburg helping high-achieving adults trade performance for presence."
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "text",
+      "body": "You’ve built a life that looks enviable from the outside, but the internal cost of maintaining that success has become unsustainable. I work with the \"reliable\" ones, the people who've spent decades perfecting the art of \"fine\" while their own well-being sits on the back burner. You aren't just looking for a listener who will tell you everything will be okay. You're looking for someone who understands that it won't be okay until you actually deal with what's underneath.\n\nI get it. Yes, I've read plenty of books and attended trainings, but also because I've sat across from countless individuals and couples who are exactly where you are right now. Successful on paper, but struggling underneath, wondering if this is just how life is supposed to feel.\n\n**Spoiler:** **It's not.**",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "body": "You’ve built a life that looks enviable from the outside, but the internal cost of maintaining that success has become unsustainable. I work with the \"reliable\" ones, the people who've spent decades perfecting the art of \"fine\" while their own well-being sits on the back burner. You aren't just looking for a listener who will tell you everything will be okay. You're looking for someone who understands that it won't be okay until you actually deal with what's underneath.\n\nI get it. Yes, I've read plenty of books and attended trainings, but also because I've sat across from countless individuals and couples who are exactly where you are right now. Successful on paper, but struggling underneath, wondering if this is just how life is supposed to feel.\n\n**Spoiler:** **It's not.**"
+      "padding": "standard"
     },
     {
       "type": "image_text",
+      "subtitle": "Hi, I’m Kaylie Groenhout (she/her).",
+      "body": "*I’m a board-certified Licensed Professional Counselor in Leesburg, but more importantly, I’m a therapist who believes in depth over clinical distance. I created Wildwood because I saw too many people who were \"self-aware\" but still suffering. You deserve a space that is as professional as it is personal.*",
+      "image": "/wildwood/images/kaylie-groenhout-lpc.jpg",
       "image_position": "left",
       "theme": "alternate",
-      "padding": "small",
-      "image": "/wildwood/images/kaylie-groenhout-lpc.jpg",
-      "body": "*I’m a board-certified Licensed Professional Counselor in Leesburg, but more importantly, I’m a therapist who believes in depth over clinical distance. I created Wildwood because I saw too many people who were \"self-aware\" but still suffering. You deserve a space that is as professional as it is personal.*",
-      "subtitle": "Hi, I’m Kaylie Groenhout (she/her)."
+      "padding": "small"
     },
     {
       "type": "grid",
@@ -63,20 +63,20 @@
     },
     {
       "type": "text",
+      "subtitle": "Insight is the Beginning. Integration is the Goal.",
+      "body": "I'm warm and direct. I'll meet you where you are and hold space for whatever shows up in our sessions.\n\nSome sessions will feel heavy. Some will feel lighter. All of them will move you forward if you're willing to do the work, because I'm tracking patterns you might not even notice yet. I'm paying attention to what you're saying and what you're not saying. I'm watching for the moments when your nervous system takes over, and your rational brain checks out.\n\nAnd I'm going to point those moments out because that's where the real work happens. But whether you decide to explore them, sit with them, or work through them? That's your choice. This is your healing. I'm here to hold space for it.\n\nTechniques don't matter if we don't have a solid therapeutic relationship. **Healing happens in connection.** That means our relationship matters *just as much* as any intervention I use. This isn’t just a philosophy; it’s a clinical reality supported by research.",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "body": "I'm warm and direct. I'll meet you where you are and hold space for whatever shows up in our sessions.\n\nSome sessions will feel heavy. Some will feel lighter. All of them will move you forward if you're willing to do the work, because I'm tracking patterns you might not even notice yet. I'm paying attention to what you're saying and what you're not saying. I'm watching for the moments when your nervous system takes over, and your rational brain checks out.\n\nAnd I'm going to point those moments out because that's where the real work happens. But whether you decide to explore them, sit with them, or work through them? That's your choice. This is your healing. I'm here to hold space for it.\n\nTechniques don't matter if we don't have a solid therapeutic relationship. **Healing happens in connection.** That means our relationship matters *just as much* as any intervention I use. This isn’t just a philosophy; it’s a clinical reality supported by research.",
-      "subtitle": "Insight is the Beginning. Integration is the Goal."
+      "padding": "standard"
     },
     {
       "type": "text",
+      "title": "",
+      "subtitle": "",
+      "body": "## We bridge the gap between understanding your story and actually changing how you feel within it.",
       "theme": "alternate",
       "alignment": "center",
-      "padding": "large",
-      "subtitle": "",
-      "title": "",
-      "body": "## We bridge the gap between understanding your story and actually changing how you feel within it."
+      "padding": "large"
     },
     {
       "type": "text",
@@ -89,10 +89,6 @@
     },
     {
       "type": "grid",
-      "columns": "4",
-      "style": "cards",
-      "theme": "alternate",
-      "padding": "standard",
       "subtitle": "Tools I Use in My Work",
       "items": [
         {
@@ -115,7 +111,11 @@
           "subtitle": "Somatic-Informed",
           "text": "True healing isn't just changing the way you think. We check in with your physical sensations to help your nervous system move out of survival responses and back into a state of grounded safety and ease."
         }
-      ]
+      ],
+      "columns": "4",
+      "style": "cards",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "accordion",
@@ -163,9 +163,6 @@
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "olive",
       "layout": "centered"
-    },
-    {
-      "body": "You’ve built a life that looks enviable from the outside, but the internal cost of maintaining that success has become unsustainable. I work with the \"reliable\" ones, the people who've spent decades perfecting the art of \"fine\" while their own well-being sits on the back burner. You aren't just looking for a listener who will tell you everything will be okay. You're looking for someone who understands that it won't be okay until you actually deal with what's underneath.\n\nI get it. Yes, I've read plenty of books and attended trainings, but also because I've sat across from countless individuals and couples who are exactly where you are right now. Successful on paper, but struggling underneath, wondering if this is just how life is supposed to feel.\n\n**Spoiler:** **It's not.**"
     }
   ],
   "subtitle": "I’m Kaylie Groenhout, LPC and EMDR Certified Therapist in Leesburg helping high-achieving adults trade performance for presence."
