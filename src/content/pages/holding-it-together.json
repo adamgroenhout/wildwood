@@ -14,7 +14,7 @@
     },
     {
       "type": "image_text",
-      "body": "You show up for work, for family, for friends. To the outside world, you look high functioning and capable. People rely on you. You're a master at pushing through.\n\nBut inside, the emotional load can get overwhelming. The quiet moments are when overwhelm and disconnection hit hardest. Maybe your nervous system is on edge more often than you admit.\n\nYou’re not broken, and you’re not alone. This group creates room for that — a place where you don’t have to hold everything by yourself.",
+      "body": "You're the person everyone relies on. You anticipate needs, meet every deadline, and keep the motor running. But inside, the engine is, well, overheating. You're exhausted from the quiet pressure of always being *fine*. This is the place where you finally don't have to be.",
       "theme": "cream",
       "image_position": "left",
       "image_alt": "Welcoming group therapy circle",
@@ -22,52 +22,41 @@
       "padding": "standard"
     },
     {
-      "type": "text",
-      "title": "Who this group is for:",
-      "body": "* Adults who appear high functioning but feel overwhelmed or numb inside\n* People who support everyone else and struggle to receive support themselves\n* Those experiencing anxiety, depression, burnout, and/or emotional disconnection\n* Anyone tired of feeling alone in their healing and wanting real connection\n\n*This is a trauma-informed, connection-based therapy group that meets in person in Leesburg, Virginia.*",
-      "theme": "sage",
-      "alignment": "left",
-      "padding": "standard"
+      "type": "accordion",
+      "title": "The Journey",
+      "items": [
+        {
+          "title": "Weeks 1-2: Finding Your Feet (Grounding)",
+          "content": "We start with the body. You’ll learn practical ways to notice the bouncing knee, tight chest, or antsy energy and bring yourself back to the present before the overwhelm takes over."
+        },
+        {
+          "title": "Weeks 3-4: The Power of the Pause",
+          "content": "Thoughts, Emotions, and the Inner Critic"
+        },
+        {
+          "title": "Week 5-6: Being Seen",
+          "content": "Self-Compassion and Shame Resilience"
+        }
+      ],
+      "theme": "charcoal",
+      "layout": "stacked",
+      "padding": "standard",
+      "body": "This group is a curated container for those ready to put insight into practice. It's likely a fit if you're looking for tools and community. It's **not** a fit if you're currently in active crisis, dealing with acute substance use, and/or unable to commit to the full 6-week cycle."
     },
     {
       "type": "text",
       "title": "Program Details",
-      "body": "**Duration:** 6-week closed therapy group\n**Location:** In person in Leesburg, Virginia\n**Format:** 75-minute sessions each week\n**Cohort Size:** Small cohort (5 to 6 participants)\n**Cost:** $495 full program",
+      "body": "**Duration:** 6-week closed therapy group\\\n**Dates:** Tuesdays, May 6th - June 10th, 2026\\\n**Time:** 6 PM - 7:15 PM (75-minute sessions)\\\n**Location:** [In person at the Wildwood office](/contact)\n**Cohort Size:** Small cohort (8 participants max.)\n**Cost:** $495 for the complete 6-week program (superbills available for out-of-network benefits).",
       "theme": "alternate",
       "alignment": "left",
       "padding": "standard"
     },
     {
-      "type": "accordion",
-      "title": "Weekly Focus:",
-      "items": [
-        {
-          "title": "Week 1",
-          "content": "Foundations, Safety, and Pacing"
-        },
-        {
-          "title": "Week 2",
-          "content": "Grounding and Somatic Regulation Skills"
-        },
-        {
-          "title": "Week 3",
-          "content": "Thoughts, Emotions, and the Inner Critic"
-        },
-        {
-          "title": "Week 4",
-          "content": "Boundaries, Communication, and Relational Patterns"
-        },
-        {
-          "title": "Week 5",
-          "content": "Self-Compassion and Shame Resilience"
-        },
-        {
-          "title": "Week 6",
-          "content": "Integration and Moving Forward"
-        }
-      ],
-      "theme": "charcoal",
-      "layout": "stacked",
+      "type": "text",
+      "title": "Is this the right fit for you?",
+      "body": "* Adults who appear high functioning but feel overwhelmed or numb inside\n* People who support everyone else and struggle to receive support themselves\n* Those experiencing anxiety, depression, burnout, and/or emotional disconnection\n* Anyone tired of feeling alone in their healing and wanting real connection\n\n*This is a trauma-informed, connection-based therapy group that meets in person in Leesburg, Virginia.*",
+      "theme": "sage",
+      "alignment": "left",
       "padding": "standard"
     },
     {
@@ -89,5 +78,5 @@
     }
   ],
   "seo_title": "Holding It Together: 6-Week In-Person Group Therapy in Leesburg",
-  "subtitle": "For the high-functioning adult moving from \"seamless performance\" to authentic connection."
+  "subtitle": "For the high-functioning adult moving from seamless performance to authentic connection."
 }
