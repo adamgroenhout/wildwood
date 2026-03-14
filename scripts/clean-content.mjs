@@ -10,7 +10,7 @@ const BLOCK_SCHEMA = {
   image_text: ['type', 'title', 'subtitle', 'body', 'image', 'image_alt', 'image_position', 'link_text', 'link_url', 'theme', 'padding'],
   accordion: ['type', 'title', 'subtitle', 'body', 'items', 'button_text', 'button_url', 'theme', 'layout', 'padding'],
   grid: ['type', 'title', 'subtitle', 'items', 'button_text', 'button_url', 'columns', 'style', 'theme', 'padding'],
-  cta: ['type', 'title', 'tagline', 'body', 'button_text', 'button_url', 'image', 'image_alt', 'theme', 'layout'],
+  cta: ['type', 'title', 'tagline', 'button_text', 'button_url', 'image', 'image_alt', 'theme', 'layout'], // REMOVED 'body' to prevent ghost text movement
   map: ['type'] // Map block is minimal in config
 };
 
