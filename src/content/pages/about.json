@@ -54,13 +54,31 @@
       "padding": "standard"
     },
     {
-      "type": "text",
-      "title": "Who I Work With Best",
-      "subtitle": "The Clients I Love Working With",
-      "body": "I'm most energized when working with individuals and couples who are done with performing and ready for presence. My practice is designed for the people who have spent a lifetime being the reliable one, only to realize they’ve become a stranger to themselves.\n\nI specialize in working with adults (typically ages 30 to 70+) who are high-functioning on the outside but navigating a complex internal landscape. You don’t need a therapist to tell you, \"It’s going to be okay.\"\n\n**You need a guide who can help you navigate the nuances of:**\n\n* Anxiety that feels like a constant background hum you can't quite turn off, even when life is technically \"fine\"\n* Losing the thread of your own desires because you’ve become a master at navigating the emotional weather of the people around you\n* Trading the constant on-call version of yourself for a sense of internal quiet — stopping the endless mental marathon of trying to stay three steps ahead\n* The heavy, quiet sense that you are fundamentally too much or not enough (or both), leading you to apologize for taking up space in your own life\n* Watching the same old relationship scripts play out, even when the partners and circumstances have changed.\n\nMy work with couples extends into the nuanced landscapes of ethical non-monogamy and polyamory. In this space, your relationship structure is respected as a fundamental starting point, not an oddity to be questioned. We move directly into the sophisticated work of navigating poly-secure attachment, complex boundary negotiation, and the unique communication hurdles that arise in non-traditional dynamics. While every relationship's internal landscape is unique, you'll find a partner here who is already **fluent in the language of the lifestyle**. We can focus on the work of deep connection rather than basic education.",
+      "type": "grid",
+      "columns": "3",
+      "style": "minimal",
       "theme": "alternate",
-      "alignment": "left",
-      "padding": "standard"
+      "padding": "standard",
+      "subtitle": "Depth-Oriented Therapy for the Complex Internal Landscape",
+      "title": "A therapy sanctuary for adult individuals (30-70+) and non-traditional partners.",
+      "items": [
+        {
+          "link_text": "",
+          "title": "\"You know your history, but you are still a stranger to yourself.\"",
+          "text": "You’ve spent years analyzing the \"why.\" You understand your patterns, yet you still feel the same hollow sense of disconnect. Whether you're 35 or 65, you aren’t just looking for more coping skills; you're looking for yourself.",
+          "number": ""
+        },
+        {
+          "link_text": "",
+          "title": "\"We work within the complex internal landscape.\"",
+          "text": "Healing isn't a linear path, especially when your life includes non-traditional relationship structures like CNM or polyamory. We provide a safe, judgment-free space that respects your intelligence and your lived experience. We move beyond the noise of what's at the surface and drop in to what's happening beneath and between."
+        },
+        {
+          "link_text": "Learn more",
+          "title": "\"Because your rational brain eventually checks out.\"",
+          "text": "You can intellectualize your story and your pain all day, but true change happens when we track what is happening in the room. We bridge the gap between knowing better and feeling better, unburdening the roles you’ve played for decades so you can show up authentically in the present."
+        }
+      ]
     },
     {
       "type": "text",
