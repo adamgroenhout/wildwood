@@ -42,8 +42,8 @@ const isCentered = alignment === 'center';
 ---
 
 <Section theme={data.theme || 'alternate'} padding={data.padding || 'standard'} class={isDark ? 'theme-dark' : ''}>
-  <div class="max-w-6xl mx-auto space-y-16">
-    
+  <div class="max-w-7xl mx-auto space-y-16">
+
     {(data.title || data.subtitle) && (
       <div class:list={["space-y-4 mx-auto", isCentered ? 'text-center max-w-3xl' : 'text-left']}>
         {data.subtitle && (
@@ -62,9 +62,9 @@ const isCentered = alignment === 'center';
         {data.title && !data.subtitle && <div class:list={["w-24 h-px bg-terracotta/30 mt-8", isCentered ? 'mx-auto' : '']}></div>}
       </div>
     )}
-    
+
     <div class:list={[
-      "grid gap-x-10 gap-y-16 lg:gap-x-16 lg:gap-y-20",
+      "grid gap-x-12 gap-y-16 lg:gap-x-24 lg:gap-y-20",
       data.items.length === 1 ? (isCentered ? "max-w-3xl mx-auto" : "max-w-3xl") : colClass,
       'text-left'
     ]}>
@@ -79,9 +79,8 @@ const isCentered = alignment === 'center';
           <div class="space-y-4 flex-grow">
             {item.title && <h3 class="eyebrow text-terracotta tracking-wider text-pretty">{item.title}</h3>}
             {item.subtitle && <p class="h3-serif !italic leading-snug text-pretty">{item.subtitle}</p>}
-            {(item.text || item.body) && <div class="body-lg opacity-85 leading-relaxed prose prose-sm max-w-none text-pretty" set:html={marked.parse((item.text || item.body) as string)} />}
-          </div>
-          {item.link_url && (
+            {(item.text || item.body) && <div class="body-lg opacity-85 leading-relaxed prose max-w-none text-pretty" set:html={marked.parse((item.text || item.body) as string)} />}
+          </div>          {item.link_url && (
             <div class="pt-4 mt-auto">
               <a href={formatUrl(item.link_url)} class="eyebrow inline-flex items-center gap-2 border-b border-current/20 pb-1 transition-all duration-300 hover:border-terracotta hover:text-terracotta group">
                 <span>{item.link_text || 'Learn more'}</span>

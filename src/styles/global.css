@@ -278,7 +278,7 @@
   .prose h3 { font-size: 1.45rem; }
   .prose h4 { font-size: 1.2rem; }
   .prose h1, .prose h2, .prose h3, .prose h4 { color: var(--theme-heading); margin-top: 2.5em; margin-bottom: 1.25em; }
-  .prose ul { list-style-type: disc; padding-left: 1.625em; margin-top: 1.5em; margin-bottom: 1.5em; }
+  .prose ul { list-style-type: disc; padding-left: 1.25em; margin-top: 1.5em; margin-bottom: 1.5em; }
   .prose li { margin-top: 0.75em; margin-bottom: 0.75em; }
   .prose strong { color: inherit; font-weight: 700; }
   .prose a:not(.btn) { 
