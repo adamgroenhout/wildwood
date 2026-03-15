@@ -77,8 +77,8 @@ const isCentered = alignment === 'center';
             <span class="display-serif opacity-20 block mb-2 text-6xl text-terracotta">{item.number}</span>
           )}
           <div class="space-y-4 flex-grow">
-            {item.title && <h3 class="eyebrow text-terracotta tracking-wider text-pretty">{item.title}</h3>}
-            {item.subtitle && <p class="h3-serif !italic leading-snug text-pretty">{item.subtitle}</p>}
+            {item.subtitle && <h3 class="h3-serif !italic leading-snug text-pretty">{item.subtitle}</h3>}
+            {item.title && <p class="eyebrow text-terracotta tracking-wider text-pretty">{item.title}</p>}
             {(item.text || item.body) && <div class="body-lg opacity-85 leading-relaxed prose max-w-none text-pretty" set:html={marked.parse((item.text || item.body) as string)} />}
           </div>          {item.link_url && (
             <div class="pt-4 mt-auto">
