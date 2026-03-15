@@ -2,15 +2,15 @@
   "title": "Schedule Your Free Consultation",
   "blocks": [
     {
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "alignment": "center",
-      "hero_alt": "Sunlit hallway representing a welcoming entry",
-      "theme": "dark",
-      "hero_title": "Schedule Your Free Consultation",
-      "hero_image": "src/assets/images/a_photorealistic_image_of_a_warm.webp",
       "type": "hero",
+      "hero_title": "Schedule Your Free Consultation",
+      "hero_subtitle": "",
+      "hero_image": "src/assets/images/a_photorealistic_image_of_a_warm.webp",
+      "hero_alt": "Sunlit hallway representing a welcoming entry",
       "cta_text": "Schedule a Call",
-      "hero_subtitle": ""
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "text",
@@ -25,15 +25,12 @@
       "title": "Get in Touch",
       "button_text": "Book Your Consultation",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "image_alt": "book your consultation button",
       "theme": "terracotta",
-      "layout": "centered",
-      "image_alt": "book your consultation button"
+      "layout": "centered"
     },
     {
-      "type": "map",
-      "title": "Visit the Office",
-      "subtitle": "Leesburg, VA",
-      "theme": "cream"
+      "type": "map"
     },
     {
       "type": "grid",
@@ -66,25 +63,25 @@
       "padding": "standard"
     },
     {
-      "body": "Facing the front of the building, you'll see the cafe's red door. **To enter the office, look to the left of the building for a small iron gate and narrow brick walkway.**",
-      "image_alt": "image of a white brick little house from early 1900s with a metal roof, black shutters, and red front door which is the home of Wildwood Psychotherapy in Leesburg, VA",
-      "theme": "alternate",
-      "image_position": "left",
-      "padding": "small",
-      "subtitle": "Same building as Shake & Bops Cafe.",
-      "title": "Location",
       "type": "image_text",
-      "image": "src/assets/images/19-wirt-street-sw.webp"
+      "title": "Location",
+      "subtitle": "Same building as Shake & Bops Cafe.",
+      "body": "Facing the front of the building, you'll see the cafe's red door. **To enter the office, look to the left of the building for a small iron gate and narrow brick walkway.**",
+      "image": "src/assets/images/19-wirt-street-sw.webp",
+      "image_alt": "image of a white brick little house from early 1900s with a metal roof, black shutters, and red front door which is the home of Wildwood Psychotherapy in Leesburg, VA",
+      "image_position": "left",
+      "theme": "alternate",
+      "padding": "small"
     },
     {
       "type": "image_text",
       "subtitle": "Follow the Path",
       "body": "Step up the two small brick steps leading to a narrow brick walkway. Follow the pathway, walking down along the side of the building until you see a bank of mailboxes on the wall. Immediately to your right will be the door for the entrance.",
       "image": "src/assets/images/office-brick-walkway.webp",
+      "image_alt": "narrow brick walkway along the white brick wall of the building that houses Wildwood Psychotherapy",
       "image_position": "right",
       "theme": "alternate",
-      "padding": "small",
-      "image_alt": "narrow brick walkway along the white brick wall of the building that houses Wildwood Psychotherapy"
+      "padding": "small"
     }
   ],
   "seo_title": "Schedule Your Free Consultation"
