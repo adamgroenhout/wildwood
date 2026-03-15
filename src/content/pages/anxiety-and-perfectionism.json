@@ -103,7 +103,7 @@
     },
     {
       "type": "grid",
-      "title": "90-minute sessions let us:",
+      "title": "",
       "items": [
         {
           "text": "Actually practice nervous system regulation until your body learns the new response"
@@ -121,7 +121,8 @@
       "columns": "2",
       "style": "cards",
       "theme": "cream",
-      "padding": "standard"
+      "padding": "standard",
+      "subtitle": "90-minute sessions let us:"
     },
     {
       "type": "text",
