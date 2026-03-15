@@ -3,7 +3,7 @@
   "seo_title": "Group Therapy in Leesburg, VA | Wildwood Psychotherapy",
   "blocks": [
     {
-      "cta_url": "https://adamgroenhout.github.io/wildwood/holding-it-together/",
+      "cta_url": "#current-groups",
       "alignment": "center",
       "hero_alt": "Circle of smooth river stones representing community",
       "theme": "dark",
@@ -44,6 +44,7 @@
       "padding": "standard"
     },
     {
+      "id": "current-groups",
       "body": "A 6-Week Journey for High-Functioning Adults\n\nA small, in-person cohort in Leesburg for those moving past the put-together front to practice regulation and authentic connection.",
       "image_alt": "Now Enrolling: Holding It Together",
       "theme": "alternate",
