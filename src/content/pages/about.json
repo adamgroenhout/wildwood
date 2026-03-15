@@ -81,21 +81,15 @@
       ]
     },
     {
-      "type": "text",
-      "title": "My Approach",
-      "subtitle": "Depth, Directness, and Grounded Insight",
-      "body": "I'm warm and direct. I'll meet you where you are and hold space for whatever shows up in our sessions.\n\nSome sessions will feel heavy. Some will feel lighter. All of them will move you forward if you're willing to do the work, because I'm tracking patterns you might not even notice yet. I'm paying attention to what you're saying and what you're not saying. I'm watching for the moments when your nervous system takes over, and your rational brain checks out.\n\nAnd I'm going to point those moments out because that's where the real work happens. But whether you decide to explore them, sit with them, or work through them? That's your choice. This is your healing. I'm here to hold space for it.",
-      "theme": "standard",
-      "alignment": "left",
-      "padding": "standard"
-    },
-    {
-      "type": "text",
-      "title": "Science-Backed & Human-Centered",
-      "body": "I lead with EMDR and IFS-informed parts work because they go where conversation cannot - reaching the neurological roots of your story to facilitate true unburdening. I supplement this depth with the practical, boots-on-the-ground tools of DBT and ACT to ensure you feel regulated and capable in your daily life.\n\nBut none of these techniques matter if we don't have a solid therapeutic relationship. **Healing happens in connection.** That means our relationship matters *just as much* as any intervention I use. This isn’t just a philosophy; it’s a clinical reality supported by research.",
-      "theme": "standard",
-      "alignment": "left",
-      "padding": "standard"
+      "body": "Some sessions will feel heavy. Some will feel lighter. All of them are part of moving forward. My approach is warm but active; I’m not just a passive listener. I'm tracking the moments when your nervous system takes over and your rational brain checks out. I’m paying attention to what you’re saying, and more importantly, what you’re *not* saying. \n\nI'll point those patterns out as they happen, because that's where insight turns into integration. Whether you decide to explore those moments, sit with them, or work through them is always your choice. This is your healing; I'm here to hold the space for it.",
+      "image_alt": "Soft botanical shadows on a warm, earthy-toned wall in a peaceful therapy office, representing the mindful, grounded approach of Wildwood Psychotherapy in Leesburg, VA",
+      "theme": "alternate",
+      "image_position": "left",
+      "padding": "small",
+      "subtitle": "What It Feels Like in the Room",
+      "title": "Depth, Directness, and Grounded Insight",
+      "type": "image_text",
+      "image": "src/assets/images/pexels-mdsnmdsnmdsn-2821756.jpg"
     },
     {
       "type": "text",
@@ -134,6 +128,14 @@
       "columns": "4",
       "style": "cards",
       "theme": "alternate",
+      "padding": "standard"
+    },
+    {
+      "type": "text",
+      "title": "Science-Backed & Human-Centered",
+      "body": "Techniques don't matter if we don't have a solid therapeutic relationship. **Healing happens in connection.** That means our relationship matters *just as much* as any intervention I use. This isn’t just a philosophy; it’s a clinical reality supported by research.",
+      "theme": "standard",
+      "alignment": "left",
       "padding": "standard"
     },
     {
@@ -182,6 +184,9 @@
       "theme": "olive",
       "layout": "centered",
       "image_alt": "image"
+    },
+    {
+      "body": "Some sessions will feel heavy; some will feel lighter. All of them will move you forward. My approach is warm but active; I’m not just a passive listener. I'm paying attention to what you’re saying, and more importantly, what you’re *not*.\n\nI track the moments when a protective part of you steps in. I’m watching for those shifts in your energy where the thinking brain gives way to a deeper, more reactive feeling. I notice when your logic is bypassed by a surge of emotion or a need to retreat. I point these transitions out as they happen, because they usually point us exactly toward what needs the most care.\n\nThis is your space, and I'm here to hold the space for it. Whether you decide to explore those moments, sit with them, or work through them is always your choice. I bridge the gap between \"knowing better\" and \"feeling better,\" unburdening the roles you’ve played for decades so you can show up authentically in your present."
     }
   ],
   "subtitle": "I’m Kaylie Groenhout, LPC and EMDR Certified Therapist in Leesburg helping high-achieving adults trade performance for presence."
