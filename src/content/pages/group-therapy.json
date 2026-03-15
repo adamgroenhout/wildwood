@@ -3,23 +3,23 @@
   "seo_title": "Group Therapy in Leesburg, VA | Wildwood Psychotherapy",
   "blocks": [
     {
-      "cta_url": "#current-groups",
-      "alignment": "center",
-      "hero_alt": "Circle of smooth river stones representing community",
-      "theme": "dark",
-      "hero_title": "Group Therapy in Leesburg, VA",
-      "hero_image": "src/assets/images/a_gentle_photorealistic_image_of.webp",
       "type": "hero",
+      "hero_title": "Group Therapy in Leesburg, VA",
+      "hero_subtitle": "Connection & healing in community.",
+      "hero_image": "src/assets/images/a_gentle_photorealistic_image_of.webp",
+      "hero_alt": "Circle of smooth river stones representing community",
       "cta_text": "See Current Groups",
-      "hero_subtitle": "Connection & healing in community."
+      "cta_url": "#current-groups",
+      "theme": "dark",
+      "alignment": "center"
     },
     {
       "type": "text",
+      "subtitle": "Beyond the Individual Journey",
+      "body": "One-on-one therapy offers a deep dive into your personal story, but there's a specific kind of magic that can only happen in the presence of others. Beyond support, our groups are curated, trauma-informed containers designed to help you practice new ways of being in real-time.\n\nWhether you're looking to quiet the noise of perfectionism, process shared trauma, or simply find a space where you don't have to explain yourself, our groups offer a grounded path back to connection.",
       "theme": "alternate",
       "alignment": "left",
-      "padding": "standard",
-      "subtitle": "Beyond the Individual Journey",
-      "body": "One-on-one therapy offers a deep dive into your personal story, but there's a specific kind of magic that can only happen in the presence of others. Beyond support, our groups are curated, trauma-informed containers designed to help you practice new ways of being in real-time.\n\nWhether you're looking to quiet the noise of perfectionism, process shared trauma, or simply find a space where you don't have to explain yourself, our groups offer a grounded path back to connection."
+      "padding": "standard"
     },
     {
       "type": "grid",
@@ -44,27 +44,22 @@
       "padding": "standard"
     },
     {
-      "id": "current-groups",
-      "body": "A 6-Week Journey for High-Functioning Adults\n\nA small, in-person cohort in Leesburg for those moving past the put-together front to practice regulation and authentic connection.",
-      "image_alt": "Now Enrolling: Holding It Together",
-      "theme": "alternate",
-      "link_url": "/holding-it-together",
-      "image_position": "left",
-      "padding": "small",
-      "link_text": "See Current Groups",
-      "subtitle": "Current & Upcoming Groups",
-      "title": "Now Enrolling: Holding It Together",
       "type": "image_text",
-      "image": "src/assets/images/a_photorealistic_image_of_an_ope.webp"
+      "title": "Now Enrolling: Holding It Together",
+      "subtitle": "Current & Upcoming Groups",
+      "body": "A 6-Week Journey for High-Functioning Adults\n\nA small, in-person cohort in Leesburg for those moving past the put-together front to practice regulation and authentic connection.",
+      "image": "src/assets/images/a_photorealistic_image_of_an_ope.webp",
+      "image_alt": "Now Enrolling: Holding It Together",
+      "image_position": "left",
+      "link_text": "See Current Groups",
+      "link_url": "/holding-it-together",
+      "theme": "alternate",
+      "padding": "small"
     },
     {
       "type": "grid",
-      "columns": "3",
-      "style": "minimal",
-      "theme": "alternate",
-      "padding": "standard",
-      "subtitle": "Why Wildwood Groups Are Different",
       "title": "",
+      "subtitle": "Why Wildwood Groups Are Different",
       "items": [
         {
           "link_text": "",
@@ -85,9 +80,15 @@
           "title": "Pillar 3",
           "text": "Your *no* is as respected as your *yes*. You're always in charge of how much you share. No forced vulnerability, ever."
         }
-      ]
+      ],
+      "columns": "3",
+      "style": "minimal",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
+      "type": "grid",
+      "title": "How it Works",
       "items": [
         {
           "text": "Browse current groups.",
@@ -102,21 +103,16 @@
           "text": "Join a small, confidential cohort of peers."
         }
       ],
-      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
-      "theme": "alternate",
-      "padding": "standard",
-      "style": "minimal",
-      "title": "How it Works",
       "button_text": "Schedule Your Call",
-      "type": "grid",
-      "columns": "3"
+      "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "columns": "3",
+      "style": "minimal",
+      "theme": "alternate",
+      "padding": "standard"
     },
     {
       "type": "accordion",
       "title": "Common Concerns",
-      "theme": "alternate",
-      "layout": "stacked",
-      "padding": "standard",
       "items": [
         {
           "title": "Do I have to share everything?",
@@ -142,7 +138,10 @@
           "title": "How do I know if I'm a good fit?",
           "content": "Every participant has a 15-minute screening call with [Kaylie](/about), the group facilitator, first. This ensures the group dynamic is balanced and that the program matches your specific goals."
         }
-      ]
+      ],
+      "theme": "alternate",
+      "layout": "stacked",
+      "padding": "standard"
     }
   ],
   "subtitle": "Connection & healing in community."
