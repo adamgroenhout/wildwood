@@ -3,23 +3,24 @@
   "seo_title": "FAQ about Therapy at Wildwood Psychotherapy in Leesburg, VA",
   "blocks": [
     {
-      "type": "hero",
-      "hero_title": "Frequently Asked Questions",
-      "hero_subtitle": "",
-      "hero_image": "src/assets/images/a_minimalist_photorealistic_imag_1.webp",
+      "cta_url": "/contact",
+      "alignment": "center",
       "hero_alt": "Light through a window representing clarity",
       "theme": "dark",
-      "alignment": "center",
+      "hero_title": "Frequently Asked Questions",
+      "hero_image": "src/assets/images/a_minimalist_photorealistic_imag_1.webp",
+      "type": "hero",
       "cta_text": "Still Have Questions?",
-      "cta_url": "/contact"
+      "hero_subtitle": ""
     },
     {
       "type": "image_text",
       "body": "Find answers to common questions about trauma therapy, EMDR, insurance, rates, and more at Wildwood Psychotherapy in Leesburg, Virginia.",
       "theme": "cream",
       "image_position": "left",
-      "image_alt": "Notebook and pen for clarity",
-      "image": "src/assets/images/a_serene_minimalist_flat_lay_ima.webp"
+      "image_alt": "looking up at bright blue sky with right-hand side laced with cheerful yellow wildflowers denoting calm",
+      "image": "src/assets/images/masaaki-komori-7xp5bj34ybg-unsplash.jpg",
+      "padding": "standard"
     },
     {
       "type": "accordion",
@@ -30,31 +31,31 @@
         },
         {
           "title": "Do you take insurance?",
-          "content": "I am an out-of-network provider and do not bill insurance directly. Choosing to work outside of insurance protects your privacy and gives us flexibility to move at a pace that supports meaningful, trauma-informed work. I can provide a superbill for potential reimbursement."
+          "content": "No. I'm an out-of-network provider and do not bill insurance directly. Choosing to work outside of insurance protects your privacy and gives us flexibility to move at a pace that supports meaningful, trauma-informed work. I can provide you with a superbill (a detailed receipt with diagnosis) that you can submit to your insurance company for potential reimbursement if you have out-of-network benefits. Many insurance plans will reimburse a portion of out-of-network therapy costs. I recommend calling your insurance company to ask about your out-of-network mental health benefits before we start working together."
         },
         {
           "title": "What does EMDRIA Certified Therapist™ mean?",
-          "content": "No, I don't take insurance directly. I'm an out-of-network provider, which means you pay my full fee at the time of service. However, I can provide you with a superbill (detailed receipt with diagnosis) that you can submit to your insurance company for potential reimbursement if you have out-of-network benefits. Many insurance plans will reimburse a portion of out-of-network therapy costs. I recommend calling your insurance company to ask about your out-of-network mental health benefits before we start working together."
+          "content": "In simple terms, it means I didn’t stop at the initial, 50-hour basic training. While any licensed therapist can technically \"do\" EMDR after that foundational course, becoming **Certified** means I’ve committed to a longer, more supervised path of learning.\n\nFor me, pursuing the title was about making sure I was doing right by my clients. It involved over 50 extra hours of clinical practice and more than 20 additional hours of direct consultation with EMDR experts to refine my skills. When we do EMDR therapy together, it means you’re working with someone who stays deeply connected to the EMDR community and the latest research. I don’t have all the answers, but I have a dedicated map and a commitment to clinical excellence that guides our work together."
         },
         {
           "title": "What are your rates?",
-          "content": "- **Initial Individual Intake (60 mins):** $220\n- **Individual Session (50 mins):** $200\n- **Individual Extended Session (90 minutes):** $360\n- **Initial Couples/Relationship Intake (60 minutes):** $250\n- **Couples/Relationship Session (50 mins):** $225\n- **Couples Extended Session (90 Minutes):** $405\n- **[Intensives](/wildwood/intensives):** Starting at $1600"
+          "content": "* **Initial Individual Intake (60 mins):** $220\n* **Individual Session (50 mins):** $200\n* **Individual Extended Session (90 minutes):** $360\n* **Initial Couples/Relationship Intake (60 minutes):** $250\n* **Couples/Relationship Session (50 mins):** $225\n* **Couples Extended Session (90 Minutes):** $405\n* **[Intensives](/wildwood/intensives):** Starting at $1500"
         },
         {
           "title": "Where are you located?",
-          "content": "The office is located in historic downtown Leesburg at **19 Wirt St SW** near Town Hall. It's in the same building as Shake and Bops Botanical Cafe, on the 2nd floor. The office itself is tucked away behind a private brick walkway to ensure privacy."
+          "content": "The office is nestled in the heart of historic downtown Leesburg at **19 Wirt St SW, #205**, near Town Hall. You’ll find us in the same character-filled building as *Shake and Bops Botanical Cafe*. To ensure a sense of quiet and discretion for our clients, the entrance is tucked away behind a private brick walkway.\n\n**A Note on Accessibility & Our Historic Space:**\nThe office is located on the second floor of a beautiful, historic building, and the office is only accessible via a flight of stairs. I recognize that this may not be a fit for everyone’s physical needs. If stairs present a barrier for you, I'm fully committed to ensuring you receive the same deep, high-quality care through telehealth, allowing you to engage in therapy from the comfort and accessibility of your own home or other private location."
         },
         {
           "title": "Do you offer virtual therapy?",
-          "content": "Yes. I offer secure, HIPAA-compliant virtual therapy sessions for clients anywhere in Virginia. Virtual sessions work great for individual therapy, EMDR, and many couples. Some people prefer the convenience of meeting from home, while others like the structure of coming to the office. We can figure out what works best for you."
+          "content": "Yes. I offer secure, HIPAA-compliant virtual therapy sessions for clients physically located anywhere in Virginia. Virtual sessions work great for individual therapy, EMDR, as well as for many couples trying to sync schedules. Some people prefer the convenience of meeting from home, while others like the structure of coming to the office. We can figure out what works best for you."
         },
         {
           "title": "What is your cancellation policy?",
-          "content": "I require 24 hours' notice for cancellations or rescheduling. If you cancel with less than 24 hours' notice or miss your appointment without canceling, you'll be charged the full session fee. I get that life happens, but I hold this time specifically for you, and last-minute cancellations mean I can't offer that slot to someone else who needs it."
+          "content": "I require 24 hours' notice for cancellations or rescheduling. If you cancel with less than 24 hours' notice or miss your appointment without canceling, you'll be charged the full session fee. I understand life happens, and I hold this time specifically for you. Last-minute cancellations mean I can't offer that slot to someone else who needs it."
         },
         {
           "title": "How long does therapy take?",
-          "content": "It depends on what you're working on and what you want to accomplish. Some people come for a few months to work through a specific issue. Others stay longer to do deeper work on relationship patterns or complex trauma. I'm not interested in keeping you in therapy forever. My goal is to help you get what you need and move on with your life. We'll talk about your goals in the first session and revisit them regularly so you know where you're at."
+          "content": "It depends on what you're working on and what you want to accomplish. Some people come for a few months to work through a specific issue. Others stay longer to do deeper work on relationship patterns or complex trauma. I'm not interested in keeping you in therapy forever. We'll talk about your goals in the first session and revisit them regularly so you know where you're at."
         },
         {
           "title": "What happens in the first session?",
@@ -66,15 +67,15 @@
         },
         {
           "title": "Do you offer couples therapy?",
-          "content": "Yes. I specialize in couples therapy for people navigating non-monogamy, polyamory, and open relationships. I also work with couples dealing with trust issues, communication breakdowns, or trying to rebuild after infidelity. I don't do couples therapy to save marriages. I do it to help people figure out what they actually want and whether they can build something sustainable together."
+          "content": "Yes. I specialize in couples therapy for people navigating non-monogamy, polyamory, and open relationships. I also work with couples who feel the weight of resentment, disconnect, or a mismatch in desire. My approach isn't about saving a marriage or relationship at all costs; it’s about restoring emotional safety and clarity. We’ll look beneath the surface of your conflicts to understand what's happening for each of you and in the space between you. Whether you're navigating a shift in your relationship structure or simply trying to find your way back to each other after years of autopilot, couples therapy creates the space to see if a healthy, sustainable connection is possible."
         },
         {
           "title": "How do I schedule an appointment?",
-          "content": "[Click here](https://wildwoodpsychotherapy.clientsecure.me/). You'll fill out a brief form and choose a time that works for you. I'll reach out to confirm and send you electronic intake documents before our first session. If you have questions before scheduling, you can also contact me via email, secure portal messaging, or phone."
+          "content": "I use a secure, user-friendly [portal](https://wildwoodpsychotherapy.clientsecure.me/) called SimplePractice to make the logistics of starting therapy as stress-free as possible. You can view my live calendar and self-schedule your sessions up to four weeks in advance.\n\nOnce you enter the portal, you’ll simply:\n\n1. Select your location (in-person in the Leesburg office or a virtual appointment).\n2. Choose your session type (e.g., a 50-minute individual session or 90-minute extended couples session).\n3. Submit your request. I'll personally review the request and send you a confirmation email to finalize the appointment.\n\n[View the Calendar & Schedule a Session](https://wildwoodpsychotherapy.clientsecure.me/)\n\n**A Note on Intensives:** Because [therapy intensives](/intensives) require a unique, custom-tailored block of time, they cannot be self-scheduled through the portal. To explore or book an intensive, please [reach out to me directly](https://www.google.com/search?q=your-contact-link) so we can coordinate a schedule that fits your needs."
         },
         {
           "title": "Do you offer evening or weekend appointments?",
-          "content": "No. I don't currently offer evening or weekend sessions. I typically see clients Monday-Thursday, 8 AM-3 PM. The only exception may be for scheduled intensives."
+          "content": "Only for select intensives. Otherwise, I typically see clients Monday-Thursday, 8 AM-3 PM."
         },
         {
           "title": "Can I bring my partner to individual therapy sessions?",
@@ -84,7 +85,8 @@
       "theme": "alternate",
       "layout": "split",
       "title": "Practice Logistics & Approach",
-      "subtitle": "Common Questions"
+      "subtitle": "Common Questions",
+      "padding": "standard"
     },
     {
       "type": "cta",
@@ -92,7 +94,8 @@
       "button_text": "Get Started",
       "button_url": "/contact",
       "theme": "terracotta",
-      "layout": "centered"
+      "layout": "centered",
+      "image_alt": "call to action - get started button"
     }
   ]
 }
