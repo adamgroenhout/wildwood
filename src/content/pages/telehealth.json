@@ -3,15 +3,15 @@
   "seo_title": "Online therapy for adults in Virginia.",
   "blocks": [
     {
-      "type": "hero",
-      "hero_title": "Telehealth",
-      "hero_subtitle": "Online therapy via video for adults in Virginia.",
-      "hero_image": "src/assets/images/a_clean_photorealistic_image_of_.webp",
+      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/",
+      "alignment": "center",
       "hero_alt": "Cozy desk with laptop representing digital connection",
       "theme": "dark",
-      "alignment": "center",
+      "hero_title": "Telehealth",
+      "hero_image": "src/assets/images/a_clean_photorealistic_image_of_.webp",
+      "type": "hero",
       "cta_text": "Schedule a Call",
-      "cta_url": "https://wildwoodpsychotherapy.clientsecure.me/"
+      "hero_subtitle": "Online therapy via video for adults in Virginia."
     },
     {
       "type": "grid",
@@ -19,15 +19,8 @@
       "items": [],
       "columns": "3",
       "style": "minimal",
-      "theme": "sage"
-    },
-    {
-      "type": "grid",
-      "title": "DELETE",
-      "items": [],
-      "columns": "2",
-      "style": "numbered",
-      "theme": "cream"
+      "theme": "sage",
+      "padding": "standard"
     },
     {
       "type": "image_text",
@@ -61,7 +54,8 @@
       "button_text": "Schedule a Call",
       "button_url": "https://wildwoodpsychotherapy.clientsecure.me/",
       "theme": "olive",
-      "layout": "centered"
+      "layout": "centered",
+      "image_alt": "call to action button encouraging inquirer to schedule a consultation call"
     }
   ],
   "subtitle": "Online therapy via video for adults in Virginia."
