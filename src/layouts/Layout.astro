@@ -34,12 +34,51 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href={`${base}favicon.png?v=2`} />
 		<link rel="apple-touch-icon" href={`${base}favicon.png?v=2`} />
 		<meta name="generator" content={Astro.generator} />
+		
+		{/* SEO Meta Tags */}
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={Astro.url.href} />
+
+		{/* Open Graph / Facebook */}
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(`${base}favicon.png?v=2`, Astro.site)} />
+
+		{/* Twitter */}
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url.href} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(`${base}favicon.png?v=2`, Astro.site)} />
+
+		{/* JSON-LD Structured Data */}
+		<script type="application/ld+json" is:inline set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "MedicalBusiness",
+			"name": settings.site_name,
+			"description": settings.site_description,
+			"url": Astro.site,
+			"telephone": settings.contact?.phone,
+			"email": settings.contact?.email,
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "19 Wirt St SW, Suite 205",
+				"addressLocality": "Leesburg",
+				"addressRegion": "VA",
+				"postalCode": "20175",
+				"addressCountry": "US"
+			},
+			"medicalSpecialty": "Psychotherapy",
+			"priceRange": "$$"
+		})} />
+
 		<ClientRouter />
 	</head>
 	<body class="bg-olive text-paper/90 font-sans grain">
