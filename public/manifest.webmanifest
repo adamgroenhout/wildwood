@@ -1,0 +1,16 @@
+{
+  "name": "Wildwood Psychotherapy",
+  "short_name": "Wildwood",
+  "description": "Expert EMDR and IFS-Informed Therapy for Adults in Leesburg, VA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#294b27",
+  "theme_color": "#294b27",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

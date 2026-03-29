@@ -32,7 +32,12 @@ const logoAsset = resolveAsset(logo || '');
 			<nav class="hidden lg:flex space-x-6 xl:space-x-8 items-center">
 				{navigation?.map(item => (
 					<div class="relative group">
-						<a href={formatUrl(item.href)} class="eyebrow text-paper/70 hover:text-paper transition-colors link-underline">
+						<a 
+							href={formatUrl(item.href)} 
+							class="eyebrow text-paper/70 hover:text-paper transition-colors link-underline"
+							aria-haspopup={item.subItems ? "true" : "false"}
+							aria-expanded="false"
+						>
 							{item.name}
 							{item.subItems && (
 								<svg class="ml-1 w-3 h-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,9 +46,12 @@ const logoAsset = resolveAsset(logo || '');
 							)}
 						</a>
 						{item.subItems && (
-							<div class="absolute left-0 mt-2 w-56 bg-olive border border-paper/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-1 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2">
+							<div 
+								class="absolute left-0 mt-2 w-56 bg-olive border border-paper/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-1 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2"
+								role="menu"
+							>
 								{item.subItems.map(subItem => (
-									<a href={formatUrl(subItem.href)} class="block px-4 py-3 eyebrow text-paper/70 hover:bg-paper/5 hover:text-paper transition-colors">
+									<a href={formatUrl(subItem.href)} class="block px-4 py-3 eyebrow text-paper/70 hover:bg-paper/5 hover:text-paper transition-colors" role="menuitem">
 										{subItem.name}
 									</a>
 								))}
@@ -79,7 +87,12 @@ const logoAsset = resolveAsset(logo || '');
 						{item.name}
 					</a>
 					{item.subItems && (
-						<button class="mobile-submenu-toggle p-3 text-paper/50 hover:text-paper transition-colors">
+						<button 
+							class="mobile-submenu-toggle p-3 text-paper/50 hover:text-paper transition-colors"
+							aria-label={`Toggle ${item.name} submenu`}
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
 							<svg class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
@@ -139,16 +152,40 @@ const logoAsset = resolveAsset(logo || '');
 					menu.classList.add('pointer-events-auto', 'block');
 					menuIcon.classList.add('hidden');
 					closeIcon.classList.remove('hidden');
+					button.setAttribute('aria-expanded', 'true');
 					document.body.style.overflow = 'hidden'; // Prevent scroll when menu is open
 				} else {
 					menu.classList.add('hidden', 'pointer-events-none');
 					menu.classList.remove('pointer-events-auto', 'block');
 					menuIcon.classList.remove('hidden');
 					closeIcon.classList.add('hidden');
+					button.setAttribute('aria-expanded', 'false');
 					document.body.style.overflow = '';
 				}
 			};
 		}
+
+		// Handle desktop submenu ARIA on hover/focus
+		document.querySelectorAll('.group').forEach(group => {
+			const trigger = group.querySelector('a[aria-haspopup="true"]');
+			const submenu = group.querySelector('[role="menu"]');
+			if (trigger) {
+				group.addEventListener('mouseenter', () => trigger.setAttribute('aria-expanded', 'true'));
+				group.addEventListener('mouseleave', () => trigger.setAttribute('aria-expanded', 'false'));
+				
+				// Keyboard focus handling
+				trigger.addEventListener('focus', () => trigger.setAttribute('aria-expanded', 'true'));
+				
+				// Close when focus leaves the submenu
+				if (submenu) {
+					const links = submenu.querySelectorAll('a');
+					const lastLink = links[links.length - 1];
+					if (lastLink) {
+						lastLink.addEventListener('blur', () => trigger.setAttribute('aria-expanded', 'false'));
+					}
+				}
+			}
+		});
 
 		// Submenu toggles for mobile
 		document.querySelectorAll('.mobile-submenu-toggle').forEach(toggle => {
@@ -159,6 +196,7 @@ const logoAsset = resolveAsset(logo || '');
 				if (submenu && icon) {
 					const isHidden = submenu.classList.toggle('hidden');
 					icon.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+					toggle.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
 				}
 			};
 		});

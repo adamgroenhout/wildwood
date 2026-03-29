@@ -91,4 +91,10 @@ const heroAsset = resolveAsset(data.hero_image || '');
     from { transform: scale(1) translateZ(0); }
     to { transform: scale(1.15) translateZ(0); }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    img {
+      animation: none !important;
+    }
+  }
 </style>
