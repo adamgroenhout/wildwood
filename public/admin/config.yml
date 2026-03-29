@@ -126,7 +126,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "text", required: false }
               - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-              - { label: "Body", name: "body", widget: "markdown" }
+              - { label: "Body", name: "body", widget: "markdown", hint: "Avoid using H1 (#) here. Start with H2 (##) or H3 (###) to maintain SEO hierarchy." }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "image_alt", widget: "string", required: true }
               - { label: "Image Position", name: "image_position", widget: "select", options: ["left", "right"], default: "left" }
