@@ -5,11 +5,23 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # Correctly set the package ecosystem to npm
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "github-actions" # Correctly set the package ecosystem to github-actions
-    directory: "/" # Location of package manifests
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions:
+        patterns:
+          - "*"
