@@ -1,15 +1,15 @@
 {
-  "title": "Page Not Found",
+  "title": "Page not found",
   "seo_title": "404: Page Not Found",
   "blocks": [
     {
       "type": "hero",
-      "hero_title": "Page Not Found",
+      "hero_title": "Page not found",
       "hero_subtitle": "It seems the page you're looking for has moved or no longer exists. Let's help you find your way back.",
       "hero_alt": "Abstract calming background",
       "cta_text": "Return Home",
       "cta_url": "/",
-      "theme": "terracotta",
+      "theme": "olive",
       "alignment": "center"
     }
   ]
