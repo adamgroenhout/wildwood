@@ -4,7 +4,7 @@
   "blocks": [
     {
       "type": "hero",
-      "hero_title": "Page not found",
+      "hero_title": "Page Not Found",
       "hero_subtitle": "It seems the page you're looking for has moved or no longer exists. Let's help you find your way back.",
       "hero_alt": "Abstract calming background",
       "cta_text": "Return Home",
