@@ -13,7 +13,7 @@ if (!entry) {
 const { title, subtitle, seo_title, blocks } = entry.data;
 ---
 
-<Layout title={seo_title || title}>
+<Layout title={seo_title}>
 	<main>
 		{/* Check if the user already added a hero block. If not, give them a standard page header using the title. */}
 		{!blocks?.some((b: any) => b.type === 'hero') && (
