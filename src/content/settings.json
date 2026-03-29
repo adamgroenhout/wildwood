@@ -8,9 +8,8 @@
   "site_title": "Wildwood Psychotherapy | EMDR & Trauma Therapy in Leesburg, VA",
   "staff_login_text": "Staff Login",
   "site_name": "Wildwood Psychotherapy",
-  "google_analytics_id": "G-3113PKV0GY",
   "staff_logout_text": "Staff Logout",
-  "site_description": "Expert EMDR and IFS-Informed Therapy for Adults in Leesburg and Western Loudoun. Wildwood Psychotherapy offers refined, trauma-informed care. Book your free consultation.",
+  "site_description": "Compassionate EMDR and IFS-Informed Therapy for Adults in Leesburg and Western Loudoun. Wildwood Psychotherapy offers refined, trauma-informed care. Book your free consultation.",
   "copyright_text": "All rights reserved.",
   "logo": "src/assets/images/1-300x300.webp",
   "header_cta_href": "/contact",
@@ -154,5 +153,6 @@
       ]
     }
   ],
+  "google_analytics_id": "G-3113PKV0GY",
   "land_acknowledgment": "Land Acknowledgment: We respectfully acknowledge that we are on the traditional lands of the Manahoac and Piscataway People."
 }
