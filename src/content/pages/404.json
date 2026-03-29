@@ -1,5 +1,5 @@
 {
-  "title": "Page not found",
+  "title": "Page Not Found",
   "seo_title": "404: Page Not Found",
   "blocks": [
     {
@@ -9,7 +9,7 @@
       "hero_alt": "Abstract calming background",
       "cta_text": "Return Home",
       "cta_url": "/",
-      "theme": "olive",
+      "theme": "terracotta",
       "alignment": "center"
     }
   ]
