@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const INPUT_IMAGE = 'src/assets/images/gemini_generated_image_83a33y83a33y83a3.png';
-const OUTPUT_IMAGE = 'public/og-image.png';
+const OUTPUT_IMAGE = 'public/og-image.jpg';
 const WIDTH = 1200;
 const HEIGHT = 630;
 
@@ -52,7 +52,7 @@ async function generateOGImage() {
           left: 0,
         },
       ])
-      .png()
+      .jpeg({ quality: 85 })
       .toFile(OUTPUT_IMAGE);
 
     console.log(`Successfully generated: ${OUTPUT_IMAGE}`);
