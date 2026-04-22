@@ -8,7 +8,7 @@
       "hero_image": "src/assets/images/a_minimalist_photorealistic_imag_gfe.webp",
       "hero_alt": "Clear glass of water representing transparency",
       "cta_text": "Learn More",
-      "cta_url": "http://www.cms.gov/nosurprises",
+      "cta_url": "https://www.cms.gov/nosurprises",
       "theme": "dark",
       "alignment": "center"
     },
@@ -23,7 +23,7 @@
       "type": "cta",
       "title": "Learn More",
       "button_text": "Visit CMS.gov",
-      "button_url": "http://www.cms.gov/nosurprises",
+      "button_url": "https://www.cms.gov/nosurprises",
       "theme": "olive",
       "layout": "centered"
     }
