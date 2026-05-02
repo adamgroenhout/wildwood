@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const pageEntries = await getCollection('site_pages');
   
   return pageEntries
-    .filter(entry => entry.id !== 'home')
+    .filter(entry => entry.id !== 'home' && entry.id !== '404')
     .map(entry => ({
       params: { slug: entry.id },
       props: { entry },
